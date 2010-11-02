@@ -1,25 +1,28 @@
 <!DOCTYPE HTML>
 
 <html>
-<head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">  
-	<title>Nerian Blog: {{ page.title }}</title>
-	<link rel="stylesheet" href="css/master.css">		
-</head>
-<body>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: {{ page.title }}</title>
+        <link rel="stylesheet" href="/css/master.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/posts.html">Posts</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </div>
 
-	<header>
-		<h1>Nerian Blog</h1>
-	</header>
-
-	<div id='content'>     
-		<h1>{{ page.title }}</h1>
-		{{ content }}
-	</div>
-</div>
-<div id='footer'>
-
-	FOOTER
-</div>
-</body>
+            <div id="content">
+		{{ content }}            
+            </div>
+            <div id='footer'>
+                <h3>About</h3>
+                <span>This Blog is mantained by Gonzalo Rodríguez-Baltanás. I blog about my projects, technology and whatever comes to my mind.</span>
+            </div>
+        </div>
+    </body>
 </html>
