@@ -37,6 +37,13 @@ body{
     -border-radius: 15px;
 }
 
+.image{
+    text-align: center
+}
+.sub{
+    text-align: center
+}
+    
 #wrapper{
     width: 650px;
     margin:0px auto;    
