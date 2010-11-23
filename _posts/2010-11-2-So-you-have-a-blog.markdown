@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What a minute, not a Wordpress blog?
+title: Wait a minute, not a Wordpress blog?
 ---
 
 This is a genuine html 5 and css 3 static web page generated using Jekyll and hosted at GitHub. Isn't it cool?
