@@ -1,0 +1,153 @@
+---
+layout: post
+title: 'The Ruby programmer stack 1: RVM'
+---      
+ 
+Introduction
+------------
+
+I love Ruby. It is expressive. It is powerful. But above all, it has the coolest ecosystem I have ever seen. The ecosystem for a programming language is the stack of tools, practices and conventions that programmers of a particular programming language share in common. A culture that defines its members as Rubyist.  
+
+The Rubyist's mind thinks like this:  
+
+* KISS – Keep it simple. 
+* DRY – Don't repeat yourself
+* Test Driven Development – Rubyist don't write tests that checks the validity of code. They write code that passes the agreed Test. 
+* Agile – Rubyist embrace change. They design their applications to embrace change. 
+* Documentation is important, but not the product. Documentation is useful, to the point, with code examples. No 900 pages manual.                                                                       
+
+Nobody said that your ruby code won't execute unless it follows the rules I said. This is just what I have seen so far, what seems to be the usual practice, the way I perceive the Ruby culture. 
+
+I didn't say anything about the language. I am just talking about the Ruby culture. I just saying that their culture, their community, it just rocks and that's why I decide to use Ruby as my main programming language.
+
+This is the first issue of a series of articles concerning Ruby and its ecosystem. Let start by setting up Ruby itself.
+
+RVM
+----  
+
+{% assign hl = 'highlight bash' %}
+
+RVM is the **R**uby **V**ersion **M**anager. Do you remember what I said about Rubyist's ability to embrace change? This is the main tool. Ruby programmers usually have many versions of ruby install. Mainly 1.9 and 1.8. This is how you install it:
+ 
+First, you need to get Git using any of these methods:
+
+{% highlight bash %}
+# Any Platform:
+
+From the website: http://git-scm.com/
+
+# Mac OS:
+
+$ brew install git  # Homebrew
+
+or
+
+$ port install git # Macports
+
+# Linux
+
+$ apt-get install git-core 
+
+{% endhighlight bash %}
+
+Then install RVM:     
+
+{% highlight bash %}    
+# Just copy/paste this and hit enter.
+$ bash <<(curl http://rvm.beginrescueend.com/releases/rvm-install-head)
+
+{% endhighlight bash %}    
+
+Now we are going to install Ruby 1.9 without using sudo. We never use sudo.
+
+{% highlight bash %} 
+$ rvm install 1.9
+{% endhighlight %}   
+
+Now, Rubyist use Gems. Gems are small pieces of functionality, like bricks, that helps you to build your big & cool application. 
+
+Normally, in order to install a gem, like rspec, you do:
+
+{% highlight bash %} 
+$ gem install rspec
+{% endhighlight %} 
+
+But what you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?
+
+Enter RVM's Gemsets.    
+
+A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. 
+
+{% highlight bash %} 
+# Create folder
+$ mkdir hidra  
+$ cd hidra                   
+# Automatically use and/or create the gemset Hidra
+# when entering this folder (and subfolders). 
+# We save that conf to a .rvmrc file. 
+# This file is automatically read by RVM.
+$ "rvm --create use  '1.9.2@Hidra'" > .rvmrc 
+
+# reenter the folder.
+
+$ cd ..
+$ cd hidra
+
+# Now, let install many gems ^_^!
+# This will install gems under the current gemset 
+# that you are using, that's is the Hidra gemset. 
+$ gem install jekyll
+Building native extensions.  This could take a while...
+Successfully installed liquid-2.2.2
+Successfully installed fast-stemmer-1.0.0
+Successfully installed classifier-1.3.3
+Successfully installed directory_watcher-1.3.2
+Successfully installed syntax-1.0.0
+Successfully installed maruku-0.6.0
+Successfully installed jekyll-0.10.0
+7 gems installed  
+        
+# Not lets create the project Fenix.
+$ cd ..
+$ mkdir fenix
+$ "rvm --create use  '1.9.2@Fenix'" > .rvmrc
+$ gem install rails
+...large output ... 
+
+# Not let check that we have truly have separate sets of gems. 
+
+$ gem list
+
+...will show the list of gems for the fenix gemset ...
+$ cd .. && cd hidra
+$ gem list
+...will show the list of gems for the hidra gemset ...    
+
+They are different! ^_^
+{% endhighlight %}      
+                                                          
+
+More tricks:
+
+I don't need the documentation that is installed for every gem. So:
+                                    
+{% highlight bash %}          
+# ~/.gemrc or /etc/gemrc: 
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
+{% endhighlight %}
+                   
+Another one:
+Instead of 
+
+{% highlight bash %} 
+"rvm --create use  '1.9.2@Fenix'"
+{% endhighlight %}
+
+you can write this so that it creates the gemset in whatever Ruby the system has installed.                           
+
+{% highlight bash %} 
+"rvm --create use  '@Fenix'"
+{% endhighlight %}
+
+ 
