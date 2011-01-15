@@ -3,8 +3,7 @@ layout: post
 title: 'The Ruby programmer stack 1: RVM'
 ---      
  
-Introduction
-------------
+**Introduction**
 
 I love Ruby. It is expressive. It is powerful. But above all, it has the coolest ecosystem I have ever seen. The ecosystem for a programming language is the stack of tools, practices and conventions that programmers of a particular programming language share in common. A culture that defines its members as Rubyist.  
 
@@ -22,8 +21,7 @@ I didn't say anything about the language. I am just talking about the Ruby cultu
 
 This is the first issue of a series of articles concerning Ruby and its ecosystem. Let start by setting up Ruby itself.
 
-RVM
-----  
+**RVM**
 
 {% assign hl = 'highlight bash' %}
 
