@@ -138,14 +138,16 @@ update: --no-rdoc --no-ri
 Another one:
 Instead of 
 
-{% highlight bash %} 
-"rvm --create use  '1.9.2@Fenix'"
+{% highlight bash %}  
+# .rvmrc
+rvm --create use  '1.9.2@Fenix'
 {% endhighlight %}
 
 you can write this so that it creates the gemset in whatever Ruby the system has installed.                           
 
 {% highlight bash %} 
-"rvm --create use  '@Fenix'"
+# .rvmrc
+rvm --create use  '@Fenix'
 {% endhighlight %}
 
  
