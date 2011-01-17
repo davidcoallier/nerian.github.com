@@ -1,7 +1,7 @@
 body{
     margin: 0px auto;
     background-color: #333333;
-}
+}   
 
 #header a{
     text-decoration: none;
@@ -57,20 +57,23 @@ body{
     border:1px solid white;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    -border-radius: 15px;
+    -border-radius: 15px;	
+	font-size: 108%;
+	font-family: 'Droid Sans', arial, serif;
+	line-height: 150%;
 
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
 }
 
 #content p{
-	text-indent: 1.5em
+	text-indent: 1.5em;	
 }
 
 #content p.not_indented{
 	text-indent: 0
-}
-
+}        
+   
 .image{
     text-align: center;    
 }
