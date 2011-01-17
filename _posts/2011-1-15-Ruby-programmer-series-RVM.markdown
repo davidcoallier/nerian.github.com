@@ -70,7 +70,7 @@ Normally, in order to install a gem, like rspec, you do:
 $ gem install rspec
 {% endhighlight %} 
 
-But what you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?
+But when you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?
 
 Enter RVM's Gemsets.    
 
