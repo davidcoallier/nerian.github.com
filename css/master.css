@@ -58,12 +58,16 @@ body{
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -border-radius: 15px;	
-	font-size: 108%;
+	font-size: 100%;
 	font-family: 'Droid Sans', arial, serif;
 	line-height: 150%;
 
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
+}  
+
+#content h2{
+	font-size:180%;
 }
 
 #content p{
