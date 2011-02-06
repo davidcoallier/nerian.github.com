@@ -141,11 +141,11 @@ Instead of
 rvm --create use  '1.9.2@Fenix'
 {% endhighlight %}
 
-you can write this so that it creates the gemset in whatever Ruby the system has installed.                           
+you can write this so that it creates the gemset in whatever is the default ruby version.                           
 
 {% highlight bash %} 
 # .rvmrc
-rvm --create use  '@Fenix'
-{% endhighlight %}
-
- 
+# Either create a gemset mongoid-site or use the existing one
+rvm gemset create "Fenix"
+rvm gemset use "Fenix"
+{% endhighlight %}                  
