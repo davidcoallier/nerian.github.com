@@ -23,8 +23,6 @@ This is the first issue of a series of articles concerning Ruby and its ecosyste
 
 **RVM**
 
-{% assign hl = 'highlight bash' %}
-
 RVM is the **R**uby **V**ersion **M**anager. Do you remember what I said about Rubyist's ability to embrace change? This is the main tool. Ruby programmers usually have many versions of ruby install. Mainly 1.9 and 1.8. This is how you install it:
  
 First, you need to get Git using any of these methods:
