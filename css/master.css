@@ -1,3 +1,15 @@
+@font-face {
+    font-family: MavenPro;
+    src: url('/fonts/mavenpro.otf');
+    font-weight:400;	
+} 
+
+@font-face {
+    font-family: VeraMono;
+    src: url('/fonts/VeraMono.ttf');
+    font-weight:400;
+}
+
 body{
     margin: 0px auto;
     background-color: #333333;
@@ -58,14 +70,14 @@ body{
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -border-radius: 15px;	
-	font-size: 100%;
-	font-family: 'Droid Sans', arial, serif;
-	line-height: 150%;
+	font-family: 'MavenPro', arial, sans-serif;
+	font-size: 17px;
+	line-height: 26px;
 
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
-}  
-
+} 
+	  
 #content h2{
 	font-size:150%;
 }
