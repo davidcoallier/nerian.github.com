@@ -70,7 +70,6 @@ body{
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -border-radius: 15px;	
-	font-family: 'MavenPro', arial, sans-serif;
 	font-size: 17px;
 	line-height: 26px;
 
@@ -83,7 +82,12 @@ body{
 }
 
 #content p{
-	text-indent: 1.5em;	
+	text-indent: 1.5em;
+	font-family: "gesta-1","gesta-2",sans-serif;	
+}
+
+#content li{
+	font-family: "gesta-1","gesta-2",sans-serif;	
 }
 
 #content p.not_indented{

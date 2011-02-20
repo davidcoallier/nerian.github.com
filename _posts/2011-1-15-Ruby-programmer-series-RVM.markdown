@@ -13,7 +13,7 @@ The Rubyist's mind thinks like this:
 * DRY – Don't repeat yourself
 * Test Driven Development – Rubyist don't write tests that checks the validity of code. They write code that passes the agreed Test. 
 * Agile – Rubyist embrace change. They design their applications to embrace change. 
-* Documentation is important, but not the product. Documentation is useful, to the point, with code examples. No 900 pages manual.                                                                       
+* Documentation is important, but it is not the final product. Documentation is useful, concise, to the point, with code examples. No 900 pages manual.                                                                       
 
 Nobody said that your ruby code won't execute unless it follows the rules I said. This is just what I have seen so far, what seems to be the usual practice, the way I perceive the Ruby culture. 
 
