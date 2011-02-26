@@ -9,8 +9,11 @@ Summary:
 * Install Nginx with Homebrew
 * Install Passenger from RVM
 * Configure the couple.
-* Setup a Rails Project.
-    
+* Setup a Rails Project.  
+
+### Introduction
+
+Running __rails s__ every time we want to start a Ruby on Rails server is a waste of time and terminal tabs. The best way is to use Phusion Passenger. Phussion Passenger enables us to just go to http://davinci.dev and find the server. It is automatically started. On demand.    
 
 ### Install RVM
 
@@ -102,6 +105,20 @@ http {
 
 ### Set up a Rails Project
 
+Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rails_env. In my case, I like to start the server on the development environment, that way the sources are reloaded every request. Very handy on the development machine. 
+
+{% highlight bash %}
+server {
+      listen 8081;
+      server_name davinci.dev;
+      root /Users/Nerian/NetBeansProjects/DaVinci/public;
+      passenger_enabled on;
+	  rails_env development;   
+   }                
+{% endhighlight bash %}
+
+
+
 Create a .rvmrc file on the root of your project. Change username and project name.
 
 {% highlight bash %}
@@ -129,3 +146,16 @@ if ENV['MY_RUBY_HOME'] && ENV['MY_RUBY_HOME'].include?('rvm')
   end
 end 
 {% endhighlight bash %}
+
+How do I see the logs of my application?  
+
+{% highlight bash %}
+$ cd yourapp/
+$ tail -f log/development.log
+{% endhighlight bash %}
+
+How do I restart my application?
+{% highlight bash %}
+$ touch yourapp/tmp/restart
+{% endhighlight bash %}
+
