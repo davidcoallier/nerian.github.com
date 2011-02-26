@@ -1,2 +1,2 @@
-rvm gemset create "NerianBlog"
-rvm gemset use "NerianBlog"
+rvm gemset create 'NerianBlog' 
+rvm gemset use 'NerianBlog'
