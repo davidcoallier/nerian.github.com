@@ -51,8 +51,14 @@ Then install RVM:
 {% highlight bash %}    
 # Just copy/paste this and hit enter.
 $ bash <<(curl http://rvm.beginrescueend.com/releases/rvm-install-head)
+{% endhighlight bash %}                                                
 
-{% endhighlight bash %}    
+Add this snippet to the end of your .bash_profile or .zshrc
+              
+{% highlight bash %}                                             
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
+{% endhighlight bash %}
 
 Now we are going to install Ruby 1.9 without using sudo. We never use sudo.
 
