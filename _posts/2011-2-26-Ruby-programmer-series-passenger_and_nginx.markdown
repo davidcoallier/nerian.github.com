@@ -23,8 +23,9 @@ $ bash < < ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
 
 Add this snippet to the end of your .bash_profile or .zshrc
               
-{% highlight bash %}
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+{% highlight bash %}                                             
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
 {% endhighlight bash %}
 
 Close the shell and open a new one.
