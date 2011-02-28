@@ -64,7 +64,22 @@ Now we are going to install Ruby 1.9 without using sudo. We never use sudo.
 
 {% highlight bash %} 
 $ rvm install 1.9
-{% endhighlight %}   
+{% endhighlight %}  
+
+If you run into: 
+      
+{% highlight bash %}
+ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+which is not the architecture being linked (x86_64)
+collect2: ld returned 1 exit status
+make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+make: *** [mkmain.sh] Error 1
+{% endhighlight bash %} 
+
+You need to install libxml2
+{% highlight bash %}
+brew install libxml2
+{% endhighlight bash %}
 
 Now, Rubyist use Gems. Gems are small pieces of functionality, like bricks, that helps you to build your big & cool application. 
 
