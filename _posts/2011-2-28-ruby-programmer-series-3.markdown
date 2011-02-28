@@ -7,6 +7,7 @@ title: 'The Ruby programmer stack 3: Blazingly fast tests with Spork on a Mongoi
 ### Summary:
 
 * We are going to set up a Rails 3 project using Mongoid and Spork.
+* The full project is in [github](https://github.com/Nerian/Mongoid-spork-Rails-app-example 'github')
 
 ### Introduction:
 
