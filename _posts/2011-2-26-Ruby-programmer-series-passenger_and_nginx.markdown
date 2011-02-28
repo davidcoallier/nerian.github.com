@@ -19,6 +19,12 @@ Running __rails s__ every time we want to start a Ruby on Rails server is a wast
 
 {% highlight bash %}
 $ bash < < ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+{% endhighlight bash %}    
+
+Add this snippet to the end of your .bash_profile or .zshrc
+              
+{% highlight bash %}
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 {% endhighlight bash %}
 
 Close the shell and open a new one.
