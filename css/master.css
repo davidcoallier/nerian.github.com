@@ -8,7 +8,14 @@
     font-family: VeraMono;
     src: url('/fonts/VeraMono.ttf');
     font-weight:400;
+} 
+ 
+@font-face {
+    font-family: Confortaa;
+    src: url('/fonts/Comfortaa-Regular.ttf');
+    font-weight:400;
 }
+
 
 body{
     margin: 0px auto;
@@ -79,6 +86,10 @@ body{
 	  
 #content h2{
 	font-size:150%;
+	font-family: "Confortaa";
+}
+#content h4{
+	font-family: "Confortaa";
 }
 
 #content p{
@@ -115,4 +126,27 @@ body{
 
 #footer{
     color: white;
+}
+
+.date{         
+	display:inline;
+	height: 60px;
+}
+
+.title{           
+	display:inline;
+	float:right;
+}
+
+.date-title-line{
+
+}
+
+.post-list ul{
+	list-style-type:none;
+}                        
+
+.post-list span{
+	display:inline-block;
+    width:350px;
 }
