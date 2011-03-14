@@ -98,12 +98,12 @@ Click intro in the next two questions.
 
 At the end of the install it says that it modified Nginx config file. Don't use that file.
 Edit /usr/local/etc/nginx/nginx.conf and add the code snippet.
-Change to your user name.
+Change user name and/or passenger version.
                  
 {% highlight bash %}
 http {
       ...
-      passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.3;
+      passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.5;
       passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
       ...
   }                 
