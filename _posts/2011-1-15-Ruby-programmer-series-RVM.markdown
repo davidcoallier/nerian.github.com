@@ -63,7 +63,7 @@ Add this snippet to the end of your .bash_profile or .zshrc
 Now we are going to install Ruby 1.9 without using sudo. We never use sudo.
 
 {% highlight bash %} 
-$ rvm install 1.9
+$ rvm install 1.9.2
 {% endhighlight %}  
 
 If you run into: 
