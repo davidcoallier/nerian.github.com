@@ -1,16 +1,4 @@
 @font-face {
-    font-family: MavenPro;
-    src: url('/fonts/mavenpro.otf');
-    font-weight:400;	
-} 
-
-@font-face {
-    font-family: VeraMono;
-    src: url('/fonts/VeraMono.ttf');
-    font-weight:400;
-} 
- 
-@font-face {
     font-family: Confortaa;
     src: url('/fonts/Comfortaa-Regular.ttf');
     font-weight:400;
