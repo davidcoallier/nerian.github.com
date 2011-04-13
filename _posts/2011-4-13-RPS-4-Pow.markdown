@@ -1,0 +1,62 @@
+---
+layout: post
+title: 'The Ruby programmer stack 4: Pow'
+---          
+
+### Summary
+
+* What is Pow.
+* Installing Pow.
+
+### What is Pow
+
+I admit it. I have an addiction. I am addicted to updating all the applications of my system to the last version. Always. Every single day I check if there is something new. Now, this is not really a burden. Just *brew update* and *rvm @global gem update*. Pretty automatic.
+
+The problem is...I use Passenger and Nginx, exactly as stated in _The Ruby Programmer Stack 2_ so every time there is an update to either Nginx or Passenger I have to go through a 10 min upgrade process. 
+
+Today Nginx released version 1.0.0. Also Passenger has an update too. But I decided that I have had enough. My time is way too valuable to waste it in no-value things.
+
+Enter Pow, by _37 Signals._
+
+### Installing Pow
+
+Install Pow. Make sure it shows the four steps. As there could be errors.             
+         
+{% highlight bash %}
+$ curl get.pow.cx | sh
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
+{% endhighlight bash %}
+
+If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.
+                    
+{% highlight bash %}
+$ cd ~/.pow
+$ ln -s /path/to/myapp
+{% endhighlight bash %}
+
+It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.
+
+{% highlight bash %}
+$ ls
+DaVinci@ resque@
+$ mv DaVinci davinci
+{% endhighlight bash %}
+
+If there was any error, try this:
+                      
+{% highlight bash %}                              
+$ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
+$ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
+$ curl get.pow.cx | sh
+{% endhighlight bash %}
+
+
+
+
+###Links 
+
+http://pow.cx/
+
