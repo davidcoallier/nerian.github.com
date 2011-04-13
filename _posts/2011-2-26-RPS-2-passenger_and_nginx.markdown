@@ -5,9 +5,9 @@ title: 'The Ruby programmer stack 2: Installing Passenger with Nginx using Homeb
  
 ### Summary:
 
-* Install RVM
-* Install Nginx with Homebrew
-* Install Passenger from RVM
+* Install RVM.
+* Install Nginx with Homebrew.
+* Install Passenger from RVM.
 * Configure the couple.
 * Setup a Rails Project.  
 
@@ -61,7 +61,7 @@ $ brew install nginx --with-passenger
 The install outputs instructions to make Nginx lauch at login:
 
 {% highlight bash %}
-$ cp /usr/local/Cellar/nginx/0.8.54/org.nginx.plist ~/Library/LaunchAgents 
+$ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
 
 $ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
 {% endhighlight bash %}        
@@ -72,7 +72,7 @@ Decompress the source of Nginx.
 
 {% highlight bash %}
 $ cd $HOME/Library/Caches/Homebrew
-$ tar xvf nginx-0.8.54.tar.gz                       
+$ tar xvf nginx-1.0.0.tar.gz
 {% endhighlight bash %}
                               
 Now install the Nginx module
@@ -86,12 +86,12 @@ Do chose to customise your own Nginx installation.
 Your Nginx source code is located here (change it to you user name):
 
 {% highlight bash %}
-/Users/Nerian/Library/Caches/Homebrew/nginx-0.8.54                             
+/Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
 {% endhighlight bash %}
 
 Chose to install Nginx to:
 {% highlight bash %}
-/usr/local/Cellar/nginx/0.8.54/sbin
+/usr/local/Cellar/nginx/1.0.0/sbin
 {% endhighlight bash %}
 
 Click intro in the next two questions.
@@ -103,7 +103,7 @@ Change user name and/or passenger version.
 {% highlight bash %}
 http {
       ...
-      passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.5;
+      passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.6;
       passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
       ...
   }                 
