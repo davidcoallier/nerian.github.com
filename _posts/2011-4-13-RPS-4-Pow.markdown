@@ -12,7 +12,7 @@ title: 'The Ruby programmer stack 4: Pow'
 
 I admit it. I have an addiction. I am addicted to updating all the applications of my system to the last version. Always. Every single day I check if there is something new. Now, this is not really a burden. Just *brew update* and *rvm @global gem update*. Pretty automatic.
 
-The problem is...I use Passenger and Nginx, exactly as stated in _The Ruby Programmer Stack 2_ so every time there is an update to either Nginx or Passenger I have to go through a 10 min upgrade process. 
+The problem is...I use Passenger and Nginx, exactly as stated in ['The Ruby Programmer Stack 2'](/2011/02/26/RPS-2-passenger_and_nginx.html '/2011/02/26/RPS-2-passenger_and_nginx') so every time there is an update to either Nginx or Passenger I have to go through a 10 min upgrade process. 
 
 Today Nginx released version 1.0.0. Also Passenger has an update too. But I decided that I have had enough. My time is way too valuable to waste it in no-value things.
 
@@ -58,5 +58,5 @@ $ curl get.pow.cx | sh
 
 ###Links 
 
-http://pow.cx/
+[http://pow.cx/](http://pow.cx/ "http://pow.cx/")
 
