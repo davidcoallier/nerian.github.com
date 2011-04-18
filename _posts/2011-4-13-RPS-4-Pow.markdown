@@ -51,8 +51,29 @@ If there was any error, try this:
 $ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
 $ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
 $ curl get.pow.cx | sh
+{% endhighlight bash %} 
+
+In order to update Pow, you just call 
+     
+{% highlight bash %}
+$ curl get.pow.cx | sh
 {% endhighlight bash %}
 
+So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:
+  
+{% highlight bash %}
+$ alias pow-update='curl get.pow.cx | sh'        
+{% endhighlight bash %}
+
+So you just do:
+    
+{% highlight bash %}
+$ pow-update
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
+{% endhighlight bash %}
 
 
 
