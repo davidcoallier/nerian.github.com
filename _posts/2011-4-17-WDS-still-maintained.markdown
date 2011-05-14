@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The Wise Developer series 1: Still Maintained'
+title: 'Still Maintained'
 ---                                                         
 
 ### Summary

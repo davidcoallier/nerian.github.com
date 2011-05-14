@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The Ruby programmer stack 3: Blazingly fast tests with Spork on a Mongoid project'
+title: 'Lighting fast tests with Spork on a Mongoid project'
 ---                                                                          
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The Ruby programmer stack 5: Fuubar'
+title: 'Fuubar'
 ---                                        
                
 ### Fuubar

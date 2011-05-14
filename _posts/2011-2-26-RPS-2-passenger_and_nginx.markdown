@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The Ruby programmer stack 2: Installing Passenger with Nginx using Homebrew and RVM in Mac OS X '
+title: 'Installing Passenger with Nginx using Homebrew and RVM in Mac OS X'
 ---
  
 ### Summary:
