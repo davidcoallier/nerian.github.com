@@ -30,6 +30,9 @@ ruby-1.9.2-p180 :081 > JSON.parse(JSON.dump(arra)) == arra
  => true
 ruby-1.9.2-p180 :082 > JSON.parse(JSON.dump(arra2)) == arra
  => true
+ruby-1.9.2-p180 :086 > JSON.parse(JSON.dump(arra2)) == arra2
+ => false
+
 JSON.parse(JSON.dump(arra1))
  => {"cu"=>"algo"}        
 JSON.parse(JSON.dump(arra2))
