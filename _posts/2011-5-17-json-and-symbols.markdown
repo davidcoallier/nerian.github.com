@@ -34,7 +34,6 @@ JSON.parse(JSON.dump(arra1))
  => {"cu"=>"algo"}        
 JSON.parse(JSON.dump(arra2))
  => {"cu"=>"algo"}
-
-#Pray with me:  I shall never use symbols when I use JSON.
-
 {% endhighlight bash %}
+
+Pray with me:  I shall never use symbols when I use JSON.
