@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Did you known that JSON.encode doesn't respect symbols?"
+title: "Did you know that JSON.encode doesn't respect symbols?"
 ---                                                            
 
 Today was one of those days that instead of addressing myself as a programmer I entitle myself the title of 'Bug Exorcist'.
