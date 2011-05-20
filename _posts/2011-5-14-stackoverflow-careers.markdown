@@ -48,7 +48,7 @@ You tell me:
 
 <a href='http://careers.stackoverflow.com/nerian'>http://careers.stackoverflow.com/nerian</a>  
 
-PD: I have 5 invitations left, if you want one post comment below with your email address 
+PD: I have 5 invitations left, if you want one post a comment below with your email address 
 
 
 
