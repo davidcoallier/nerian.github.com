@@ -53,6 +53,11 @@ class Me < Hacker
   # Contact via email with Nerian
   def contact(message)
     Mail.account('siotopo & gmail.com').inbox<< message 
+  end
+             
+  # Redirect the user to my stackoverflow careers page
+  def view_curriculum
+    redirect_to http://careers.stackoverflow.com/nerian
   end        
 end 
 
