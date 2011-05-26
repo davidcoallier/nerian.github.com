@@ -35,7 +35,7 @@ Here are some reasons:
 
 And that are only the software part of the problems. I haven't talked about the methodology. It was almost a joke. First we develop the working software. Then we write the documention – flow diagrams, class diagrams, etc. The test part was irrelevant, nobody did testing.
 
-Now, if you are with in the agile way of developing software you must be feeling a heart attack. We were wasting days writing flow diagrams – which are supposed to help us when we START the development –  AFTER completing the software. Completely absurd. Retarded.
+Now, if you are with me in the agile way of developing software you must be feeling a heart attack. We were wasting days writing flow diagrams – which are supposed to help us when we START the development –  AFTER completing the software. Completely absurd. Retarded.
 
 After 4 years of academic projects I can say that today universities need to rethink how they teach. They need to do it asap because the modern world has no use for the people they are training.
 
