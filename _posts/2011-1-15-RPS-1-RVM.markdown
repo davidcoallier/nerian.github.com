@@ -50,7 +50,7 @@ Then install RVM:
 
 {% highlight bash %}    
 # Just copy/paste this and hit enter.
-$ bash <<( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 {% endhighlight bash %}                                                
 
 Add this snippet to the end of your .bash_profile or .zshrc
