@@ -21,13 +21,11 @@ Now if you have, like you should, a Readme file in your Github repo you could ad
 
 All you have to add to your Readme file is a link to an image:                                                 
                
-{% highlight html %}
 
-<img alt='' src='http://stillmaintained.com/Nerian/nerian.github.com.png'/>
+	<img alt='' src='http://stillmaintained.com/Nerian/nerian.github.com.png'/>
 
-<img alt='' src='http://stillmaintained.com/
-	{GithubUserName}/{NameOfTheProject}.png'/>
-{% endhighlight html %}
+	<img alt='' src='http://stillmaintained.com/{GithubUserName}/{NameOfTheProject}.png'/>
+{:lang="html"}
     
 ### Example
 

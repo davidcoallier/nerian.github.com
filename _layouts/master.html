@@ -1,70 +1,33 @@
-<!DOCTYPE HTML>
-
-<html>
-    <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-        <title>Nerian Blog: {{ page.title }}</title>
-        <link rel="stylesheet" href="/css/master.css">
-        <link rel="stylesheet" href="/css/syntax.css">						
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <div id="subhead1">
-					<a href="/index.html">
-                    	<span class="nerian">Nerian</span>
-                    	<span class="dot">github</span>
-                    	<span class="blog">com</span>
-					</a>
-                </div>
-                <div id="subhead2">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-						<li><a href="/books.html">Books</a></li>
-						<li><a href="http://careers.stackoverflow.com/nerian">Curriculum</a></li>
-                        <li><a href="http://feeds.feedburner.com/Nerian-blog" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;</li>
-						<li><a href="https://github.com/Nerian"><img STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/></a></li>
-						<li><a href="http://www.twitter.com/iCodeErgoExist"><img STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/></a></li>
-						
-                    </ul>
-                </div>
-                <div style="clear:both;"></div>
-            </div>
-
-            <div id="content">
-		{{ content }}            
-            </div>
-            <div id='footer'>
-                <h3>About</h3>
-                <p>This Blog is maintained by Gonzalo Rodríguez-Baltanás. I am a 22 years old student at Spain. I love Ruby, the Web and red wine. I blog about interesting technology that I find, mostly web related.</p>
-            </div>
-        </div>
-
-		<script type="text/javascript">
-		var disqus_shortname = 'nerian-blog';
-		(function () {
-		  var s = document.createElement('script'); s.async = true;
-		  s.src = 'http://disqus.com/forums/nerian-blog/count.js';
-		  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-		}());
-		</script>				   				
-		
-		<script type="text/javascript">
-
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-20768366-1']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		</script>    
-		
-		<script type="text/javascript" src="http://use.typekit.com/mxd6wjg.js"></script>		
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>          				
-    </body>
-</html>
+---
+layout: includes
+---
+<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			{{ content }} 
+		</div>           
+	</div>
+</div>     

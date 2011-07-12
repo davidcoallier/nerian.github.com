@@ -27,67 +27,66 @@ RVM is the **R**uby **V**ersion **M**anager. Do you remember what I said about R
  
 First, you need to get Git using any of these methods:
 
-{% highlight bash %}
-# Any Platform:
+	# Any Platform:
 
-From the website: http://git-scm.com/
+	From the website: http://git-scm.com/
 
-# Mac OS:
+	# Mac OS:
 
-$ brew install git  # Homebrew
+	$ brew install git  # Homebrew
 
-or
+	or
 
-$ port install git # Macports
+	$ port install git # Macports
 
-# Linux
+	# Linux
 
-$ apt-get install git-core 
-
-{% endhighlight bash %}
+	$ apt-get install git-core 
+{:lang="bash"}
 
 Then install RVM:     
 
-{% highlight bash %}    
-# Just copy/paste this and hit enter.
-$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-{% endhighlight bash %}                                                
+	# Just copy/paste this and hit enter.
+	$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+{:lang="bash"}
 
 Add this snippet to the end of your .bash_profile or .zshrc
               
-{% highlight bash %}                                             
-# This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
-{% endhighlight bash %}
+
+	# This loads RVM into a shell session.
+	[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"      
+{:lang="ruby"}
+
 
 Now we are going to install Ruby 1.9 without using sudo. We never use sudo.
 
-{% highlight bash %} 
-$ rvm install 1.9.2
-{% endhighlight %}  
+
+	$ rvm install 1.9.2
+{:lang="bash"}
 
 If you run into: 
       
-{% highlight bash %}
-ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
-which is not the architecture being linked (x86_64)
-collect2: ld returned 1 exit status
-make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
-make: *** [mkmain.sh] Error 1
-{% endhighlight bash %} 
+
+	ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+	which is not the architecture being linked (x86_64)
+	collect2: ld returned 1 exit status
+	make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+	make: *** [mkmain.sh] Error 1
+{:lang="bash"}
 
 You need to install libxml2
-{% highlight bash %}
-brew install libxml2
-{% endhighlight bash %}
+
+
+	brew install libxml2
+{:lang="bash"}
 
 Now, Rubyist use Gems. Gems are small pieces of functionality, like bricks, that helps you to build your big & cool application. 
 
 Normally, in order to install a gem, like rspec, you do:
 
-{% highlight bash %} 
-$ gem install rspec
-{% endhighlight %} 
+
+	$ gem install rspec
+{:lang="bash"}
 
 But when you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?
 
@@ -95,78 +94,78 @@ Enter RVM's Gemsets.
 
 A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. 
 
-{% highlight bash %} 
-# Create folder
-$ mkdir hidra  
-$ cd hidra                   
-# Automatically use and/or create the gemset Hidra
-# when entering this folder (and subfolders). 
-# We save that conf to a .rvmrc file. 
-# This file is automatically read by RVM.
-$ "rvm --create use  '1.9.2@Hidra'" > .rvmrc 
+ 
+	# Create folder
+	$ mkdir hidra  
+	$ cd hidra                   
+	# Automatically use and/or create the gemset Hidra
+	# when entering this folder (and subfolders). 
+	# We save that conf to a .rvmrc file. 
+	# This file is automatically read by RVM.
+	$ "rvm --create use  '1.9.2@Hidra'" > .rvmrc 
 
-# reenter the folder.
+	# reenter the folder.
 
-$ cd ..
-$ cd hidra
+	$ cd ..
+	$ cd hidra
 
-# Now, let install many gems ^_^!
-# This will install gems under the current gemset 
-# that you are using, that's is the Hidra gemset. 
-$ gem install jekyll
-Building native extensions.  This could take a while...
-Successfully installed liquid-2.2.2
-Successfully installed fast-stemmer-1.0.0
-Successfully installed classifier-1.3.3
-Successfully installed directory_watcher-1.3.2
-Successfully installed syntax-1.0.0
-Successfully installed maruku-0.6.0
-Successfully installed jekyll-0.10.0
-7 gems installed  
-        
-# Not lets create the project Fenix.
-$ cd ..
-$ mkdir fenix
-$ "rvm --create use  '1.9.2@Fenix'" > .rvmrc
-$ gem install rails
-...large output ... 
+	# Now, let install many gems ^_^!
+	# This will install gems under the current gemset 
+	# that you are using, that's is the Hidra gemset. 
+	$ gem install jekyll
+	Building native extensions.  This could take a while...
+	Successfully installed liquid-2.2.2
+	Successfully installed fast-stemmer-1.0.0
+	Successfully installed classifier-1.3.3
+	Successfully installed directory_watcher-1.3.2
+	Successfully installed syntax-1.0.0
+	Successfully installed maruku-0.6.0
+	Successfully installed jekyll-0.10.0
+	7 gems installed  
+       
+	# Now lets create the project Fenix.
+	$ cd ..
+	$ mkdir fenix
+	$ "rvm --create use  '1.9.2@Fenix'" > .rvmrc
+	$ gem install rails
+	...large output ... 
 
-# Not let check that we have truly have separate sets of gems. 
+	# Now let check that we have truly have separate sets of gems. 
 
-$ gem list
+	$ gem list
 
-...will show the list of gems for the fenix gemset ...
-$ cd .. && cd hidra
-$ gem list
-...will show the list of gems for the hidra gemset ...    
+	...will show the list of gems for the fenix gemset ...
+	$ cd .. && cd hidra
+	$ gem list
+	...will show the list of gems for the hidra gemset ...    
 
-They are different! ^_^
-{% endhighlight %}      
+	They are different! ^_^   
+{:lang="bash"}      
                                                           
 
 More tricks:
 
 I don't need the documentation that is installed for every gem. So:
                                     
-{% highlight bash %}          
-# ~/.gemrc or /etc/gemrc: 
-install: --no-rdoc --no-ri
-update: --no-rdoc --no-ri
-{% endhighlight %}
+       
+	# ~/.gemrc or /etc/gemrc: 
+	install: --no-rdoc --no-ri
+	update: --no-rdoc --no-ri
+{:lang="bash"}
                    
 Another one:
 Instead of 
 
-{% highlight bash %}  
-# .rvmrc
-rvm --create use  '1.9.2@Fenix'
-{% endhighlight %}
+
+	# .rvmrc
+	rvm --create use  '1.9.2@Fenix'
+{:lang="bash"}
 
 you can write this so that it creates the gemset in whatever is the default ruby version.                           
 
-{% highlight bash %} 
-# .rvmrc
-# Either create a gemset mongoid-site or use the existing one
-rvm gemset create "Fenix"
-rvm gemset use "Fenix"
-{% endhighlight %}                  
+ 
+	# .rvmrc
+	# Either create a gemset mongoid-site or use the existing one
+	rvm gemset create "Fenix"
+	rvm gemset use "Fenix"
+{:lang="ruby"}

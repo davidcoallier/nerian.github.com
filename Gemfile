@@ -1,3 +1,5 @@
 source :gemcutter
 gem "jekyll"
-gem 'pygments'
+gem 'pygments'   
+gem 'coderay'
+gem 'kramdown'

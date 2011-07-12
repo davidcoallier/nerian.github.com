@@ -19,113 +19,106 @@ Spork is a gem designed to allow you to run your spec very quickly. How does it 
 
 ### Create a Rails project:
                                
-{% highlight bash %}
-$ rails new mongoid-spork-example
-{% endhighlight bash %}   
-                                                                                   
+
+	$ rails new mongoid-spork-example
+{:lang="bash"}                                                                                   
 
 Configure RVM       
 
-{% highlight bash %}
-$ cd mongoid-spork-example
-$ echo "rvm gemset create mongoid-example \nrvm gemset use mongoid-example" >> .rvmrc
-{% endhighlight bash %}
+	$ cd mongoid-spork-example
+	$ echo "rvm gemset create mongoid-example \nrvm gemset use mongoid-example" >> .rvmrc
+{:lang="bash"}
                     
 Configure Gemfile      
            
-{% highlight ruby %}
-gem 'rails', '3.0.4'                                                     
-gem "mongoid", "2.0.0.rc.7"
-gem 'bson_ext'
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'spork', '~> 0.9.0.rc' # It's important to use the rc version 
-end   
-{% endhighlight ruby %}
+	gem 'rails', '3.0.4'                                                     
+	gem "mongoid", "2.0.0.rc.7"
+	gem 'bson_ext'
+	group :development, :test do
+	  gem 'rspec-rails'
+	  gem 'spork', '~> 0.9.0.rc' # It's important to use the rc version 
+	end              
+{:lang="ruby"}
                
 Install gems
-{% highlight bash %}
-$ bundle install       
-{% endhighlight bash %}        
+
+	$ bundle install       
+{:lang="bash"}
 
 Generate mongoid configuration file:
-{% highlight bash %}         
-$ rails generate mongoid:config
-{% endhighlight bash %}
+
+	$ rails generate mongoid:config
+{:lang="bash"}
 
 Empty config/database.yml
 
 Open config/application and comment the line require 'rails/all'. Add the rest:
 
-{% highlight bash %}
-#require 'rails/all' 
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
-require "rails/test_unit/railtie"
-{% endhighlight bash %}        
+	#require 'rails/all' 
+	require "action_controller/railtie"
+	require "action_mailer/railtie"
+	require "active_resource/railtie"
+	require "rails/test_unit/railtie"  
+{:lang="ruby"}
       
 Run RSpec generator
-{% highlight bash %}
-rails g rspec:install
-{% endhighlight bash %}
+
+	rails g rspec:install
+{:lang="bash"}
 
 Run the Spork generator. This changes the spec/spec_helper.rb
 
-{% highlight bash %}    
-$ spork --bootstrap          
-{% endhighlight bash %}
+	$ spork --bootstrap          
+{:lang="bash"}
 
 Configure spec/spec_helper.rb
             
-{% highlight ruby %}
-require 'rubygems'
-require 'spork'
+	require 'rubygems'
+	require 'spork'
 
-Spork.prefork do
-  # Loading more in this block will cause your tests to run faster. However,
-  # if you change any configuration or code from libraries loaded here, you'll
-  # need to restart spork for it take effect.
-  ENV["RAILS_ENV"] ||= 'test'
-  require File.expand_path("../../config/environment", __FILE__)
-  require 'rspec/rails'     
-  require 'capybara/rails'
+	Spork.prefork do
+	  # Loading more in this block will cause your tests to run faster. However,
+	  # if you change any configuration or code from libraries loaded here, you'll
+	  # need to restart spork for it take effect.
+	  ENV["RAILS_ENV"] ||= 'test'
+	  require File.expand_path("../../config/environment", __FILE__)
+	  require 'rspec/rails'     
+	  require 'capybara/rails'
   
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+	  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-  RSpec.configure do |config|
-    config.mock_with :rspec    
+	  RSpec.configure do |config|
+	    config.mock_with :rspec    
 
-    #Add this following line to get spork working with rails 3
-    ActiveSupport::Dependencies.clear
-  end
+	    #Add this following line to get spork working with rails 3
+	    ActiveSupport::Dependencies.clear
+	  end
 
-end
+	end
 
-Spork.each_run do
-  # This code will be run each time you run your specs.
+	Spork.each_run do
+	  # This code will be run each time you run your specs.
 
-  load "#{Rails.root}/config/routes.rb"
-  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
+	  load "#{Rails.root}/config/routes.rb"
+	  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
 
-end
-{% endhighlight ruby %}                
+	end           
+{:lang="ruby"}                
 
 In order to configure Rspec to always use Spork we need to edit mongoid-spork-example/.rspec. Create it if it doesn't exist.
 
-{% highlight bash %}                 
---colour
---drb
-{% endhighlight bash %} 
+	--colour
+	--drb
+{:lang="ruby"}
                     
-We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.
-{% highlight bash %}                
-$ spork
-{% endhighlight bash %}
+We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            
+
+	$ spork
+{:lang="bash"}
   
 Now run the tests from another tab.
-{% highlight bash %}
-$ rspec spec 
-{% endhighlight bash %}
+
+	$ rspec spec 
+{:lang="bash"}
 
 Instant start ^_^
