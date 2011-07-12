@@ -3,3 +3,4 @@ gem "jekyll"
 gem 'coderay'
 gem 'kramdown'
 gem 'rack'
+gem 'rack-contrib'
