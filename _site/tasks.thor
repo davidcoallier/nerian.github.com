@@ -1,9 +1,7 @@
 class Blog < Thor
   
-  desc "deply", "Deploy to heroku and push to github"
-  def deploy         
-    puts '# Generating _site with jekyll'
-    `jekyll`                           
+  desc "deploy", "Deploy to heroku and push to github"
+  def deploy                           
     puts '# Pushing to github'
     `git push`             
     puts '# Deploying to Heroku'
