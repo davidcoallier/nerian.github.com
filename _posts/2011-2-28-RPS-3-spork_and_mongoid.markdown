@@ -13,7 +13,7 @@ title: 'Lighting fast tests with Spork on a Mongoid project'
 
 MongoDB is a document oriented database. To sum it up what it means: Flexibility. 
 
-Mongoid is a ORM that harness the power of MongoDB in a very elegant way. Its power lies around a very good documentation and an active community.
+Mongoid is a ODM that harness the power of MongoDB in a very elegant way. Its power lies around a very good documentation and an active community.
 
 Spork is a gem designed to allow you to run your spec very quickly. How does it do that? It preloads your Rails environment. You'll notice a difference in that your testing starts right away, instead of waiting a few seconds.
 
