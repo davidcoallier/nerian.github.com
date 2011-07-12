@@ -1,5 +1,6 @@
 body{
-	background: #ACD0DB url("data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAF2CAYAAACvRfJEAAAA1ElEQVQ4y51VQRICIQxL+P/Ju5/QJznjyT/Ug64INKGztwU2aUnb0C7X+609ni80AGgAovH3dexly+wgGkhY2P+SGYGJ1ulDpVGgH7DcxI1BF8poE6nn6xKL/EhzrbVGeYwai8mU9JVhaDXISmlzEUkWfp72OlYyG+yRrsJS3lKSIlF3mpRT2C/M95XoTsJilXSs9JBvwmw4Q5PCtMBO2I2rmAaBGogYhchPnT10JU3NT7H4mRZCLC5aMBnH95m8vTGCMtrqtnSnW3r/bmUGVX23JAJv0QW40LEL68QAAAAASUVORK5CYII=") repeat-x
+	background: #ACD0DB url("data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAF2CAYAAACvRfJEAAAA1ElEQVQ4y51VQRICIQxL+P/Ju5/QJznjyT/Ug64INKGztwU2aUnb0C7X+609ni80AGgAovH3dexly+wgGkhY2P+SGYGJ1ulDpVGgH7DcxI1BF8poE6nn6xKL/EhzrbVGeYwai8mU9JVhaDXISmlzEUkWfp72OlYyG+yRrsJS3lKSIlF3mpRT2C/M95XoTsJilXSs9JBvwmw4Q5PCtMBO2I2rmAaBGogYhchPnT10JU3NT7H4mRZCLC5aMBnH95m8vTGCMtrqtnSnW3r/bmUGVX23JAJv0QW40LEL68QAAAAASUVORK5CYII=") repeat-x;      	                      	
+	font-family: "Bookman Old Style";
 }
 
 #header a{
@@ -43,11 +44,11 @@ body{
 
 #content{
 	text-align: justify;   	
-	font-size: 17px;
+	font-size: 16px;
 	line-height: 26px;
 	width: 800px;
 	margin: 50px auto;
-	padding-left: 200px;  
+	padding-left: 200px;	  
 }                         
 
 .post, #header{
@@ -65,12 +66,11 @@ body{
 	font-family: 'Verdana'
 }
 
-#content p{
+p{
 	text-indent: 1.5em;
-	font-family: "Bookman Old Style"
 }
 
-#content p.not_indented{
+p.not_indented{
 	text-indent: 0
 }        
    
@@ -97,10 +97,7 @@ body{
 	display:inline;
 	float:right;
 }
-
-.post-list ul{
-	list-style-type:none;
-}                        
+          
 
 .post-list span{
 	display:inline-block;
