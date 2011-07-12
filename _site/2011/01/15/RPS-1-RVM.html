@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: RVM</title>
+        <link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/coderay.css">						
+    </head>
+    <body>        
+	
+		<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			<div>
+	<h2><a href="/2011/01/15/RPS-1-RVM.html">RVM</a></h2>
+	<em>Posted on 15 January 2011</em>
+	<br/>
+	<div>
+		<p><strong>Introduction</strong></p>
+
+<p>I love Ruby. It is expressive. It is powerful. But above all, it has the coolest ecosystem I have ever seen. The ecosystem for a programming language is the stack of tools, practices and conventions that programmers of a particular programming language share in common. A culture that defines its members as Rubyist.  </p>
+
+<p>The Rubyist’s mind thinks like this:  </p>
+
+<ul>
+  <li>KISS – Keep it simple. </li>
+  <li>DRY – Don’t repeat yourself</li>
+  <li>Test Driven Development – Rubyist don’t write tests that checks the validity of code. They write code that passes the agreed Test. </li>
+  <li>Agile – Rubyist embrace change. They design their applications to embrace change. </li>
+  <li>Documentation is important, but it is not the final product. Documentation is useful, concise, to the point, with code examples. No 900 pages manual.                                                                       </li>
+</ul>
+
+<p>Nobody said that your ruby code won’t execute unless it follows the rules I said. This is just what I have seen so far, what seems to be the usual practice, the way I perceive the Ruby culture. </p>
+
+<p>I didn’t say anything about the language. I am just talking about the Ruby culture. I just saying that their culture, their community, it just rocks and that’s why I decide to use Ruby as my main programming language.</p>
+
+<p>This is the first issue of a series of articles concerning Ruby and its ecosystem. Let start by setting up Ruby itself.</p>
+
+<p><strong>RVM</strong></p>
+
+<p>RVM is the <strong>R</strong>uby <strong>V</strong>ersion <strong>M</strong>anager. Do you remember what I said about Rubyist’s ability to embrace change? This is the main tool. Ruby programmers usually have many versions of ruby install. Mainly 1.9 and 1.8. This is how you install it:</p>
+
+<p>First, you need to get Git using any of these methods:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no"> 1</span> # Any Platform:
+<span class="no"> 2</span> 
+<span class="no"> 3</span> From the website: http://git-scm.com/
+<span class="no"> 4</span> 
+<span class="no"> 5</span> # Mac OS:
+<span class="no"> 6</span> 
+<span class="no"> 7</span> $ brew install git  # Homebrew
+<span class="no"> 8</span> 
+<span class="no"> 9</span> or
+<span class="no"><strong>10</strong></span> 
+<span class="no">11</span> $ port install git # Macports
+<span class="no">12</span> 
+<span class="no">13</span> # Linux
+<span class="no">14</span> 
+<span class="no">15</span> $ apt-get install git-core 
+</pre></div>
+</div>
+</div>
+
+<p>Then install RVM:     </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> # Just copy/paste this and hit enter.
+<span class="no">2</span> $ bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
+</pre></div>
+</div>
+</div>
+
+<p>Add this snippet to the end of your .bash_profile or .zshrc</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> <span class="c"># This loads RVM into a shell session.</span>
+<span class="no">2</span> [[ -s <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span> ]] &amp;&amp; . <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span>      
+</pre></div>
+</div>
+</div>
+
+<p>Now we are going to install Ruby 1.9 without using sudo. We never use sudo.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ rvm install 1.9.2
+</pre></div>
+</div>
+</div>
+
+<p>If you run into: </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+<span class="no">2</span> which is not the architecture being linked (x86_64)
+<span class="no">3</span> collect2: ld returned 1 exit status
+<span class="no">4</span> make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+<span class="no">5</span> make: *** [mkmain.sh] Error 1
+</pre></div>
+</div>
+</div>
+
+<p>You need to install libxml2</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> brew install libxml2
+</pre></div>
+</div>
+</div>
+
+<p>Now, Rubyist use Gems. Gems are small pieces of functionality, like bricks, that helps you to build your big &amp; cool application. </p>
+
+<p>Normally, in order to install a gem, like rspec, you do:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ gem install rspec
+</pre></div>
+</div>
+</div>
+
+<p>But when you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?</p>
+
+<p>Enter RVM’s Gemsets.    </p>
+
+<p>A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no"> 1</span> # Create folder
+<span class="no"> 2</span> $ mkdir hidra  
+<span class="no"> 3</span> $ cd hidra                   
+<span class="no"> 4</span> # Automatically use and/or create the gemset Hidra
+<span class="no"> 5</span> # when entering this folder (and subfolders). 
+<span class="no"> 6</span> # We save that conf to a .rvmrc file. 
+<span class="no"> 7</span> # This file is automatically read by RVM.
+<span class="no"> 8</span> $ &quot;rvm --create use  '1.9.2@Hidra'&quot; &gt; .rvmrc 
+<span class="no"> 9</span> 
+<span class="no"><strong>10</strong></span> # reenter the folder.
+<span class="no">11</span> 
+<span class="no">12</span> $ cd ..
+<span class="no">13</span> $ cd hidra
+<span class="no">14</span> 
+<span class="no">15</span> # Now, let install many gems ^_^!
+<span class="no">16</span> # This will install gems under the current gemset 
+<span class="no">17</span> # that you are using, that's is the Hidra gemset. 
+<span class="no">18</span> $ gem install jekyll
+<span class="no">19</span> Building native extensions.  This could take a while...
+<span class="no"><strong>20</strong></span> Successfully installed liquid-2.2.2
+<span class="no">21</span> Successfully installed fast-stemmer-1.0.0
+<span class="no">22</span> Successfully installed classifier-1.3.3
+<span class="no">23</span> Successfully installed directory_watcher-1.3.2
+<span class="no">24</span> Successfully installed syntax-1.0.0
+<span class="no">25</span> Successfully installed maruku-0.6.0
+<span class="no">26</span> Successfully installed jekyll-0.10.0
+<span class="no">27</span> 7 gems installed  
+<span class="no">28</span>    
+<span class="no">29</span> # Now lets create the project Fenix.
+<span class="no"><strong>30</strong></span> $ cd ..
+<span class="no">31</span> $ mkdir fenix
+<span class="no">32</span> $ &quot;rvm --create use  '1.9.2@Fenix'&quot; &gt; .rvmrc
+<span class="no">33</span> $ gem install rails
+<span class="no">34</span> ...large output ... 
+<span class="no">35</span> 
+<span class="no">36</span> # Now let check that we have truly have separate sets of gems. 
+<span class="no">37</span> 
+<span class="no">38</span> $ gem list
+<span class="no">39</span> 
+<span class="no"><strong>40</strong></span> ...will show the list of gems for the fenix gemset ...
+<span class="no">41</span> $ cd .. &amp;&amp; cd hidra
+<span class="no">42</span> $ gem list
+<span class="no">43</span> ...will show the list of gems for the hidra gemset ...    
+<span class="no">44</span> 
+<span class="no">45</span> They are different! ^_^   
+</pre></div>
+</div>
+</div>
+
+<p>More tricks:</p>
+
+<p>I don’t need the documentation that is installed for every gem. So:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> # ~/.gemrc or /etc/gemrc: 
+<span class="no">2</span> install: --no-rdoc --no-ri
+<span class="no">3</span> update: --no-rdoc --no-ri
+</pre></div>
+</div>
+</div>
+
+<p>Another one:
+Instead of </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> # .rvmrc
+<span class="no">2</span> rvm --create use  '1.9.2@Fenix'
+</pre></div>
+</div>
+</div>
+
+<p>you can write this so that it creates the gemset in whatever is the default ruby version.                           </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> <span class="c"># .rvmrc</span>
+<span class="no">2</span> <span class="c"># Either create a gemset mongoid-site or use the existing one</span>
+<span class="no">3</span> rvm gemset create <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
+<span class="no">4</span> rvm gemset use <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
+</pre></div>
+</div>
+</div>
+		                              				
+	</div>	                                              	
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'nerian-blog';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+Configuration                                                                                                  			
+		</div>                                                                                                             				
+	</div>   	
+</div>     
+   		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20768366-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>    	       				
+    </body>
+</html>

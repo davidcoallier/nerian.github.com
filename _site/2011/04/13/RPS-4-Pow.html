@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: Pow</title>
+        <link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/coderay.css">						
+    </head>
+    <body>        
+	
+		<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			<div>
+	<h2><a href="/2011/04/13/RPS-4-Pow.html">Pow</a></h2>
+	<em>Posted on 13 April 2011</em>
+	<br/>
+	<div>
+		<h3 id="summary">Summary</h3>
+
+<ul>
+  <li>What is Pow.</li>
+  <li>Installing Pow.</li>
+</ul>
+
+<h3 id="what-is-pow">What is Pow</h3>
+
+<p>I admit it. I have an addiction. I am addicted to updating all the applications of my system to the last version. Always. Every single day I check if there is something new. Now, this is not really a burden. Just <em>brew update</em> and <em>rvm @global gem update</em>. Pretty automatic.</p>
+
+<p>The problem is…I use Passenger and Nginx, exactly as stated in <a href="/2011/02/26/RPS-2-passenger_and_nginx.html" title="/2011/02/26/RPS-2-passenger_and_nginx">‘The Ruby Programmer Stack 2’</a> so every time there is an update to either Nginx or Passenger I have to go through a 10 min upgrade process. </p>
+
+<p>Today Nginx released version 1.0.0. Also Passenger has an update too. But I decided that I have had enough. My time is way too valuable to waste it in no-value things.</p>
+
+<p>Enter Pow, by <em>37 Signals.</em></p>
+
+<h3 id="installing-pow">Installing Pow</h3>
+
+<p>Install Pow. Make sure it shows the four steps. As there could be errors.             </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ curl get.pow.cx | sh
+<span class="no">2</span> *** Installing Pow 0.2.2...
+<span class="no">3</span> *** Installing local configuration files...
+<span class="no">4</span> *** Starting the Pow server...
+<span class="no">5</span> *** Installed
+</pre></div>
+</div>
+</div>
+
+<p>If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ cd ~/.pow
+<span class="no">2</span> $ ln -s /path/to/myapp
+</pre></div>
+</div>
+</div>
+
+<p>It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ ls
+<span class="no">2</span> DaVinci@ resque@
+<span class="no">3</span> $ mv DaVinci davinci
+</pre></div>
+</div>
+</div>
+
+<p>If there was any error, try this:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
+<span class="no">2</span> $ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
+<span class="no">3</span> $ curl get.pow.cx | sh
+</pre></div>
+</div>
+</div>
+
+<p>In order to update Pow, you just call </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ curl get.pow.cx | sh
+</pre></div>
+</div>
+</div>
+
+<p>So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ alias pow-update='curl get.pow.cx | sh'        
+</pre></div>
+</div>
+</div>
+
+<p>So you just do:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ pow-update
+<span class="no">2</span> *** Installing Pow 0.2.2...
+<span class="no">3</span> *** Installing local configuration files...
+<span class="no">4</span> *** Starting the Pow server...
+<span class="no">5</span> *** Installed
+</pre></div>
+</div>
+</div>
+
+<h3 id="links">Links</h3>
+
+<p><a href="http://pow.cx/" title="http://pow.cx/">http://pow.cx/</a></p>
+
+		                              				
+	</div>	                                              	
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'nerian-blog';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+Configuration                                                                                                  			
+		</div>                                                                                                             				
+	</div>   	
+</div>     
+   		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20768366-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>    	       				
+    </body>
+</html>

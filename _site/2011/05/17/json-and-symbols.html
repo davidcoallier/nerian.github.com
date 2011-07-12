@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: Did you know that JSON.encode doesn't respect symbols?</title>
+        <link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/coderay.css">						
+    </head>
+    <body>        
+	
+		<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			<div>
+	<h2><a href="/2011/05/17/json-and-symbols.html">Did you know that JSON.encode doesn't respect symbols?</a></h2>
+	<em>Posted on 17 May 2011</em>
+	<br/>
+	<div>
+		<p>Today was one of those days that instead of addressing myself as a programmer I entitle myself the title of ‘Bug Exorcist’.</p>
+
+<p>Doing bug exorcism is a very dangerous matter. Do not take it lightly for it can be your doom. The job of a Bug Exorcist is to track down devilish bugs that disguise themselves in the most elaborate ways. I will elaborate on one in particular:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no"> 1</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">086</span> &gt; require <span class="s"><span class="dl">'</span><span class="k">json</span><span class="dl">'</span></span>    
+<span class="no"> 2</span>                  
+<span class="no"> 3</span> <span class="c"># A hash that contains a string key. </span>
+<span class="no"> 4</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">065</span> &gt; arra = {<span class="s"><span class="dl">'</span><span class="k">cu</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
+<span class="no"> 5</span>  =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}
+<span class="no"> 6</span> <span class="c"># A hash that contains a symbol key.</span>
+<span class="no"> 7</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">066</span> &gt; arra2 = {<span class="ke">cu</span>: <span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
+<span class="no"> 8</span>  =&gt; {<span class="sy">:cu</span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}              
+<span class="no"> 9</span> <span class="c"># You would say they are different, won't you?</span>
+<span class="no"><strong>10</strong></span>       
+<span class="no">11</span> <span class="c"># Are you watching closely?</span>
+<span class="no">12</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">067</span> &gt; <span class="co">JSON</span>.dump(arra)
+<span class="no">13</span>  =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">{</span><span class="ch">\&quot;</span><span class="k">cu</span><span class="ch">\&quot;</span><span class="k">:</span><span class="ch">\&quot;</span><span class="k">algo</span><span class="ch">\&quot;</span><span class="k">}</span><span class="dl">&quot;</span></span>
+<span class="no">14</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">080</span> &gt; <span class="co">JSON</span>.dump(arra2)
+<span class="no">15</span>  =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">{</span><span class="ch">\&quot;</span><span class="k">cu</span><span class="ch">\&quot;</span><span class="k">:</span><span class="ch">\&quot;</span><span class="k">algo</span><span class="ch">\&quot;</span><span class="k">}</span><span class="dl">&quot;</span></span>
+<span class="no">16</span> 
+<span class="no">17</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">081</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra)) == arra
+<span class="no">18</span>  =&gt; <span class="pc">true</span>
+<span class="no">19</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">082</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2)) == arra
+<span class="no"><strong>20</strong></span>  =&gt; <span class="pc">true</span>
+<span class="no">21</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">086</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2)) == arra2
+<span class="no">22</span>  =&gt; <span class="pc">false</span>
+<span class="no">23</span> 
+<span class="no">24</span> <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra1))
+<span class="no">25</span>  =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}        
+<span class="no">26</span> <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2))
+<span class="no">27</span>  =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}
+</pre></div>
+</div>
+</div>
+
+<p>Pray with me:  I shall never use symbols when I use JSON.     </p>
+
+<p>And another perl: </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">090</span> &gt; otro={<span class="i">5</span>=&gt;<span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
+<span class="no">2</span>  =&gt; {<span class="i">5</span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>} 
+<span class="no">3</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">091</span> &gt; otro[<span class="i">5</span>]
+<span class="no">4</span>  =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span> 
+<span class="no">5</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">092</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(otro))
+<span class="no">6</span>  =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">5</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>} 
+<span class="no">7</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">093</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(otro)) == otro
+<span class="no">8</span>  =&gt; <span class="pc">false</span>     
+</pre></div>
+</div>
+</div>
+
+<p>Pray with me: Never use integers </p>
+
+<p>Or any other object, for that matter:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no"> 1</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">096</span> &gt; persona = <span class="co">Person</span>.new
+<span class="no"> 2</span>  =&gt; <span class="c">#&lt;Person:0x00000101883900&gt; </span>
+<span class="no"> 3</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">098</span> &gt; mas = {persona =&gt; <span class="s"><span class="dl">'</span><span class="k">jojo</span><span class="dl">'</span></span>}
+<span class="no"> 4</span>  =&gt; {<span class="c">#&lt;Person:0x00000101883900&gt;=&gt;&quot;jojo&quot;} </span>
+<span class="no"> 5</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">099</span> &gt; mas[persona]
+<span class="no"> 6</span>  =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">jojo</span><span class="dl">&quot;</span></span> 
+<span class="no"> 7</span> 
+<span class="no"> 8</span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">101</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(mas)) == mas
+<span class="no"> 9</span>  =&gt; <span class="pc">false</span> 
+<span class="no"><strong>10</strong></span> ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">102</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(mas)) 
+<span class="no">11</span>  =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">#&lt;Person:0x00000101883900&gt;</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">jojo</span><span class="dl">&quot;</span></span>}
+</pre></div>
+</div>
+</div>
+
+<p>Conclusion: In JSON keys are always just strings. Don’t get fancy with your keys :)</p>
+		                              				
+	</div>	                                              	
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'nerian-blog';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+Configuration                                                                                                  			
+		</div>                                                                                                             				
+	</div>   	
+</div>     
+   		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20768366-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>    	       				
+    </body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: Installing Passenger with Nginx using Homebrew and RVM in Mac OS X</title>
+        <link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/coderay.css">						
+    </head>
+    <body>        
+	
+		<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			<div>
+	<h2><a href="/2011/02/26/RPS-2-passenger_and_nginx.html">Installing Passenger with Nginx using Homebrew and RVM in Mac OS X</a></h2>
+	<em>Posted on 26 February 2011</em>
+	<br/>
+	<div>
+		<h3 id="summary">Summary:</h3>
+
+<ul>
+  <li>Install RVM.</li>
+  <li>Install Nginx with Homebrew.</li>
+  <li>Install Passenger from RVM.</li>
+  <li>Configure the couple.</li>
+  <li>Setup a Rails Project.  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Running <strong>rails s</strong> every time we want to start a Ruby on Rails server is a waste of time and terminal tabs. The best way is to use Phusion Passenger. Phussion Passenger enables us to just go to http://davinci.dev and find the server. It is automatically started. On demand.    </p>
+
+<h3 id="install-rvm">Install RVM</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ bash &lt; &lt; ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+</pre></div>
+</div>
+</div>
+
+<p>Add this snippet to the end of your .bash_profile or .zshrc</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> # This loads RVM into a shell session.
+<span class="no">2</span> [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;&amp; . &quot;$HOME/.rvm/scripts/rvm&quot;  
+</pre></div>
+</div>
+</div>
+
+<p>Close the shell and open a new one.</p>
+
+<p>Install ruby 1.9.2</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ rvm install 1.9.2
+</pre></div>
+</div>
+</div>
+
+<p>Set as default</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ rvm --default 1.9.2                                  
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-passenger-from-rvm">Install Passenger from RVM</h3>
+
+<p>Install passenger and bundler in the global gemset</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ rvm 1.9.2@global gem install passenger bundler       
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-nginx-from-homebrew">Install Nginx from Homebrew</h3>
+
+<p>Install Nginx    </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ brew install nginx --with-passenger
+</pre></div>
+</div>
+</div>
+
+<p>The install outputs instructions to make Nginx lauch at login:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
+<span class="no">2</span> 
+<span class="no">3</span> $ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
+</pre></div>
+</div>
+</div>
+
+<h3 id="configure-the-couple">Configure the couple</h3>
+
+<p>Decompress the source of Nginx.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ cd $HOME/Library/Caches/Homebrew
+<span class="no">2</span> $ tar xvf nginx-1.0.0.tar.gz
+</pre></div>
+</div>
+</div>
+
+<p>Now install the Nginx module</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ passenger-install-nginx-module
+</pre></div>
+</div>
+</div>
+
+<p>Do chose to customise your own Nginx installation.</p>
+
+<p>Your Nginx source code is located here (change it to you user name):</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> /Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
+</pre></div>
+</div>
+</div>
+
+<p>Chose to install Nginx to:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> /usr/local/Cellar/nginx/1.0.0/sbin
+</pre></div>
+</div>
+</div>
+
+<p>Click intro in the next two questions.</p>
+
+<p>At the end of the install it says that it modified Nginx config file. Don’t use that file.
+Edit /usr/local/etc/nginx/nginx.conf and add the code snippet.
+Change user name and/or passenger version.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> http {
+<span class="no">2</span>       ...
+<span class="no">3</span>       passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.6;
+<span class="no">4</span>       passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
+<span class="no">5</span>       ...
+<span class="no">6</span>   }                 
+</pre></div>
+</div>
+</div>
+
+<h3 id="set-up-a-rails-project">Set up a Rails Project</h3>
+
+<p>Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rails_env. In my case, I like to start the server on the development environment, that way the sources are reloaded every request. Very handy on the development machine. </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> server {
+<span class="no">2</span>       listen 8081;
+<span class="no">3</span>       server_name davinci.dev;
+<span class="no">4</span>       root /Users/Nerian/NetBeansProjects/DaVinci/public;
+<span class="no">5</span>       passenger_enabled on;
+<span class="no">6</span>       rails_env development;   
+<span class="no">7</span>    }                
+</pre></div>
+</div>
+</div>
+
+<p>Create a .rvmrc file on the root of your project. Change username and project name.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> if [[ -s &quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&quot; ]] ; then
+<span class="no">2</span>   . &quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&quot;
+<span class="no">3</span> else
+<span class="no">4</span>   rvm --create use  &quot;ruby-1.9.2-p180@DaVinci&quot;
+<span class="no">5</span> fi                  
+</pre></div>
+</div>
+</div>
+
+<p>Set up load paths in your Rails 3 project. This is config/setup_load_paths.rb</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no"> 1</span> if ENV['MY_RUBY_HOME'] &amp;&amp; ENV['MY_RUBY_HOME'].include?('rvm')
+<span class="no"> 2</span>   begin
+<span class="no"> 3</span>     rvm_path     = File.dirname(File.dirname(ENV['MY_RUBY_HOME']))
+<span class="no"> 4</span>     rvm_lib_path = File.join(rvm_path, 'lib')
+<span class="no"> 5</span>     $LOAD_PATH.unshift rvm_lib_path
+<span class="no"> 6</span>     require 'rvm'
+<span class="no"> 7</span>     RVM.use_from_path! File.dirname(File.dirname(__FILE__))
+<span class="no"> 8</span>   rescue LoadError
+<span class="no"> 9</span>     # RVM is unavailable at this point.
+<span class="no"><strong>10</strong></span>     raise &quot;RVM ruby lib is currently unavailable.&quot;
+<span class="no">11</span>   end
+<span class="no">12</span> end           
+</pre></div>
+</div>
+</div>
+
+<p>How do I see the logs of my application?  </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ cd yourapp/
+<span class="no">2</span> $ tail -f log/development.log
+</pre></div>
+</div>
+</div>
+
+<p>How do I restart my application?</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="no">1</span> $ touch yourapp/tmp/restart
+</pre></div>
+</div>
+</div>
+		                              				
+	</div>	                                              	
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'nerian-blog';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+Configuration                                                                                                  			
+		</div>                                                                                                             				
+	</div>   	
+</div>     
+   		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20768366-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>    	       				
+    </body>
+</html>

@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Nerian.blog</title>
+ <link href="http://nerian.github.com/atom.xml" rel="self"/>
+ <link href="http://nerian.github.com/"/>
+ <updated>2011-07-12T23:01:52+02:00</updated>
+ <id>http://nerian.github.com/</id>
+ <author>
+   <name>Gonzalo Rodríguez</name>
+   <email>siotopo@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>GOOF: Get Out Of Facebook</title>
+   <link href="http://nerian.github.com/2011/05/29/get-out-of-facebook.html"/>
+   <updated>2011-05-29T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/05/29/get-out-of-facebook</id>
+   <content type="html">&lt;p&gt;GOOF is the acronym of Get Out Of Facebook. It is a Ruby on Rails application I developed as a part of the course &lt;em&gt;Project&lt;/em&gt; at the FUNP university.                                                       &lt;/p&gt;
+
+&lt;p&gt;It is more of a technical demo than a full-fledge application. The objective was to gain some valuable experience developing Facebook applications.                                                                    &lt;/p&gt;
+
+&lt;p&gt;It is built on the top of &lt;a href=&quot;https://github.com/arsduo/koala&quot;&gt;Koala&lt;/a&gt;, a Ruby library for Facebook applications.&lt;/p&gt;
+
+&lt;p&gt;The code is available &lt;a href=&quot;https://github.com/Nerian/Goofb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And the application is running &lt;a href=&quot;http://goof.heroku.com&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Distributed rendering of an image across multiple computers with DPovray</title>
+   <link href="http://nerian.github.com/2011/05/26/dpovray.html"/>
+   <updated>2011-05-26T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/05/26/dpovray</id>
+   <content type="html">&lt;p&gt;Let go back a couple of months. Let go back to the start of the academic year. September 2010. &lt;/p&gt;
+
+&lt;p&gt;I enrolled in the Distributed System course. I was curious to see how big applications can use multiple cores – a cluster of machines – to solve complicated or massive problems.            &lt;/p&gt;
+
+&lt;p&gt;So as part of the course we had to build a distributed system. Each team consisting of three persons. The technology that we had to use was Java and Corba.&lt;/p&gt;
+
+&lt;p&gt;Now if you google what Corba is you will understand very well what my mind thought. In one word: WTF?&lt;/p&gt;
+
+&lt;p&gt;Corba is like a Balrog: Ancient, big, heavy, slow. Pure evil.&lt;/p&gt;
+
+&lt;p&gt;So I did what I always do. I did a search for alternatives. I didn’t had to search much to find better ways to solve the problem concerning the communication between processes on different machines. Specially, above all, I wanted to avoid using Java. I wanted to use Ruby and BrB. &lt;/p&gt;
+
+&lt;p&gt;So I spoke with the professors. They told me that I could do the project in any technology that I wanted, provided that I can find a team that would agree. No problem, I thought, there must be someone who wants to try something new.&lt;/p&gt;
+
+&lt;p&gt;No fucking soul answered the call. They said that they only knew Java, that they didn’t wanted to learn ruby, that everybody was going to use Java, etc.&lt;/p&gt;
+
+&lt;p&gt;My question is: What good is it to learn a technology that you will never ever use because it is so ancient that no new developments are being made? What good is it to use a technology that is slow, error prone, untested, undocumented, heavy and the complete opposite of agile? &lt;/p&gt;
+
+&lt;p&gt;The answer is: They are not software developers. They are sheep.&lt;/p&gt;
+
+&lt;p&gt;I had no choice but to join the sheep and build the software using Java and the ominous Corba. It took 4 months to build an application that rendered povray scenes using many computers. 4 months. 3 developers.&lt;/p&gt;
+
+&lt;p&gt;One would be expect a really good piece of software. So long time. So many people. So much ‘documentation’ in the course slides about Java and Corba. I will say that our application got a 19/20 in the mark, almost perfect. But for me, in the range of good software, it was a complete and utter failure. 0 points. No bullshit.&lt;/p&gt;
+
+&lt;p&gt;Here are some reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Not a single test case.&lt;/li&gt;
+  &lt;li&gt;We used Subversion. Oh man, I can’t count how many problems we have because of retarded SVN.&lt;/li&gt;
+  &lt;li&gt;We used Corba. Seriously, google about Corba. It creeps the hell out of me.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And that are only the software part of the problems. I haven’t talked about the methodology. It was almost a joke. First we develop the working software. Then we write the documention – flow diagrams, class diagrams, etc. The test part was irrelevant, nobody did testing.&lt;/p&gt;
+
+&lt;p&gt;Now, if you are with me in the agile way of developing software you must be feeling a heart attack. We were wasting days writing flow diagrams – which are supposed to help us when we START the development –  AFTER completing the software. Completely absurd. Retarded.&lt;/p&gt;
+
+&lt;p&gt;After 4 years of academic projects I can say that today universities need to rethink how they teach. They need to do it asap because the modern world has no use for the people they are training.&lt;/p&gt;
+
+&lt;p&gt;At the beginning I told my professor that even if I was going to do the Java project, I will keep developing the ruby alternative. I wanted to learn Ruby.                       &lt;/p&gt;
+
+&lt;p&gt;That was probably one of the best decisions in my life. It is the reason why this blog is alive. I read the RSpec book and tried to follow the test driven methodology. I had a lot of mistakes. If I now look at my code I think is some serious shit. That’s good, it means I am learning.&lt;/p&gt;
+
+&lt;p&gt;But I didn’t finished that ruby project. I started other projects – based in Ruby too. I read a lot about Rails; the Web development with ruby on Rails is a very good book. I learned about Capybara, Steak, Cucumber, MongoDB, Redis, RVM, Nginx, Passenger, Heroku, Stackoverflow, Sinatra, Git, RESTful services, HAML, Markdown, JSON….&lt;/p&gt;
+
+&lt;p&gt;Fiuu, man…what I have learn this year, all by myself, is much more that what I have learnt by my formal education in 3 years. I need to make a blog post about education, but now let focus on DPovray.&lt;/p&gt;
+
+&lt;p&gt;A week ago I restarted the project. Considering all the technologies that I learnt I decided trying something new: Sinatra, Resque and Redis. In a week I finished what it took 4 months and 3 people to do it in Java. I had no prior knowledge of Sinatra, Redis or Resque.&lt;/p&gt;
+
+&lt;p&gt;I think the beauty of Ruby is how simple it makes things. It let you focus on choosing the right algorithm, the right way of doing things and doesn’t get in your way.&lt;/p&gt;
+
+&lt;p&gt;The Java algorithm to merge the images used Swing. It was a hardcoded piece of shit of around 500 lines of code. Heavy. Slow. If you didn’t programmed it you won’t understand what was going on. Actually…I didn’t neither.&lt;/p&gt;
+
+&lt;p&gt;The Ruby algorithm that I used is capable of merging 200 partial images – total image being 2000x2000 pixels – in less than a second. 4 lines of code. 4 LINES! No use of files. Just an in-memory tail operation thanks to clever use of TGA images and Ruby string manipulation magic.               &lt;/p&gt;
+
+&lt;p&gt;Oh, and I used all the libraries I could find to solve my problems. If there is a library that simplify my job I use it, for sure! I started with tests and ended with working software. The documention I have is what the user needs.&lt;/p&gt;
+
+&lt;p&gt;I present you DPovray:  &lt;a href=&quot;https://github.com/Nerian/DPovray&quot;&gt;https://github.com/Nerian/DPovray&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am sure it could be done better. I am sure it has a lot of things to improve. Raise an issue at github or fork, you can count on me acting on your feedback. For I want to master Ruby land and I do want to be a good developer.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Did you know that JSON.encode doesn't respect symbols?</title>
+   <link href="http://nerian.github.com/2011/05/17/json-and-symbols.html"/>
+   <updated>2011-05-17T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/05/17/json-and-symbols</id>
+   <content type="html">&lt;p&gt;Today was one of those days that instead of addressing myself as a programmer I entitle myself the title of ‘Bug Exorcist’.&lt;/p&gt;
+
+&lt;p&gt;Doing bug exorcism is a very dangerous matter. Do not take it lightly for it can be your doom. The job of a Bug Exorcist is to track down devilish bugs that disguise themselves in the most elaborate ways. I will elaborate on one in particular:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;    
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;                  
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# A hash that contains a string key. &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;065&lt;/span&gt; &amp;gt; arra = {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# A hash that contains a symbol key.&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;066&lt;/span&gt; &amp;gt; arra2 = {&lt;span class=&quot;ke&quot;&gt;cu&lt;/span&gt;: &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;sy&quot;&gt;:cu&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}              
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# You would say they are different, won't you?&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;       
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Are you watching closely?&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;067&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)
+&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;080&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)
+&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;081&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)) == arra
+&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;082&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra2
+&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra1))
+&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}        
+&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2))
+&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pray with me:  I shall never use symbols when I use JSON.     &lt;/p&gt;
+
+&lt;p&gt;And another perl: &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;090&lt;/span&gt; &amp;gt; otro={&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;091&lt;/span&gt; &amp;gt; otro[&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;]
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;092&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro))
+&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
+&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;093&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro)) == otro
+&lt;span class=&quot;no&quot;&gt;8&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;     
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pray with me: Never use integers &lt;/p&gt;
+
+&lt;p&gt;Or any other object, for that matter:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;096&lt;/span&gt; &amp;gt; persona = &lt;span class=&quot;co&quot;&gt;Person&lt;/span&gt;.new
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt; &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;098&lt;/span&gt; &amp;gt; mas = {persona =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;=&amp;gt;&amp;quot;jojo&amp;quot;} &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;099&lt;/span&gt; &amp;gt; mas[persona]
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;101&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) == mas
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;102&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) 
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Conclusion: In JSON keys are always just strings. Don’t get fancy with your keys :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>You need a programmer to introduce a programmer or how Stackoverflow Careers rocks </title>
+   <link href="http://nerian.github.com/2011/05/14/stackoverflow-careers.html"/>
+   <updated>2011-05-14T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/05/14/stackoverflow-careers</id>
+   <content type="html">&lt;p&gt;Like most XXI century people , I have a Linkedin account. I listed my experience, education, positions, interests, etc and sent an invitation to colleges. &lt;/p&gt;
+
+&lt;p&gt;But when I look at a Linkedin profile of other developers I don’t really get to grasp what they are about. I find that Linkedin profiles doesn’t really get to represent the person they intent to introduce to potential employers. And so, that’s a failure.&lt;/p&gt;
+
+&lt;p&gt;Yesterday I received an invitation to create a profile in Stackoverflow careers. The email I received is one of the best advertising emails I have ever seen:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We’re impressed by your “ruby-on-rails” tag answers on Stack Overflow. In recognition of your generous spirit, we’d like to invite you to create a professional profile on Stack Overflow Careers 2.0.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A Careers 2.0 profile is a great place to showcase your professional work as a programmer – Stack Exchange answers, open source projects, even the books you’ve read.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Click here to accept the invitation. It’s free!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Even if you’re not looking for a new career today, your Careers 2.0 profile will be your professional home on the web. It lets your colleagues, friends, and peers know who you are and what great work you’re doing. It’s a terrific way to build your professional reputation and take your career to the next level. And it’s fun!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You’ll always have complete control over what’s in your profile, who can see it, and whether or not employers can contact you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;But please act soon: this invitation expires in 14 days, so sign up now!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Even if you decide not to join Careers 2.0, we would like to thank you for all your contributions to Stack Overflow. It wouldn’t be the same without you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Best wishes,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Joel, Jeff and The Stack Overflow Team&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now why do I think that? Here I go:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First paragraph: Instead of the obvious and false ‘My dear customer’ these guys make yourself proud of your hard work. They are saying something that is true. And they introduce you the product they want to sell as if it were a reward. That gives you a good feeling for the rest of the email.&lt;/li&gt;
+  &lt;li&gt;Second paragraph: A one line introduction to the thing they want to sell. &lt;/li&gt;
+  &lt;li&gt;Third paragraph: A quick call to action. And it tells you that it’s free.&lt;/li&gt;
+  &lt;li&gt;Fourth paragraph: Maybe you think you don’t need it, but…ey it’s free and you will need it in the future! It’s a perfect second – reinforcing – call to action.&lt;/li&gt;
+  &lt;li&gt;Fifth paragraph: Programmers like to feel in control. &lt;/li&gt;
+  &lt;li&gt;Sixth paragraph: It uses scarcity to make you act. It’s now or never.&lt;/li&gt;
+  &lt;li&gt;Seventh paragraph: Ey I am cool and you are cool, let be friends – but if you don’t want me, I cool with that. A classic line.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And it ends with a friendly good bye. Now that’s how you sell a product. &lt;/p&gt;
+
+&lt;p&gt;But what really matters it is what happens next – when you use it. Is it a good product? Does it fulfil your needs? In short, after filling in your info, can a prospective employer really feel what you are about?&lt;/p&gt;
+
+&lt;p&gt;You tell me:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://careers.stackoverflow.com/nerian&quot;&gt;http://careers.stackoverflow.com/nerian&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;PD: I have 5 invitations left, if you want one post a comment below with your email address &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The power of WebGL</title>
+   <link href="http://nerian.github.com/2011/05/13/webgl.html"/>
+   <updated>2011-05-13T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/05/13/webgl</id>
+   <content type="html">&lt;p&gt;Isn’t is cool?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ro.me/&quot;&gt;http://www.ro.me/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Fuubar</title>
+   <link href="http://nerian.github.com/2011/04/20/RPS-5-fuubar.html"/>
+   <updated>2011-04-20T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/04/20/RPS-5-fuubar</id>
+   <content type="html">&lt;h3 id=&quot;fuubar&quot;&gt;Fuubar&lt;/h3&gt;
+
+&lt;p&gt;I love programming following the Behaviour Driven Development agile methodology. In few words, it means that you write the code that makes a test pass, nothing less, nothing more. It helps me to always know what is the next piece of code I have to write, so I never wander through randoms ideas or refactorings without a purpose.&lt;/p&gt;
+
+&lt;p&gt;What I want to show you is a little gem that makes the output of your RSpec tests a little prettier.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;/images/fuubar.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jeffkreeftmeijer/fuubar&quot;&gt;https://github.com/jeffkreeftmeijer/fuubar&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Still Maintained</title>
+   <link href="http://nerian.github.com/2011/04/17/WDS-still-maintained.html"/>
+   <updated>2011-04-17T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/04/17/WDS-still-maintained</id>
+   <content type="html">&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is Still Maintained and why it’s so useful.&lt;/li&gt;
+  &lt;li&gt;Example.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-is-still-maintained-and-why-its-so-useful&quot;&gt;What is Still Maintained and why it’s so useful&lt;/h3&gt;
+
+&lt;p&gt;So every once in a while you take a look at your Github’s project list and say ‘Damn, I have got a whole bunch of issues and pull request on projects that I do not want to maintain any longer’. You can do three things.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You can ignore all of them.&lt;/li&gt;
+  &lt;li&gt;You can answer to each one of them telling that that project is no longer maintained.&lt;/li&gt;
+  &lt;li&gt;Or you can use Still Maintained.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What Still Maintained do is very simple: It gives you an elegant interface to update the status of your Github projects. &lt;/p&gt;
+
+&lt;p&gt;Now if you have, like you should, a Readme file in your Github repo you could add a magic image in it, that changes automatically to the correct status of your project. This is all handled by Still Maintained. &lt;/p&gt;
+
+&lt;p&gt;All you have to add to your Readme file is a link to an image:                                                 &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/Nerian/nerian.github.com.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/{GithubUserName}/{NameOfTheProject}.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;This is how a Still Maintained powered Readme looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Nerian/nerian.github.com&quot;&gt;https://github.com/Nerian/nerian.github.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So go ahead: &amp;lt;p&amp;gt;&lt;a href=&quot;http://stillmaintained.com/&quot;&gt;http://stillmaintained.com/&lt;/a&gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Pow</title>
+   <link href="http://nerian.github.com/2011/04/13/RPS-4-Pow.html"/>
+   <updated>2011-04-13T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/04/13/RPS-4-Pow</id>
+   <content type="html">&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is Pow.&lt;/li&gt;
+  &lt;li&gt;Installing Pow.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-is-pow&quot;&gt;What is Pow&lt;/h3&gt;
+
+&lt;p&gt;I admit it. I have an addiction. I am addicted to updating all the applications of my system to the last version. Always. Every single day I check if there is something new. Now, this is not really a burden. Just &lt;em&gt;brew update&lt;/em&gt; and &lt;em&gt;rvm @global gem update&lt;/em&gt;. Pretty automatic.&lt;/p&gt;
+
+&lt;p&gt;The problem is…I use Passenger and Nginx, exactly as stated in &lt;a href=&quot;/2011/02/26/RPS-2-passenger_and_nginx.html&quot; title=&quot;/2011/02/26/RPS-2-passenger_and_nginx&quot;&gt;‘The Ruby Programmer Stack 2’&lt;/a&gt; so every time there is an update to either Nginx or Passenger I have to go through a 10 min upgrade process. &lt;/p&gt;
+
+&lt;p&gt;Today Nginx released version 1.0.0. Also Passenger has an update too. But I decided that I have had enough. My time is way too valuable to waste it in no-value things.&lt;/p&gt;
+
+&lt;p&gt;Enter Pow, by &lt;em&gt;37 Signals.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-pow&quot;&gt;Installing Pow&lt;/h3&gt;
+
+&lt;p&gt;Install Pow. Make sure it shows the four steps. As there could be errors.             &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ curl get.pow.cx | sh
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; *** Installing Pow 0.2.2...
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; *** Installing local configuration files...
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; *** Starting the Pow server...
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; *** Installed
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd ~/.pow
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ ln -s /path/to/myapp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ ls
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; DaVinci@ resque@
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ mv DaVinci davinci
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If there was any error, try this:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ curl get.pow.cx | sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In order to update Pow, you just call &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ curl get.pow.cx | sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ alias pow-update='curl get.pow.cx | sh'        
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So you just do:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ pow-update
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; *** Installing Pow 0.2.2...
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; *** Installing local configuration files...
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; *** Starting the Pow server...
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; *** Installed
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pow.cx/&quot; title=&quot;http://pow.cx/&quot;&gt;http://pow.cx/&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Lighting fast tests with Spork on a Mongoid project</title>
+   <link href="http://nerian.github.com/2011/02/28/RPS-3-spork_and_mongoid.html"/>
+   <updated>2011-02-28T00:00:00+01:00</updated>
+   <id>http://nerian.github.com/2011/02/28/RPS-3-spork_and_mongoid</id>
+   <content type="html">&lt;h3 id=&quot;summary&quot;&gt;Summary:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We are going to set up a Rails 3 project using Mongoid and Spork.&lt;/li&gt;
+  &lt;li&gt;The full project is in &lt;a href=&quot;https://github.com/Nerian/Mongoid-spork-Rails-app-example&quot; title=&quot;github&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction:&lt;/h3&gt;
+
+&lt;p&gt;MongoDB is a document oriented database. To sum it up what it means: Flexibility. &lt;/p&gt;
+
+&lt;p&gt;Mongoid is a ORM that harness the power of MongoDB in a very elegant way. Its power lies around a very good documentation and an active community.&lt;/p&gt;
+
+&lt;p&gt;Spork is a gem designed to allow you to run your spec very quickly. How does it do that? It preloads your Rails environment. You’ll notice a difference in that your testing starts right away, instead of waiting a few seconds.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-a-rails-project&quot;&gt;Create a Rails project:&lt;/h3&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rails new mongoid-spork-example
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Configure RVM       &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd mongoid-spork-example
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ echo &amp;quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&amp;quot; &amp;gt;&amp;gt; .rvmrc
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Configure Gemfile      &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;3.0.4&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;                                                     
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;mongoid&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;2.0.0.rc.7&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;bson_ext&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; group &lt;span class=&quot;sy&quot;&gt;:development&lt;/span&gt;, &lt;span class=&quot;sy&quot;&gt;:test&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;   gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec-rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;   gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;~&amp;gt; 0.9.0.rc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# It's important to use the rc version &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;              
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Install gems&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ bundle install       
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Generate mongoid configuration file:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rails generate mongoid:config
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Empty config/database.yml&lt;/p&gt;
+
+&lt;p&gt;Open config/application and comment the line require ‘rails/all’. Add the rest:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#require 'rails/all' &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_controller/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_mailer/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;active_resource/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails/test_unit/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Run RSpec generator&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; rails g rspec:install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Run the Spork generator. This changes the spec/spec_helper.rb&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ spork --bootstrap          
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Configure spec/spec_helper.rb&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rubygems&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.prefork &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Loading more in this block will cause your tests to run faster. However,&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# if you change any configuration or code from libraries loaded here, you'll&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# need to restart spork for it take effect.&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;ENV&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;RAILS_ENV&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;] ||= &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;   require &lt;span class=&quot;co&quot;&gt;File&lt;/span&gt;.expand_path(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;../../config/environment&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;pc&quot;&gt;__FILE__&lt;/span&gt;)
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;   require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;     
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;   require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;capybara/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt;   
+&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root.join(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spec/support/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)].each {|f| require f}
+&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;RSpec&lt;/span&gt;.configure &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt; |config|
+&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt;     config.mock_with &lt;span class=&quot;sy&quot;&gt;:rspec&lt;/span&gt;    
+&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;#Add this following line to get spork working with rails 3&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt;     &lt;span class=&quot;co&quot;&gt;ActiveSupport&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;Dependencies&lt;/span&gt;.clear
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt;   &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.each_run &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# This code will be run each time you run your specs.&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt;   load &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/config/routes.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;28&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/app/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;].each { |f| load f }
+&lt;span class=&quot;no&quot;&gt;29&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;30&lt;/strong&gt;&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;           
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In order to configure Rspec to always use Spork we need to edit mongoid-spork-example/.rspec. Create it if it doesn’t exist.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; --colour
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; --drb
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ spork
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now run the tests from another tab.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rspec spec 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Instant start ^_^&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Installing Passenger with Nginx using Homebrew and RVM in Mac OS X</title>
+   <link href="http://nerian.github.com/2011/02/26/RPS-2-passenger_and_nginx.html"/>
+   <updated>2011-02-26T00:00:00+01:00</updated>
+   <id>http://nerian.github.com/2011/02/26/RPS-2-passenger_and_nginx</id>
+   <content type="html">&lt;h3 id=&quot;summary&quot;&gt;Summary:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install RVM.&lt;/li&gt;
+  &lt;li&gt;Install Nginx with Homebrew.&lt;/li&gt;
+  &lt;li&gt;Install Passenger from RVM.&lt;/li&gt;
+  &lt;li&gt;Configure the couple.&lt;/li&gt;
+  &lt;li&gt;Setup a Rails Project.  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Running &lt;strong&gt;rails s&lt;/strong&gt; every time we want to start a Ruby on Rails server is a waste of time and terminal tabs. The best way is to use Phusion Passenger. Phussion Passenger enables us to just go to http://davinci.dev and find the server. It is automatically started. On demand.    &lt;/p&gt;
+
+&lt;h3 id=&quot;install-rvm&quot;&gt;Install RVM&lt;/h3&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ bash &amp;lt; &amp;lt; ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add this snippet to the end of your .bash_profile or .zshrc&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # This loads RVM into a shell session.
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; [[ -s &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot; ]] &amp;amp;&amp;amp; . &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;  
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Close the shell and open a new one.&lt;/p&gt;
+
+&lt;p&gt;Install ruby 1.9.2&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm install 1.9.2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Set as default&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm --default 1.9.2                                  
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;install-passenger-from-rvm&quot;&gt;Install Passenger from RVM&lt;/h3&gt;
+
+&lt;p&gt;Install passenger and bundler in the global gemset&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm 1.9.2@global gem install passenger bundler       
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;install-nginx-from-homebrew&quot;&gt;Install Nginx from Homebrew&lt;/h3&gt;
+
+&lt;p&gt;Install Nginx    &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ brew install nginx --with-passenger
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The install outputs instructions to make Nginx lauch at login:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;configure-the-couple&quot;&gt;Configure the couple&lt;/h3&gt;
+
+&lt;p&gt;Decompress the source of Nginx.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd $HOME/Library/Caches/Homebrew
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ tar xvf nginx-1.0.0.tar.gz
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now install the Nginx module&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ passenger-install-nginx-module
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Do chose to customise your own Nginx installation.&lt;/p&gt;
+
+&lt;p&gt;Your Nginx source code is located here (change it to you user name):&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; /Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Chose to install Nginx to:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; /usr/local/Cellar/nginx/1.0.0/sbin
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Click intro in the next two questions.&lt;/p&gt;
+
+&lt;p&gt;At the end of the install it says that it modified Nginx config file. Don’t use that file.
+Edit /usr/local/etc/nginx/nginx.conf and add the code snippet.
+Change user name and/or passenger version.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; http {
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;       ...
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;       passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.6;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;       passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;       ...
+&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;   }                 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;set-up-a-rails-project&quot;&gt;Set up a Rails Project&lt;/h3&gt;
+
+&lt;p&gt;Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rails_env. In my case, I like to start the server on the development environment, that way the sources are reloaded every request. Very handy on the development machine. &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; server {
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;       listen 8081;
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;       server_name davinci.dev;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;       root /Users/Nerian/NetBeansProjects/DaVinci/public;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;       passenger_enabled on;
+&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;       rails_env development;   
+&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt;    }                
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Create a .rvmrc file on the root of your project. Change username and project name.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; if [[ -s &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot; ]] ; then
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;   . &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot;
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; else
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;   rvm --create use  &amp;quot;ruby-1.9.2-p180@DaVinci&amp;quot;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; fi                  
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Set up load paths in your Rails 3 project. This is config/setup_load_paths.rb&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; if ENV['MY_RUBY_HOME'] &amp;amp;&amp;amp; ENV['MY_RUBY_HOME'].include?('rvm')
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;   begin
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt;     rvm_path     = File.dirname(File.dirname(ENV['MY_RUBY_HOME']))
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;     rvm_lib_path = File.join(rvm_path, 'lib')
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;     $LOAD_PATH.unshift rvm_lib_path
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;     require 'rvm'
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;     RVM.use_from_path! File.dirname(File.dirname(__FILE__))
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;   rescue LoadError
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;     # RVM is unavailable at this point.
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;     raise &amp;quot;RVM ruby lib is currently unavailable.&amp;quot;
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;   end
+&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; end           
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;How do I see the logs of my application?  &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd yourapp/
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ tail -f log/development.log
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;How do I restart my application?&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ touch yourapp/tmp/restart
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>RVM</title>
+   <link href="http://nerian.github.com/2011/01/15/RPS-1-RVM.html"/>
+   <updated>2011-01-15T00:00:00+01:00</updated>
+   <id>http://nerian.github.com/2011/01/15/RPS-1-RVM</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I love Ruby. It is expressive. It is powerful. But above all, it has the coolest ecosystem I have ever seen. The ecosystem for a programming language is the stack of tools, practices and conventions that programmers of a particular programming language share in common. A culture that defines its members as Rubyist.  &lt;/p&gt;
+
+&lt;p&gt;The Rubyist’s mind thinks like this:  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;KISS – Keep it simple. &lt;/li&gt;
+  &lt;li&gt;DRY – Don’t repeat yourself&lt;/li&gt;
+  &lt;li&gt;Test Driven Development – Rubyist don’t write tests that checks the validity of code. They write code that passes the agreed Test. &lt;/li&gt;
+  &lt;li&gt;Agile – Rubyist embrace change. They design their applications to embrace change. &lt;/li&gt;
+  &lt;li&gt;Documentation is important, but it is not the final product. Documentation is useful, concise, to the point, with code examples. No 900 pages manual.                                                                       &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nobody said that your ruby code won’t execute unless it follows the rules I said. This is just what I have seen so far, what seems to be the usual practice, the way I perceive the Ruby culture. &lt;/p&gt;
+
+&lt;p&gt;I didn’t say anything about the language. I am just talking about the Ruby culture. I just saying that their culture, their community, it just rocks and that’s why I decide to use Ruby as my main programming language.&lt;/p&gt;
+
+&lt;p&gt;This is the first issue of a series of articles concerning Ruby and its ecosystem. Let start by setting up Ruby itself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RVM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;RVM is the &lt;strong&gt;R&lt;/strong&gt;uby &lt;strong&gt;V&lt;/strong&gt;ersion &lt;strong&gt;M&lt;/strong&gt;anager. Do you remember what I said about Rubyist’s ability to embrace change? This is the main tool. Ruby programmers usually have many versions of ruby install. Mainly 1.9 and 1.8. This is how you install it:&lt;/p&gt;
+
+&lt;p&gt;First, you need to get Git using any of these methods:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; # Any Platform:
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; From the website: http://git-scm.com/
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; # Mac OS:
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; $ brew install git  # Homebrew
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; or
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; $ port install git # Macports
+&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt; # Linux
+&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt; $ apt-get install git-core 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then install RVM:     &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # Just copy/paste this and hit enter.
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ bash &amp;lt; &amp;lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add this snippet to the end of your .bash_profile or .zshrc&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; [[ -s &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; ]] &amp;amp;&amp;amp; . &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;      
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we are going to install Ruby 1.9 without using sudo. We never use sudo.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm install 1.9.2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you run into: &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; which is not the architecture being linked (x86_64)
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; collect2: ld returned 1 exit status
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; make: *** [mkmain.sh] Error 1
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You need to install libxml2&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; brew install libxml2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, Rubyist use Gems. Gems are small pieces of functionality, like bricks, that helps you to build your big &amp;amp; cool application. &lt;/p&gt;
+
+&lt;p&gt;Normally, in order to install a gem, like rspec, you do:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ gem install rspec
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But when you do this you are installing that specific version of the RSpec gem to all users. This way, we can only have one version of that gem. But what happens if you are working in 8 projects and each one of them needs an specific version of rspec, or it will not work?&lt;/p&gt;
+
+&lt;p&gt;Enter RVM’s Gemsets.    &lt;/p&gt;
+
+&lt;p&gt;A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; # Create folder
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; $ mkdir hidra  
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; $ cd hidra                   
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; # Automatically use and/or create the gemset Hidra
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; # when entering this folder (and subfolders). 
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; # We save that conf to a .rvmrc file. 
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; # This file is automatically read by RVM.
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; $ &amp;quot;rvm --create use  '1.9.2@Hidra'&amp;quot; &amp;gt; .rvmrc 
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; # reenter the folder.
+&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; $ cd ..
+&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt; $ cd hidra
+&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt; # Now, let install many gems ^_^!
+&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt; # This will install gems under the current gemset 
+&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; # that you are using, that's is the Hidra gemset. 
+&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt; $ gem install jekyll
+&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt; Building native extensions.  This could take a while...
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt; Successfully installed liquid-2.2.2
+&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; Successfully installed fast-stemmer-1.0.0
+&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt; Successfully installed classifier-1.3.3
+&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; Successfully installed directory_watcher-1.3.2
+&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; Successfully installed syntax-1.0.0
+&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt; Successfully installed maruku-0.6.0
+&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; Successfully installed jekyll-0.10.0
+&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt; 7 gems installed  
+&lt;span class=&quot;no&quot;&gt;28&lt;/span&gt;    
+&lt;span class=&quot;no&quot;&gt;29&lt;/span&gt; # Now lets create the project Fenix.
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;30&lt;/strong&gt;&lt;/span&gt; $ cd ..
+&lt;span class=&quot;no&quot;&gt;31&lt;/span&gt; $ mkdir fenix
+&lt;span class=&quot;no&quot;&gt;32&lt;/span&gt; $ &amp;quot;rvm --create use  '1.9.2@Fenix'&amp;quot; &amp;gt; .rvmrc
+&lt;span class=&quot;no&quot;&gt;33&lt;/span&gt; $ gem install rails
+&lt;span class=&quot;no&quot;&gt;34&lt;/span&gt; ...large output ... 
+&lt;span class=&quot;no&quot;&gt;35&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;36&lt;/span&gt; # Now let check that we have truly have separate sets of gems. 
+&lt;span class=&quot;no&quot;&gt;37&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;38&lt;/span&gt; $ gem list
+&lt;span class=&quot;no&quot;&gt;39&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;40&lt;/strong&gt;&lt;/span&gt; ...will show the list of gems for the fenix gemset ...
+&lt;span class=&quot;no&quot;&gt;41&lt;/span&gt; $ cd .. &amp;amp;&amp;amp; cd hidra
+&lt;span class=&quot;no&quot;&gt;42&lt;/span&gt; $ gem list
+&lt;span class=&quot;no&quot;&gt;43&lt;/span&gt; ...will show the list of gems for the hidra gemset ...    
+&lt;span class=&quot;no&quot;&gt;44&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt;45&lt;/span&gt; They are different! ^_^   
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;More tricks:&lt;/p&gt;
+
+&lt;p&gt;I don’t need the documentation that is installed for every gem. So:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # ~/.gemrc or /etc/gemrc: 
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; install: --no-rdoc --no-ri
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; update: --no-rdoc --no-ri
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Another one:
+Instead of &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # .rvmrc
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; rvm --create use  '1.9.2@Fenix'
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;you can write this so that it creates the gemset in whatever is the default ruby version.                           &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# .rvmrc&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Either create a gemset mongoid-site or use the existing one&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; rvm gemset create &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; rvm gemset use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Wait a minute, not a Wordpress blog?</title>
+   <link href="http://nerian.github.com/2010/11/02/So-you-have-a-blog.html"/>
+   <updated>2010-11-02T00:00:00+01:00</updated>
+   <id>http://nerian.github.com/2010/11/02/So-you-have-a-blog</id>
+   <content type="html">&lt;p&gt;This is a genuine html 5 and css 3 static web page generated using Jekyll and hosted at GitHub. Isn’t it cool?&lt;/p&gt;
+
+&lt;p&gt;I can just write this post using my favourite text editor, Textmate, and use Git to upload everything to GitHub. Then GitHub automatically parses everything through Jekyll and voilà, the dish is served!   &lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;&lt;img src=&quot;/images/way_to_work.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Big thanks to Tom Preston-Werner for creating Jekyll and Vincent Driessen for design inspiration.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll : &lt;a href=&quot;https://github.com/mojombo/jekyll&quot; title=&quot;Link&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ 
+</feed>
