@@ -4,13 +4,66 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-07-13T01:23:12+02:00</updated>
+ <updated>2011-07-13T03:42:29+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
    <email>siotopo@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>A new website</title>
+   <link href="http://nerian.github.com/2011/07/13/new-website.html"/>
+   <updated>2011-07-13T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/07/13/new-website</id>
+   <content type="html">&lt;p&gt;If there is something Apple taught the world is that the most important thing is not really creating something new, but evolve, redesign, refactor what it is already in front of you.&lt;/p&gt;
+
+&lt;p&gt;Half a year ago I created this blog. It was intended to be just a mere diary, a chronology of events, regarding my adventure amid the Ruby lands.       &lt;/p&gt;
+
+&lt;p&gt;I decided at that moment that I wanted my blog to be developed in Ruby. I used Jekyll, a static site generator and Github pages to host it.&lt;/p&gt;
+
+&lt;p&gt;Today I am launching a new site. Totally resigned in style, core and principles. &lt;/p&gt;
+
+&lt;p&gt;I still use Jekyll to generate the contents, but it is no longer served by Github. It is now served by a pure Rack application hosted at Heroku.&lt;/p&gt;
+
+&lt;p&gt;The config.ru looks like this:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
+&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Also I switched from using Pygments to using Coderay. I use this awesome &lt;a href=&quot;https://github.com/Nerian/nerian.github.com/blob/master/css/coderay.css&quot;&gt;style sheet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally I switched from Markdown to Kramdown. Styling code blocks is quite appealing. This how the previous block of code is styled:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#Kramdown with coderay:&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;     require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; 
+&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt;     use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
+&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;     run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}        
+&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; {&lt;span class=&quot;sy&quot;&gt;:lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And finally I bought a domain name with my nickname :)&lt;/p&gt;
+
+&lt;p&gt;The new website resides at &lt;a href=&quot;http://nerian.es&quot;&gt;nerian.es&lt;/a&gt; and the code is at &lt;a href=&quot;https://github.com/Nerian/nerian.github.com&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>GOOF: Get Out Of Facebook</title>
