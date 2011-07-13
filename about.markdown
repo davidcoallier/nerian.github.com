@@ -3,7 +3,7 @@ layout: master
 title: About me
 ---            
 
-# Who are you?  
+<div style='text-align: center'><img src='/images/avatar.png'/></div>
 
 My name is Gonzalo Rodríguez-Baltanás Díaz, 22, and I am a specialist in web application development with Ruby and NoSQL databases such as MongoDB.                                     
                                                
