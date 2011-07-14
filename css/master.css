@@ -124,4 +124,8 @@ p.not_indented{
 }
 .third-image{
 	padding-right: 10px;
+}      
+
+#disqus_thread{
+	margin-top: 50px;
 }
