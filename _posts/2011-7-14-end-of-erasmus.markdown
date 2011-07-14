@@ -33,4 +33,4 @@ The name of this secret project is Davinci. It is going to be the best e-learnin
 
 Thank you for giving me an awesome education. I hope that with this your work will be even more awesome. 
 
-You will hear about it when it ready :)
+You will hear about it when it is ready :)
