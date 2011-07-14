@@ -6,5 +6,5 @@ class Blog < Thor
     `git push`             
     puts '# Deploying to Heroku'
     `git push heroku`
-  end         
+  end                     
 end
