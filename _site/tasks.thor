@@ -1,10 +1,13 @@
-class Blog < Thor
+class Deploy < Thor::Group
+  desc "Deploy to heroku and push to github"
   
-  desc "deploy", "Deploy to heroku and push to github"
-  def deploy                           
+  def one                           
     puts '# Pushing to github'
-    `git push`             
+    `git push`                 
+  end                      
+  
+  def two
     puts '# Deploying to Heroku'
     `git push heroku`
-  end                     
+  end
 end

@@ -7,7 +7,7 @@ title: About me
 
 My name is Gonzalo Rodríguez-Baltanás Díaz, 22, and I am a specialist in web application development with Ruby and NoSQL databases such as MongoDB.                                     
                                                
-I am freelance developer, meaning that I am available to work in your projects for a fixed weekly salary. Check the <a href='/hireme.html'>hire section</a> for more information regarding the way I work.
+I am a freelance developer, meaning that I am available to work in your projects for a fixed weekly salary. Check the <a href='/hireme.html'>hire section</a> for more information regarding the way I work.
 
 I have a degree in Computer Science with a specialisation in economy and management.
 
