@@ -41,6 +41,6 @@ Draw a big globe. It is the global market. Each one of your competitors has a st
 
 Avoid dumb answers. Don't deceive yourself. 'We are going to have a much better design!' is __not__ an answer. Showing me an actual design in a piece of paper where I can see that you have discovered a better way to enhance the user experience __is__ an answer. 
 
-Tell me who is in the team. That way I can google them and see what they had done and how awesome their work is and fantasize about the cool things we can do together.
+Tell me who is in the team. That way I can google them and see what they had done and how awesome their work is and fantasise about the cool things we can do together.
 
 Here is an email address where you can find me: siotopo @ gmail.com
