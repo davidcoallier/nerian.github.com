@@ -57,7 +57,7 @@
 <h3 id="create-a-rails-project">Create a Rails project:</h3>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ rails new mongoid-spork-example
+  <div class="code"><pre>$ rails new mongoid-spork-example
 </pre></div>
 </div>
 </div>
@@ -65,8 +65,8 @@
 <p>Configure RVM       </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ cd mongoid-spork-example
-<span class="no">2</span> $ echo &quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&quot; &gt;&gt; .rvmrc
+  <div class="code"><pre>$ cd mongoid-spork-example
+$ echo &quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&quot; &gt;&gt; .rvmrc
 </pre></div>
 </div>
 </div>
@@ -74,13 +74,13 @@
 <p>Configure Gemfile      </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> gem <span class="s"><span class="dl">'</span><span class="k">rails</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">3.0.4</span><span class="dl">'</span></span>                                                     
-<span class="no">2</span> gem <span class="s"><span class="dl">&quot;</span><span class="k">mongoid</span><span class="dl">&quot;</span></span>, <span class="s"><span class="dl">&quot;</span><span class="k">2.0.0.rc.7</span><span class="dl">&quot;</span></span>
-<span class="no">3</span> gem <span class="s"><span class="dl">'</span><span class="k">bson_ext</span><span class="dl">'</span></span>
-<span class="no">4</span> group <span class="sy">:development</span>, <span class="sy">:test</span> <span class="r">do</span>
-<span class="no">5</span>   gem <span class="s"><span class="dl">'</span><span class="k">rspec-rails</span><span class="dl">'</span></span>
-<span class="no">6</span>   gem <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">~&gt; 0.9.0.rc</span><span class="dl">'</span></span> <span class="c"># It's important to use the rc version </span>
-<span class="no">7</span> <span class="r">end</span>              
+  <div class="code"><pre>gem <span class="s"><span class="dl">'</span><span class="k">rails</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">3.0.4</span><span class="dl">'</span></span>                                                     
+gem <span class="s"><span class="dl">&quot;</span><span class="k">mongoid</span><span class="dl">&quot;</span></span>, <span class="s"><span class="dl">&quot;</span><span class="k">2.0.0.rc.7</span><span class="dl">&quot;</span></span>
+gem <span class="s"><span class="dl">'</span><span class="k">bson_ext</span><span class="dl">'</span></span>
+group <span class="sy">:development</span>, <span class="sy">:test</span> <span class="r">do</span>
+  gem <span class="s"><span class="dl">'</span><span class="k">rspec-rails</span><span class="dl">'</span></span>
+  gem <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">~&gt; 0.9.0.rc</span><span class="dl">'</span></span> <span class="c"># It's important to use the rc version </span>
+<span class="r">end</span>              
 </pre></div>
 </div>
 </div>
@@ -88,7 +88,7 @@
 <p>Install gems</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ bundle install       
+  <div class="code"><pre>$ bundle install       
 </pre></div>
 </div>
 </div>
@@ -96,7 +96,7 @@
 <p>Generate mongoid configuration file:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ rails generate mongoid:config
+  <div class="code"><pre>$ rails generate mongoid:config
 </pre></div>
 </div>
 </div>
@@ -106,11 +106,11 @@
 <p>Open config/application and comment the line require ‘rails/all’. Add the rest:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> <span class="c">#require 'rails/all' </span>
-<span class="no">2</span> require <span class="s"><span class="dl">&quot;</span><span class="k">action_controller/railtie</span><span class="dl">&quot;</span></span>
-<span class="no">3</span> require <span class="s"><span class="dl">&quot;</span><span class="k">action_mailer/railtie</span><span class="dl">&quot;</span></span>
-<span class="no">4</span> require <span class="s"><span class="dl">&quot;</span><span class="k">active_resource/railtie</span><span class="dl">&quot;</span></span>
-<span class="no">5</span> require <span class="s"><span class="dl">&quot;</span><span class="k">rails/test_unit/railtie</span><span class="dl">&quot;</span></span>  
+  <div class="code"><pre><span class="c">#require 'rails/all' </span>
+require <span class="s"><span class="dl">&quot;</span><span class="k">action_controller/railtie</span><span class="dl">&quot;</span></span>
+require <span class="s"><span class="dl">&quot;</span><span class="k">action_mailer/railtie</span><span class="dl">&quot;</span></span>
+require <span class="s"><span class="dl">&quot;</span><span class="k">active_resource/railtie</span><span class="dl">&quot;</span></span>
+require <span class="s"><span class="dl">&quot;</span><span class="k">rails/test_unit/railtie</span><span class="dl">&quot;</span></span>  
 </pre></div>
 </div>
 </div>
@@ -118,7 +118,7 @@
 <p>Run RSpec generator</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> rails g rspec:install
+  <div class="code"><pre>rails g rspec:install
 </pre></div>
 </div>
 </div>
@@ -126,7 +126,7 @@
 <p>Run the Spork generator. This changes the spec/spec_helper.rb</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ spork --bootstrap          
+  <div class="code"><pre>$ spork --bootstrap          
 </pre></div>
 </div>
 </div>
@@ -134,36 +134,36 @@
 <p>Configure spec/spec_helper.rb</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no"> 1</span> require <span class="s"><span class="dl">'</span><span class="k">rubygems</span><span class="dl">'</span></span>
-<span class="no"> 2</span> require <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>
-<span class="no"> 3</span> 
-<span class="no"> 4</span> <span class="co">Spork</span>.prefork <span class="r">do</span>
-<span class="no"> 5</span>   <span class="c"># Loading more in this block will cause your tests to run faster. However,</span>
-<span class="no"> 6</span>   <span class="c"># if you change any configuration or code from libraries loaded here, you'll</span>
-<span class="no"> 7</span>   <span class="c"># need to restart spork for it take effect.</span>
-<span class="no"> 8</span>   <span class="co">ENV</span>[<span class="s"><span class="dl">&quot;</span><span class="k">RAILS_ENV</span><span class="dl">&quot;</span></span>] ||= <span class="s"><span class="dl">'</span><span class="k">test</span><span class="dl">'</span></span>
-<span class="no"> 9</span>   require <span class="co">File</span>.expand_path(<span class="s"><span class="dl">&quot;</span><span class="k">../../config/environment</span><span class="dl">&quot;</span></span>, <span class="pc">__FILE__</span>)
-<span class="no"><strong>10</strong></span>   require <span class="s"><span class="dl">'</span><span class="k">rspec/rails</span><span class="dl">'</span></span>     
-<span class="no">11</span>   require <span class="s"><span class="dl">'</span><span class="k">capybara/rails</span><span class="dl">'</span></span>
-<span class="no">12</span>   
-<span class="no">13</span>   <span class="co">Dir</span>[<span class="co">Rails</span>.root.join(<span class="s"><span class="dl">&quot;</span><span class="k">spec/support/**/*.rb</span><span class="dl">&quot;</span></span>)].each {|f| require f}
-<span class="no">14</span> 
-<span class="no">15</span>   <span class="co">RSpec</span>.configure <span class="r">do</span> |config|
-<span class="no">16</span>     config.mock_with <span class="sy">:rspec</span>    
-<span class="no">17</span> 
-<span class="no">18</span>     <span class="c">#Add this following line to get spork working with rails 3</span>
-<span class="no">19</span>     <span class="co">ActiveSupport</span>::<span class="co">Dependencies</span>.clear
-<span class="no"><strong>20</strong></span>   <span class="r">end</span>
-<span class="no">21</span> 
-<span class="no">22</span> <span class="r">end</span>
-<span class="no">23</span> 
-<span class="no">24</span> <span class="co">Spork</span>.each_run <span class="r">do</span>
-<span class="no">25</span>   <span class="c"># This code will be run each time you run your specs.</span>
-<span class="no">26</span> 
-<span class="no">27</span>   load <span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/config/routes.rb</span><span class="dl">&quot;</span></span>
-<span class="no">28</span>   <span class="co">Dir</span>[<span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/app/**/*.rb</span><span class="dl">&quot;</span></span>].each { |f| load f }
-<span class="no">29</span> 
-<span class="no"><strong>30</strong></span> <span class="r">end</span>           
+  <div class="code"><pre>require <span class="s"><span class="dl">'</span><span class="k">rubygems</span><span class="dl">'</span></span>
+require <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>
+
+<span class="co">Spork</span>.prefork <span class="r">do</span>
+  <span class="c"># Loading more in this block will cause your tests to run faster. However,</span>
+  <span class="c"># if you change any configuration or code from libraries loaded here, you'll</span>
+  <span class="c"># need to restart spork for it take effect.</span>
+  <span class="co">ENV</span>[<span class="s"><span class="dl">&quot;</span><span class="k">RAILS_ENV</span><span class="dl">&quot;</span></span>] ||= <span class="s"><span class="dl">'</span><span class="k">test</span><span class="dl">'</span></span>
+  require <span class="co">File</span>.expand_path(<span class="s"><span class="dl">&quot;</span><span class="k">../../config/environment</span><span class="dl">&quot;</span></span>, <span class="pc">__FILE__</span>)
+  require <span class="s"><span class="dl">'</span><span class="k">rspec/rails</span><span class="dl">'</span></span>     
+  require <span class="s"><span class="dl">'</span><span class="k">capybara/rails</span><span class="dl">'</span></span>
+  
+  <span class="co">Dir</span>[<span class="co">Rails</span>.root.join(<span class="s"><span class="dl">&quot;</span><span class="k">spec/support/**/*.rb</span><span class="dl">&quot;</span></span>)].each {|f| require f}
+
+  <span class="co">RSpec</span>.configure <span class="r">do</span> |config|
+    config.mock_with <span class="sy">:rspec</span>    
+
+    <span class="c">#Add this following line to get spork working with rails 3</span>
+    <span class="co">ActiveSupport</span>::<span class="co">Dependencies</span>.clear
+  <span class="r">end</span>
+
+<span class="r">end</span>
+
+<span class="co">Spork</span>.each_run <span class="r">do</span>
+  <span class="c"># This code will be run each time you run your specs.</span>
+
+  load <span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/config/routes.rb</span><span class="dl">&quot;</span></span>
+  <span class="co">Dir</span>[<span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/app/**/*.rb</span><span class="dl">&quot;</span></span>].each { |f| load f }
+
+<span class="r">end</span>           
 </pre></div>
 </div>
 </div>
@@ -171,8 +171,8 @@
 <p>In order to configure Rspec to always use Spork we need to edit mongoid-spork-example/.rspec. Create it if it doesn’t exist.</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> --colour
-<span class="no">2</span> --drb
+  <div class="code"><pre>--colour
+--drb
 </pre></div>
 </div>
 </div>
@@ -180,7 +180,7 @@
 <p>We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ spork
+  <div class="code"><pre>$ spork
 </pre></div>
 </div>
 </div>
@@ -188,7 +188,7 @@
 <p>Now run the tests from another tab.</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ rspec spec 
+  <div class="code"><pre>$ rspec spec 
 </pre></div>
 </div>
 </div>

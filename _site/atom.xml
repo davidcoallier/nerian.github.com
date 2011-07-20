@@ -4,13 +4,108 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-07-18T03:50:54+02:00</updated>
+ <updated>2011-07-20T02:29:18+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
    <email>siotopo@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Simple Gemset – because 7 seconds is a lot of time!</title>
+   <link href="http://nerian.github.com/2011/07/20/simple_generator.html"/>
+   <updated>2011-07-20T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/07/20/simple_generator</id>
+   <content type="html">&lt;p&gt;You know those situations. Every Ruby developer go through this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You spot an interesting Ruby project at github&lt;/li&gt;
+  &lt;li&gt;You want to play with it, so you git clone it.&lt;/li&gt;
+  &lt;li&gt;You don’t want to turn your gem space into a mess, so you lose 7 seconds typing a boring .rvmrc file that just creates a new gemset for whatever ruby version you happen to be using.&lt;/li&gt;
+  &lt;li&gt;You play with your new toy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don’t want to lose those 7 seconds. 7 seconds are better used to make a quick tweet or visiting your Facebook profile.&lt;/p&gt;
+
+&lt;p&gt;simple_gemset is a gem that helps you to create such .rvmrc file.&lt;/p&gt;
+
+&lt;p&gt;Just like this:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;er&quot;&gt;$&lt;/span&gt; mkdir my_new_project
+&lt;span class=&quot;er&quot;&gt;$&lt;/span&gt; cd my_new_project
+
+&lt;span class=&quot;er&quot;&gt;$&lt;/span&gt; simple_gemset
+    create  .rvmrc               
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That generates a .rvmrc like this:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Generated with Simple_gemset  &lt;/span&gt;
+rvm gemset create &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my_new_project&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# current folder&lt;/span&gt;
+rvm gemset use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my_new_project&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It also support setting the gemset name and/or Ruby version.&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;er&quot;&gt;$&lt;/span&gt; simple_gemset my_gemset --ruby
+    &lt;span class=&quot;co&quot;&gt;Choose&lt;/span&gt; which &lt;span class=&quot;co&quot;&gt;Ruby&lt;/span&gt; version &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt; you want to use
+    &lt;span class=&quot;i&quot;&gt;0&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.8&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;6&lt;/span&gt;-p420
+    &lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.8&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;6&lt;/span&gt;-head
+    &lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.8&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;7&lt;/span&gt;-p352
+    &lt;span class=&quot;i&quot;&gt;3&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.8&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;7&lt;/span&gt;-head
+    &lt;span class=&quot;i&quot;&gt;4&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;-p378
+    &lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;-p431
+    &lt;span class=&quot;i&quot;&gt;6&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;-head
+    &lt;span class=&quot;i&quot;&gt;7&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180
+    &lt;span class=&quot;i&quot;&gt;8&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p290
+    &lt;span class=&quot;i&quot;&gt;9&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-head
+    &lt;span class=&quot;i&quot;&gt;10&lt;/span&gt;: ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;3&lt;/span&gt;-head
+    &lt;span class=&quot;i&quot;&gt;11&lt;/span&gt;: ruby-head
+    &lt;span class=&quot;i&quot;&gt;12&lt;/span&gt;: goruby
+    &lt;span class=&quot;i&quot;&gt;13&lt;/span&gt;: jruby-&lt;span class=&quot;fl&quot;&gt;1.2&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;i&quot;&gt;14&lt;/span&gt;: jruby-&lt;span class=&quot;fl&quot;&gt;1.3&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;i&quot;&gt;15&lt;/span&gt;: jruby-&lt;span class=&quot;fl&quot;&gt;1.4&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;i&quot;&gt;16&lt;/span&gt;: jruby-&lt;span class=&quot;fl&quot;&gt;1.6&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;i&quot;&gt;17&lt;/span&gt;: jruby-&lt;span class=&quot;fl&quot;&gt;1.6&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;      
+    &lt;span class=&quot;co&quot;&gt;Which&lt;/span&gt; ruby? &lt;span class=&quot;co&quot;&gt;Just&lt;/span&gt; tell me the &lt;span class=&quot;ke&quot;&gt;number&lt;/span&gt;: &lt;span class=&quot;i&quot;&gt;7&lt;/span&gt;
+
+    create  .rvmrc                            
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Which generates a .rvmrc file like this:	      &lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;c&quot;&gt;# Generated with Simple_gemset&lt;/span&gt;
+    rvm use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ruby-1.9.2-p180&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+    rvm gemset create &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my_gemset&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+    rvm gemset use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my_gemset&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;                              
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Install it with:&lt;/p&gt;
+
+&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;er&quot;&gt;$&lt;/span&gt; gem install &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;simple_gemset&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Code and further examples at:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Nerian/simple_gemset&quot;&gt;https://github.com/Nerian/simple_gemset&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Thoughts of an Erasmus student, an anthropological Post-Mortem</title>
@@ -69,13 +164,13 @@
 &lt;p&gt;The config.ru looks like this:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
+    &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
+    &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
+    &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
+run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -85,15 +180,15 @@
 &lt;p&gt;And finally I switched from Markdown to Kramdown. Styling code blocks is quite appealing. This how the previous block of code is styled:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#Kramdown with coderay:&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;     require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt;     use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;     run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}        
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; {&lt;span class=&quot;sy&quot;&gt;:lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#Kramdown with coderay:&lt;/span&gt;
+    require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rack/contrib/try_static&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; 
+    use &lt;span class=&quot;co&quot;&gt;Rack&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;TryStatic&lt;/span&gt;, 
+        &lt;span class=&quot;sy&quot;&gt;:root&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;,  &lt;span class=&quot;c&quot;&gt;# static files root dir&lt;/span&gt;
+        &lt;span class=&quot;sy&quot;&gt;:urls&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;%w[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;]&lt;/span&gt;&lt;/span&gt;,     &lt;span class=&quot;c&quot;&gt;# match all requests &lt;/span&gt;
+        &lt;span class=&quot;sy&quot;&gt;:try&lt;/span&gt; =&amp;gt; [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;] &lt;span class=&quot;c&quot;&gt;# try these postfixes sequentially&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# otherwise 404 NotFound&lt;/span&gt;
+    run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Content-Type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;text/html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}, [&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;whoops! Not Found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;]]}        
+{&lt;span class=&quot;sy&quot;&gt;:lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -198,33 +293,33 @@
 &lt;p&gt;Doing bug exorcism is a very dangerous matter. Do not take it lightly for it can be your doom. The job of a Bug Exorcist is to track down devilish bugs that disguise themselves in the most elaborate ways. I will elaborate on one in particular:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;    
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;                  
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# A hash that contains a string key. &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;065&lt;/span&gt; &amp;gt; arra = {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# A hash that contains a symbol key.&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;066&lt;/span&gt; &amp;gt; arra2 = {&lt;span class=&quot;ke&quot;&gt;cu&lt;/span&gt;: &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;sy&quot;&gt;:cu&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}              
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# You would say they are different, won't you?&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;       
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Are you watching closely?&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;067&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)
-&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;080&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)
-&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;081&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)) == arra
-&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;082&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra2
-&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra1))
-&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}        
-&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2))
-&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;    
+                 
+&lt;span class=&quot;c&quot;&gt;# A hash that contains a string key. &lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;065&lt;/span&gt; &amp;gt; arra = {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+ =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+&lt;span class=&quot;c&quot;&gt;# A hash that contains a symbol key.&lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;066&lt;/span&gt; &amp;gt; arra2 = {&lt;span class=&quot;ke&quot;&gt;cu&lt;/span&gt;: &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+ =&amp;gt; {&lt;span class=&quot;sy&quot;&gt;:cu&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}              
+&lt;span class=&quot;c&quot;&gt;# You would say they are different, won't you?&lt;/span&gt;
+      
+&lt;span class=&quot;c&quot;&gt;# Are you watching closely?&lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;067&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)
+ =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;080&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)
+ =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;081&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra)) == arra
+ =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;082&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra
+ =&amp;gt; &lt;span class=&quot;pc&quot;&gt;true&lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;086&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2)) == arra2
+ =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;
+
+&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra1))
+ =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}        
+&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(arra2))
+ =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;cu&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -234,14 +329,14 @@
 &lt;p&gt;And another perl: &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;090&lt;/span&gt; &amp;gt; otro={&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;091&lt;/span&gt; &amp;gt; otro[&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;]
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;092&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro))
-&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
-&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;093&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro)) == otro
-&lt;span class=&quot;no&quot;&gt;8&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;     
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;090&lt;/span&gt; &amp;gt; otro={&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+ =&amp;gt; {&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;091&lt;/span&gt; &amp;gt; otro[&lt;span class=&quot;i&quot;&gt;5&lt;/span&gt;]
+ =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;092&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro))
+ =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;algo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;} 
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;093&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(otro)) == otro
+ =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt;     
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -251,17 +346,17 @@
 &lt;p&gt;Or any other object, for that matter:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;096&lt;/span&gt; &amp;gt; persona = &lt;span class=&quot;co&quot;&gt;Person&lt;/span&gt;.new
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt; &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;098&lt;/span&gt; &amp;gt; mas = {persona =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;=&amp;gt;&amp;quot;jojo&amp;quot;} &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;099&lt;/span&gt; &amp;gt; mas[persona]
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;101&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) == mas
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;102&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) 
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;  =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;096&lt;/span&gt; &amp;gt; persona = &lt;span class=&quot;co&quot;&gt;Person&lt;/span&gt;.new
+ =&amp;gt; &lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt; &lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;098&lt;/span&gt; &amp;gt; mas = {persona =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;}
+ =&amp;gt; {&lt;span class=&quot;c&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;=&amp;gt;&amp;quot;jojo&amp;quot;} &lt;/span&gt;
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;099&lt;/span&gt; &amp;gt; mas[persona]
+ =&amp;gt; &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; 
+
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;101&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) == mas
+ =&amp;gt; &lt;span class=&quot;pc&quot;&gt;false&lt;/span&gt; 
+ruby-&lt;span class=&quot;fl&quot;&gt;1.9&lt;/span&gt;.&lt;span class=&quot;i&quot;&gt;2&lt;/span&gt;-p180 :&lt;span class=&quot;i&quot;&gt;102&lt;/span&gt; &amp;gt; &lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.parse(&lt;span class=&quot;co&quot;&gt;JSON&lt;/span&gt;.dump(mas)) 
+ =&amp;gt; {&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;#&amp;lt;Person:0x00000101883900&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;=&amp;gt;&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;jojo&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -400,9 +495,9 @@
 &lt;p&gt;All you have to add to your Readme file is a link to an image:                                                 &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/Nerian/nerian.github.com.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/{GithubUserName}/{NameOfTheProject}.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/Nerian/nerian.github.com.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;ta&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;an&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;http://stillmaintained.com/{GithubUserName}/{NameOfTheProject}.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ta&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -445,11 +540,11 @@
 &lt;p&gt;Install Pow. Make sure it shows the four steps. As there could be errors.             &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ curl get.pow.cx | sh
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; *** Installing Pow 0.2.2...
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; *** Installing local configuration files...
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; *** Starting the Pow server...
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; *** Installed
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ curl get.pow.cx | sh
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -457,8 +552,8 @@
 &lt;p&gt;If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd ~/.pow
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ ln -s /path/to/myapp
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ cd ~/.pow
+$ ln -s /path/to/myapp
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -466,9 +561,9 @@
 &lt;p&gt;It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ ls
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; DaVinci@ resque@
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ mv DaVinci davinci
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ ls
+DaVinci@ resque@
+$ mv DaVinci davinci
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -476,9 +571,9 @@
 &lt;p&gt;If there was any error, try this:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ curl get.pow.cx | sh
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
+$ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
+$ curl get.pow.cx | sh
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -486,7 +581,7 @@
 &lt;p&gt;In order to update Pow, you just call &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ curl get.pow.cx | sh
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ curl get.pow.cx | sh
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -494,7 +589,7 @@
 &lt;p&gt;So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ alias pow-update='curl get.pow.cx | sh'        
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ alias pow-update='curl get.pow.cx | sh'        
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -502,11 +597,11 @@
 &lt;p&gt;So you just do:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ pow-update
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; *** Installing Pow 0.2.2...
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; *** Installing local configuration files...
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; *** Starting the Pow server...
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; *** Installed
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ pow-update
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -541,7 +636,7 @@
 &lt;h3 id=&quot;create-a-rails-project&quot;&gt;Create a Rails project:&lt;/h3&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rails new mongoid-spork-example
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rails new mongoid-spork-example
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -549,8 +644,8 @@
 &lt;p&gt;Configure RVM       &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd mongoid-spork-example
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ echo &amp;quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&amp;quot; &amp;gt;&amp;gt; .rvmrc
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ cd mongoid-spork-example
+$ echo &amp;quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&amp;quot; &amp;gt;&amp;gt; .rvmrc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -558,13 +653,13 @@
 &lt;p&gt;Configure Gemfile      &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;3.0.4&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;                                                     
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;mongoid&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;2.0.0.rc.7&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;bson_ext&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; group &lt;span class=&quot;sy&quot;&gt;:development&lt;/span&gt;, &lt;span class=&quot;sy&quot;&gt;:test&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;   gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec-rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;   gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;~&amp;gt; 0.9.0.rc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# It's important to use the rc version &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;              
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;3.0.4&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;                                                     
+gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;mongoid&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;2.0.0.rc.7&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;bson_ext&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+group &lt;span class=&quot;sy&quot;&gt;:development&lt;/span&gt;, &lt;span class=&quot;sy&quot;&gt;:test&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+  gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec-rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+  gem &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;~&amp;gt; 0.9.0.rc&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# It's important to use the rc version &lt;/span&gt;
+&lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;              
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -572,7 +667,7 @@
 &lt;p&gt;Install gems&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ bundle install       
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ bundle install       
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -580,7 +675,7 @@
 &lt;p&gt;Generate mongoid configuration file:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rails generate mongoid:config
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rails generate mongoid:config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -590,11 +685,11 @@
 &lt;p&gt;Open config/application and comment the line require ‘rails/all’. Add the rest:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#require 'rails/all' &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_controller/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_mailer/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;active_resource/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails/test_unit/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;  
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#require 'rails/all' &lt;/span&gt;
+require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_controller/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;action_mailer/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;active_resource/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rails/test_unit/railtie&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;  
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -602,7 +697,7 @@
 &lt;p&gt;Run RSpec generator&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; rails g rspec:install
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;rails g rspec:install
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -610,7 +705,7 @@
 &lt;p&gt;Run the Spork generator. This changes the spec/spec_helper.rb&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ spork --bootstrap          
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ spork --bootstrap          
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -618,36 +713,36 @@
 &lt;p&gt;Configure spec/spec_helper.rb&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rubygems&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.prefork &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Loading more in this block will cause your tests to run faster. However,&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# if you change any configuration or code from libraries loaded here, you'll&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# need to restart spork for it take effect.&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;ENV&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;RAILS_ENV&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;] ||= &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;   require &lt;span class=&quot;co&quot;&gt;File&lt;/span&gt;.expand_path(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;../../config/environment&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;pc&quot;&gt;__FILE__&lt;/span&gt;)
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;   require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;     
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;   require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;capybara/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt;   
-&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root.join(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spec/support/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)].each {|f| require f}
-&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;RSpec&lt;/span&gt;.configure &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt; |config|
-&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt;     config.mock_with &lt;span class=&quot;sy&quot;&gt;:rspec&lt;/span&gt;    
-&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;#Add this following line to get spork working with rails 3&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt;     &lt;span class=&quot;co&quot;&gt;ActiveSupport&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;Dependencies&lt;/span&gt;.clear
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt;   &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.each_run &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# This code will be run each time you run your specs.&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt;   load &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/config/routes.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;28&lt;/span&gt;   &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/app/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;].each { |f| load f }
-&lt;span class=&quot;no&quot;&gt;29&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;30&lt;/strong&gt;&lt;/span&gt; &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;           
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rubygems&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spork&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.prefork &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Loading more in this block will cause your tests to run faster. However,&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# if you change any configuration or code from libraries loaded here, you'll&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# need to restart spork for it take effect.&lt;/span&gt;
+  &lt;span class=&quot;co&quot;&gt;ENV&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;RAILS_ENV&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;] ||= &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+  require &lt;span class=&quot;co&quot;&gt;File&lt;/span&gt;.expand_path(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;../../config/environment&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;pc&quot;&gt;__FILE__&lt;/span&gt;)
+  require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;rspec/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;     
+  require &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;capybara/rails&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;/span&gt;
+  
+  &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root.join(&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;spec/support/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;)].each {|f| require f}
+
+  &lt;span class=&quot;co&quot;&gt;RSpec&lt;/span&gt;.configure &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt; |config|
+    config.mock_with &lt;span class=&quot;sy&quot;&gt;:rspec&lt;/span&gt;    
+
+    &lt;span class=&quot;c&quot;&gt;#Add this following line to get spork working with rails 3&lt;/span&gt;
+    &lt;span class=&quot;co&quot;&gt;ActiveSupport&lt;/span&gt;::&lt;span class=&quot;co&quot;&gt;Dependencies&lt;/span&gt;.clear
+  &lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;co&quot;&gt;Spork&lt;/span&gt;.each_run &lt;span class=&quot;r&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# This code will be run each time you run your specs.&lt;/span&gt;
+
+  load &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/config/routes.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;co&quot;&gt;Dir&lt;/span&gt;[&lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;&lt;span class=&quot;idl&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;co&quot;&gt;Rails&lt;/span&gt;.root&lt;span class=&quot;idl&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;/app/**/*.rb&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;].each { |f| load f }
+
+&lt;span class=&quot;r&quot;&gt;end&lt;/span&gt;           
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -655,8 +750,8 @@
 &lt;p&gt;In order to configure Rspec to always use Spork we need to edit mongoid-spork-example/.rspec. Create it if it doesn’t exist.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; --colour
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; --drb
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;--colour
+--drb
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -664,7 +759,7 @@
 &lt;p&gt;We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ spork
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ spork
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -672,7 +767,7 @@
 &lt;p&gt;Now run the tests from another tab.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rspec spec 
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rspec spec 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -703,7 +798,7 @@
 &lt;h3 id=&quot;install-rvm&quot;&gt;Install RVM&lt;/h3&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ bash &amp;lt; &amp;lt; ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ bash &amp;lt; &amp;lt; ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -711,8 +806,8 @@
 &lt;p&gt;Add this snippet to the end of your .bash_profile or .zshrc&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # This loads RVM into a shell session.
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; [[ -s &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot; ]] &amp;amp;&amp;amp; . &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;  
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# This loads RVM into a shell session.
+[[ -s &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot; ]] &amp;amp;&amp;amp; . &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;  
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -722,7 +817,7 @@
 &lt;p&gt;Install ruby 1.9.2&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm install 1.9.2
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rvm install 1.9.2
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -730,7 +825,7 @@
 &lt;p&gt;Set as default&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm --default 1.9.2                                  
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rvm --default 1.9.2                                  
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -740,7 +835,7 @@
 &lt;p&gt;Install passenger and bundler in the global gemset&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm 1.9.2@global gem install passenger bundler       
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rvm 1.9.2@global gem install passenger bundler       
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -750,7 +845,7 @@
 &lt;p&gt;Install Nginx    &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ brew install nginx --with-passenger
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ brew install nginx --with-passenger
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -758,9 +853,9 @@
 &lt;p&gt;The install outputs instructions to make Nginx lauch at login:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; $ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
+
+$ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -770,8 +865,8 @@
 &lt;p&gt;Decompress the source of Nginx.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd $HOME/Library/Caches/Homebrew
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ tar xvf nginx-1.0.0.tar.gz
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ cd $HOME/Library/Caches/Homebrew
+$ tar xvf nginx-1.0.0.tar.gz
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -779,7 +874,7 @@
 &lt;p&gt;Now install the Nginx module&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ passenger-install-nginx-module
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ passenger-install-nginx-module
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -789,7 +884,7 @@
 &lt;p&gt;Your Nginx source code is located here (change it to you user name):&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; /Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;/Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -797,7 +892,7 @@
 &lt;p&gt;Chose to install Nginx to:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; /usr/local/Cellar/nginx/1.0.0/sbin
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;/usr/local/Cellar/nginx/1.0.0/sbin
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -809,12 +904,12 @@ Edit /usr/local/etc/nginx/nginx.conf and add the code snippet.
 Change user name and/or passenger version.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; http {
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;       ...
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;       passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.6;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;       passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;       ...
-&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;   }                 
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;http {
+      ...
+      passenger_root /Users/Nerian/.rvm/gems/ruby-1.9.2-p180@global/gems/passenger-3.0.6;
+      passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
+      ...
+  }                 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -824,13 +919,13 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rails_env. In my case, I like to start the server on the development environment, that way the sources are reloaded every request. Very handy on the development machine. &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; server {
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;       listen 8081;
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt;       server_name davinci.dev;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;       root /Users/Nerian/NetBeansProjects/DaVinci/public;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt;       passenger_enabled on;
-&lt;span class=&quot;no&quot;&gt;6&lt;/span&gt;       rails_env development;   
-&lt;span class=&quot;no&quot;&gt;7&lt;/span&gt;    }                
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;server {
+      listen 8081;
+      server_name davinci.dev;
+      root /Users/Nerian/NetBeansProjects/DaVinci/public;
+      passenger_enabled on;
+      rails_env development;   
+   }                
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -838,11 +933,11 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Create a .rvmrc file on the root of your project. Change username and project name.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; if [[ -s &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot; ]] ; then
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt;   . &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot;
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; else
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt;   rvm --create use  &amp;quot;ruby-1.9.2-p180@DaVinci&amp;quot;
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; fi                  
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;if [[ -s &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot; ]] ; then
+  . &amp;quot;/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci&amp;quot;
+else
+  rvm --create use  &amp;quot;ruby-1.9.2-p180@DaVinci&amp;quot;
+fi                  
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -850,18 +945,18 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Set up load paths in your Rails 3 project. This is config/setup_load_paths.rb&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; if ENV['MY_RUBY_HOME'] &amp;amp;&amp;amp; ENV['MY_RUBY_HOME'].include?('rvm')
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt;   begin
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt;     rvm_path     = File.dirname(File.dirname(ENV['MY_RUBY_HOME']))
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt;     rvm_lib_path = File.join(rvm_path, 'lib')
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt;     $LOAD_PATH.unshift rvm_lib_path
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt;     require 'rvm'
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt;     RVM.use_from_path! File.dirname(File.dirname(__FILE__))
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt;   rescue LoadError
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt;     # RVM is unavailable at this point.
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt;     raise &amp;quot;RVM ruby lib is currently unavailable.&amp;quot;
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt;   end
-&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; end           
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;if ENV['MY_RUBY_HOME'] &amp;amp;&amp;amp; ENV['MY_RUBY_HOME'].include?('rvm')
+  begin
+    rvm_path     = File.dirname(File.dirname(ENV['MY_RUBY_HOME']))
+    rvm_lib_path = File.join(rvm_path, 'lib')
+    $LOAD_PATH.unshift rvm_lib_path
+    require 'rvm'
+    RVM.use_from_path! File.dirname(File.dirname(__FILE__))
+  rescue LoadError
+    # RVM is unavailable at this point.
+    raise &amp;quot;RVM ruby lib is currently unavailable.&amp;quot;
+  end
+end           
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -869,8 +964,8 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;How do I see the logs of my application?  &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ cd yourapp/
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ tail -f log/development.log
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ cd yourapp/
+$ tail -f log/development.log
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -878,7 +973,7 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;How do I restart my application?&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ touch yourapp/tmp/restart
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ touch yourapp/tmp/restart
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -917,21 +1012,21 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;First, you need to get Git using any of these methods:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; # Any Platform:
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; From the website: http://git-scm.com/
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; # Mac OS:
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; $ brew install git  # Homebrew
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; or
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; $ port install git # Macports
-&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt; # Linux
-&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt; $ apt-get install git-core 
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# Any Platform:
+
+From the website: http://git-scm.com/
+
+# Mac OS:
+
+$ brew install git  # Homebrew
+
+or
+
+$ port install git # Macports
+
+# Linux
+
+$ apt-get install git-core 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -939,8 +1034,8 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Then install RVM:     &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # Just copy/paste this and hit enter.
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; $ bash &amp;lt; &amp;lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# Just copy/paste this and hit enter.
+$ bash &amp;lt; &amp;lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -948,8 +1043,8 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Add this snippet to the end of your .bash_profile or .zshrc&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; [[ -s &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; ]] &amp;amp;&amp;amp; . &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;      
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
+[[ -s &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt; ]] &amp;amp;&amp;amp; . &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$HOME/.rvm/scripts/rvm&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;      
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -957,7 +1052,7 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Now we are going to install Ruby 1.9 without using sudo. We never use sudo.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ rvm install 1.9.2
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ rvm install 1.9.2
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -965,11 +1060,11 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;If you run into: &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; which is not the architecture being linked (x86_64)
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; collect2: ld returned 1 exit status
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
-&lt;span class=&quot;no&quot;&gt;5&lt;/span&gt; make: *** [mkmain.sh] Error 1
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+which is not the architecture being linked (x86_64)
+collect2: ld returned 1 exit status
+make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+make: *** [mkmain.sh] Error 1
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -977,7 +1072,7 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;You need to install libxml2&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; brew install libxml2
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;brew install libxml2
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -987,7 +1082,7 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;Normally, in order to install a gem, like rspec, you do:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; $ gem install rspec
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ gem install rspec
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -999,51 +1094,51 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt; 1&lt;/span&gt; # Create folder
-&lt;span class=&quot;no&quot;&gt; 2&lt;/span&gt; $ mkdir hidra  
-&lt;span class=&quot;no&quot;&gt; 3&lt;/span&gt; $ cd hidra                   
-&lt;span class=&quot;no&quot;&gt; 4&lt;/span&gt; # Automatically use and/or create the gemset Hidra
-&lt;span class=&quot;no&quot;&gt; 5&lt;/span&gt; # when entering this folder (and subfolders). 
-&lt;span class=&quot;no&quot;&gt; 6&lt;/span&gt; # We save that conf to a .rvmrc file. 
-&lt;span class=&quot;no&quot;&gt; 7&lt;/span&gt; # This file is automatically read by RVM.
-&lt;span class=&quot;no&quot;&gt; 8&lt;/span&gt; $ &amp;quot;rvm --create use  '1.9.2@Hidra'&amp;quot; &amp;gt; .rvmrc 
-&lt;span class=&quot;no&quot;&gt; 9&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;10&lt;/strong&gt;&lt;/span&gt; # reenter the folder.
-&lt;span class=&quot;no&quot;&gt;11&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;12&lt;/span&gt; $ cd ..
-&lt;span class=&quot;no&quot;&gt;13&lt;/span&gt; $ cd hidra
-&lt;span class=&quot;no&quot;&gt;14&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;15&lt;/span&gt; # Now, let install many gems ^_^!
-&lt;span class=&quot;no&quot;&gt;16&lt;/span&gt; # This will install gems under the current gemset 
-&lt;span class=&quot;no&quot;&gt;17&lt;/span&gt; # that you are using, that's is the Hidra gemset. 
-&lt;span class=&quot;no&quot;&gt;18&lt;/span&gt; $ gem install jekyll
-&lt;span class=&quot;no&quot;&gt;19&lt;/span&gt; Building native extensions.  This could take a while...
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;20&lt;/strong&gt;&lt;/span&gt; Successfully installed liquid-2.2.2
-&lt;span class=&quot;no&quot;&gt;21&lt;/span&gt; Successfully installed fast-stemmer-1.0.0
-&lt;span class=&quot;no&quot;&gt;22&lt;/span&gt; Successfully installed classifier-1.3.3
-&lt;span class=&quot;no&quot;&gt;23&lt;/span&gt; Successfully installed directory_watcher-1.3.2
-&lt;span class=&quot;no&quot;&gt;24&lt;/span&gt; Successfully installed syntax-1.0.0
-&lt;span class=&quot;no&quot;&gt;25&lt;/span&gt; Successfully installed maruku-0.6.0
-&lt;span class=&quot;no&quot;&gt;26&lt;/span&gt; Successfully installed jekyll-0.10.0
-&lt;span class=&quot;no&quot;&gt;27&lt;/span&gt; 7 gems installed  
-&lt;span class=&quot;no&quot;&gt;28&lt;/span&gt;    
-&lt;span class=&quot;no&quot;&gt;29&lt;/span&gt; # Now lets create the project Fenix.
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;30&lt;/strong&gt;&lt;/span&gt; $ cd ..
-&lt;span class=&quot;no&quot;&gt;31&lt;/span&gt; $ mkdir fenix
-&lt;span class=&quot;no&quot;&gt;32&lt;/span&gt; $ &amp;quot;rvm --create use  '1.9.2@Fenix'&amp;quot; &amp;gt; .rvmrc
-&lt;span class=&quot;no&quot;&gt;33&lt;/span&gt; $ gem install rails
-&lt;span class=&quot;no&quot;&gt;34&lt;/span&gt; ...large output ... 
-&lt;span class=&quot;no&quot;&gt;35&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;36&lt;/span&gt; # Now let check that we have truly have separate sets of gems. 
-&lt;span class=&quot;no&quot;&gt;37&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;38&lt;/span&gt; $ gem list
-&lt;span class=&quot;no&quot;&gt;39&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;&lt;strong&gt;40&lt;/strong&gt;&lt;/span&gt; ...will show the list of gems for the fenix gemset ...
-&lt;span class=&quot;no&quot;&gt;41&lt;/span&gt; $ cd .. &amp;amp;&amp;amp; cd hidra
-&lt;span class=&quot;no&quot;&gt;42&lt;/span&gt; $ gem list
-&lt;span class=&quot;no&quot;&gt;43&lt;/span&gt; ...will show the list of gems for the hidra gemset ...    
-&lt;span class=&quot;no&quot;&gt;44&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;45&lt;/span&gt; They are different! ^_^   
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# Create folder
+$ mkdir hidra  
+$ cd hidra                   
+# Automatically use and/or create the gemset Hidra
+# when entering this folder (and subfolders). 
+# We save that conf to a .rvmrc file. 
+# This file is automatically read by RVM.
+$ &amp;quot;rvm --create use  '1.9.2@Hidra'&amp;quot; &amp;gt; .rvmrc 
+
+# reenter the folder.
+
+$ cd ..
+$ cd hidra
+
+# Now, let install many gems ^_^!
+# This will install gems under the current gemset 
+# that you are using, that's is the Hidra gemset. 
+$ gem install jekyll
+Building native extensions.  This could take a while...
+Successfully installed liquid-2.2.2
+Successfully installed fast-stemmer-1.0.0
+Successfully installed classifier-1.3.3
+Successfully installed directory_watcher-1.3.2
+Successfully installed syntax-1.0.0
+Successfully installed maruku-0.6.0
+Successfully installed jekyll-0.10.0
+7 gems installed  
+   
+# Now lets create the project Fenix.
+$ cd ..
+$ mkdir fenix
+$ &amp;quot;rvm --create use  '1.9.2@Fenix'&amp;quot; &amp;gt; .rvmrc
+$ gem install rails
+...large output ... 
+
+# Now let check that we have truly have separate sets of gems. 
+
+$ gem list
+
+...will show the list of gems for the fenix gemset ...
+$ cd .. &amp;amp;&amp;amp; cd hidra
+$ gem list
+...will show the list of gems for the hidra gemset ...    
+
+They are different! ^_^   
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1053,9 +1148,9 @@ Change user name and/or passenger version.&lt;/p&gt;
 &lt;p&gt;I don’t need the documentation that is installed for every gem. So:&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # ~/.gemrc or /etc/gemrc: 
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; install: --no-rdoc --no-ri
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; update: --no-rdoc --no-ri
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# ~/.gemrc or /etc/gemrc: 
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1064,8 +1159,8 @@ Change user name and/or passenger version.&lt;/p&gt;
 Instead of &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; # .rvmrc
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; rvm --create use  '1.9.2@Fenix'
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;# .rvmrc
+rvm --create use  '1.9.2@Fenix'
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1073,10 +1168,10 @@ Instead of &lt;/p&gt;
 &lt;p&gt;you can write this so that it creates the gemset in whatever is the default ruby version.                           &lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;no&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# .rvmrc&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Either create a gemset mongoid-site or use the existing one&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;3&lt;/span&gt; rvm gemset create &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;4&lt;/span&gt; rvm gemset use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# .rvmrc&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Either create a gemset mongoid-site or use the existing one&lt;/span&gt;
+rvm gemset create &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+rvm gemset use &lt;span class=&quot;s&quot;&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Fenix&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

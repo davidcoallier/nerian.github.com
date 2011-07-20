@@ -61,11 +61,11 @@
 <p>Install Pow. Make sure it shows the four steps. As there could be errors.             </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ curl get.pow.cx | sh
-<span class="no">2</span> *** Installing Pow 0.2.2...
-<span class="no">3</span> *** Installing local configuration files...
-<span class="no">4</span> *** Starting the Pow server...
-<span class="no">5</span> *** Installed
+  <div class="code"><pre>$ curl get.pow.cx | sh
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
 </pre></div>
 </div>
 </div>
@@ -73,8 +73,8 @@
 <p>If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ cd ~/.pow
-<span class="no">2</span> $ ln -s /path/to/myapp
+  <div class="code"><pre>$ cd ~/.pow
+$ ln -s /path/to/myapp
 </pre></div>
 </div>
 </div>
@@ -82,9 +82,9 @@
 <p>It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ ls
-<span class="no">2</span> DaVinci@ resque@
-<span class="no">3</span> $ mv DaVinci davinci
+  <div class="code"><pre>$ ls
+DaVinci@ resque@
+$ mv DaVinci davinci
 </pre></div>
 </div>
 </div>
@@ -92,9 +92,9 @@
 <p>If there was any error, try this:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
-<span class="no">2</span> $ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
-<span class="no">3</span> $ curl get.pow.cx | sh
+  <div class="code"><pre>$ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
+$ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
+$ curl get.pow.cx | sh
 </pre></div>
 </div>
 </div>
@@ -102,7 +102,7 @@
 <p>In order to update Pow, you just call </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ curl get.pow.cx | sh
+  <div class="code"><pre>$ curl get.pow.cx | sh
 </pre></div>
 </div>
 </div>
@@ -110,7 +110,7 @@
 <p>So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ alias pow-update='curl get.pow.cx | sh'        
+  <div class="code"><pre>$ alias pow-update='curl get.pow.cx | sh'        
 </pre></div>
 </div>
 </div>
@@ -118,11 +118,11 @@
 <p>So you just do:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ pow-update
-<span class="no">2</span> *** Installing Pow 0.2.2...
-<span class="no">3</span> *** Installing local configuration files...
-<span class="no">4</span> *** Starting the Pow server...
-<span class="no">5</span> *** Installed
+  <div class="code"><pre>$ pow-update
+*** Installing Pow 0.2.2...
+*** Installing local configuration files...
+*** Starting the Pow server...
+*** Installed
 </pre></div>
 </div>
 </div>

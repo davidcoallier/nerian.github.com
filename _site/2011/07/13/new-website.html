@@ -52,13 +52,13 @@
 <p>The config.ru looks like this:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span>
-<span class="no">2</span> use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
-<span class="no">3</span>     <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
-<span class="no">4</span>     <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
-<span class="no">5</span>     <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
-<span class="no">6</span> <span class="c"># otherwise 404 NotFound</span>
-<span class="no">7</span> run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}
+  <div class="code"><pre>require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span>
+use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
+    <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
+    <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
+    <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
+<span class="c"># otherwise 404 NotFound</span>
+run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}
 </pre></div>
 </div>
 </div>
@@ -68,15 +68,15 @@
 <p>And finally I switched from Markdown to Kramdown. Styling code blocks is quite appealing. This how the previous block of code is styled:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no"> 1</span> <span class="c">#Kramdown with coderay:</span>
-<span class="no"> 2</span>     require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span> 
-<span class="no"> 3</span>     use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
-<span class="no"> 4</span>         <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
-<span class="no"> 5</span>         <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
-<span class="no"> 6</span>         <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
-<span class="no"> 7</span>     <span class="c"># otherwise 404 NotFound</span>
-<span class="no"> 8</span>     run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}        
-<span class="no"> 9</span> {<span class="sy">:lang=</span><span class="s"><span class="dl">'</span><span class="k">ruby</span><span class="dl">'</span></span>}
+  <div class="code"><pre><span class="c">#Kramdown with coderay:</span>
+    require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span> 
+    use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
+        <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
+        <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
+        <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
+    <span class="c"># otherwise 404 NotFound</span>
+    run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}        
+{<span class="sy">:lang=</span><span class="s"><span class="dl">'</span><span class="k">ruby</span><span class="dl">'</span></span>}
 </pre></div>
 </div>
 </div>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Nerian Blog: Simple Gemset – because 7 seconds is a lot of time!</title>
+        <link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/coderay.css">						
+    </head>
+    <body>        
+	
+		<div id="wrapper">
+	<div id="header">
+		<div id='description'>                    
+			<span>Gonzalo Rodríguez,</span><br>
+			<span>Freelance web developer specialised in Ruby and MongoDB</span>			
+		</div>                                                                  
+		<hr>
+		<div id='actions'>
+			<ul>
+				<li><a href="/index.html">Blog</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/hireme.html">Hire me</a></li>
+				<li><a href="http://careers.stackoverflow.com/nerian" target='_blank'>Curriculum</a></li>				
+			</ul>
+		</div>		                                                                     
+		<hr>
+		<div id='external-actions'>
+			<ul>
+				<li><a href="http://feeds.feedburner.com/Nerian-blog" target='_blank' type="application/rss+xml"><img class='first-image'src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/> Subscribe </a>&nbsp;</li>
+				<li><a href="https://github.com/Nerian" target='_blank'><img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> Github</a></li>
+				<li><a href="http://www.twitter.com/iCodeErgoExist" target='_blank'><img class='third-image' STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Seguir a iCodeErgoExist en Twitter"/> Twitter</a></li>
+			</ul>			
+		</div>		
+	</div>
+	<div id="content">
+		<div class='post'>
+			<div>
+	<h2><a href="/2011/07/20/simple_generator.html">Simple Gemset – because 7 seconds is a lot of time!</a></h2>
+	<em>Posted on 20 July 2011</em>
+	<br/>
+	<div>
+		<p>You know those situations. Every Ruby developer go through this:</p>
+
+<ul>
+  <li>You spot an interesting Ruby project at github</li>
+  <li>You want to play with it, so you git clone it.</li>
+  <li>You don’t want to turn your gem space into a mess, so you lose 7 seconds typing a boring .rvmrc file that just creates a new gemset for whatever ruby version you happen to be using.</li>
+  <li>You play with your new toy.</li>
+</ul>
+
+<p>I don’t want to lose those 7 seconds. 7 seconds are better used to make a quick tweet or visiting your Facebook profile.</p>
+
+<p>simple_gemset is a gem that helps you to create such .rvmrc file.</p>
+
+<p>Just like this:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="er">$</span> mkdir my_new_project
+<span class="er">$</span> cd my_new_project
+
+<span class="er">$</span> simple_gemset
+    create  .rvmrc               
+</pre></div>
+</div>
+</div>
+
+<p>That generates a .rvmrc like this:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="c"># Generated with Simple_gemset  </span>
+rvm gemset create <span class="s"><span class="dl">'</span><span class="k">my_new_project</span><span class="dl">'</span></span> <span class="c"># current folder</span>
+rvm gemset use <span class="s"><span class="dl">'</span><span class="k">my_new_project</span><span class="dl">'</span></span>
+</pre></div>
+</div>
+</div>
+
+<p>It also support setting the gemset name and/or Ruby version.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="er">$</span> simple_gemset my_gemset --ruby
+    <span class="co">Choose</span> which <span class="co">Ruby</span> version <span class="r">do</span> you want to use
+    <span class="i">0</span>: ruby-<span class="fl">1.8</span>.<span class="i">6</span>-p420
+    <span class="i">1</span>: ruby-<span class="fl">1.8</span>.<span class="i">6</span>-head
+    <span class="i">2</span>: ruby-<span class="fl">1.8</span>.<span class="i">7</span>-p352
+    <span class="i">3</span>: ruby-<span class="fl">1.8</span>.<span class="i">7</span>-head
+    <span class="i">4</span>: ruby-<span class="fl">1.9</span>.<span class="i">1</span>-p378
+    <span class="i">5</span>: ruby-<span class="fl">1.9</span>.<span class="i">1</span>-p431
+    <span class="i">6</span>: ruby-<span class="fl">1.9</span>.<span class="i">1</span>-head
+    <span class="i">7</span>: ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180
+    <span class="i">8</span>: ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p290
+    <span class="i">9</span>: ruby-<span class="fl">1.9</span>.<span class="i">2</span>-head
+    <span class="i">10</span>: ruby-<span class="fl">1.9</span>.<span class="i">3</span>-head
+    <span class="i">11</span>: ruby-head
+    <span class="i">12</span>: goruby
+    <span class="i">13</span>: jruby-<span class="fl">1.2</span>.<span class="i">0</span>
+    <span class="i">14</span>: jruby-<span class="fl">1.3</span>.<span class="i">1</span>
+    <span class="i">15</span>: jruby-<span class="fl">1.4</span>.<span class="i">0</span>
+    <span class="i">16</span>: jruby-<span class="fl">1.6</span>.<span class="i">1</span>
+    <span class="i">17</span>: jruby-<span class="fl">1.6</span>.<span class="i">2</span>      
+    <span class="co">Which</span> ruby? <span class="co">Just</span> tell me the <span class="ke">number</span>: <span class="i">7</span>
+
+    create  .rvmrc                            
+</pre></div>
+</div>
+</div>
+
+<p>Which generates a .rvmrc file like this:	      </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>    <span class="c"># Generated with Simple_gemset</span>
+    rvm use <span class="s"><span class="dl">'</span><span class="k">ruby-1.9.2-p180</span><span class="dl">'</span></span>
+    rvm gemset create <span class="s"><span class="dl">'</span><span class="k">my_gemset</span><span class="dl">'</span></span>
+    rvm gemset use <span class="s"><span class="dl">'</span><span class="k">my_gemset</span><span class="dl">'</span></span>                              
+</pre></div>
+</div>
+</div>
+
+<p>Install it with:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="er">$</span> gem install <span class="s"><span class="dl">'</span><span class="k">simple_gemset</span><span class="dl">'</span></span>
+</pre></div>
+</div>
+</div>
+
+<p>Code and further examples at:</p>
+
+<p><a href="https://github.com/Nerian/simple_gemset">https://github.com/Nerian/simple_gemset</a></p>
+		                              				
+	</div>	                                              	
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'nerian-blog';
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>                                                                                                  			
+		</div>                                                                                                             				
+	</div>   	
+</div>     
+   		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20768366-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>    	       				
+    </body>
+</html>

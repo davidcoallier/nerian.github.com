@@ -66,21 +66,21 @@
 <p>First, you need to get Git using any of these methods:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no"> 1</span> # Any Platform:
-<span class="no"> 2</span> 
-<span class="no"> 3</span> From the website: http://git-scm.com/
-<span class="no"> 4</span> 
-<span class="no"> 5</span> # Mac OS:
-<span class="no"> 6</span> 
-<span class="no"> 7</span> $ brew install git  # Homebrew
-<span class="no"> 8</span> 
-<span class="no"> 9</span> or
-<span class="no"><strong>10</strong></span> 
-<span class="no">11</span> $ port install git # Macports
-<span class="no">12</span> 
-<span class="no">13</span> # Linux
-<span class="no">14</span> 
-<span class="no">15</span> $ apt-get install git-core 
+  <div class="code"><pre># Any Platform:
+
+From the website: http://git-scm.com/
+
+# Mac OS:
+
+$ brew install git  # Homebrew
+
+or
+
+$ port install git # Macports
+
+# Linux
+
+$ apt-get install git-core 
 </pre></div>
 </div>
 </div>
@@ -88,8 +88,8 @@
 <p>Then install RVM:     </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> # Just copy/paste this and hit enter.
-<span class="no">2</span> $ bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
+  <div class="code"><pre># Just copy/paste this and hit enter.
+$ bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm)
 </pre></div>
 </div>
 </div>
@@ -97,8 +97,8 @@
 <p>Add this snippet to the end of your .bash_profile or .zshrc</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> <span class="c"># This loads RVM into a shell session.</span>
-<span class="no">2</span> [[ -s <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span> ]] &amp;&amp; . <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span>      
+  <div class="code"><pre><span class="c"># This loads RVM into a shell session.</span>
+[[ -s <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span> ]] &amp;&amp; . <span class="s"><span class="dl">&quot;</span><span class="k">$HOME/.rvm/scripts/rvm</span><span class="dl">&quot;</span></span>      
 </pre></div>
 </div>
 </div>
@@ -106,7 +106,7 @@
 <p>Now we are going to install Ruby 1.9 without using sudo. We never use sudo.</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ rvm install 1.9.2
+  <div class="code"><pre>$ rvm install 1.9.2
 </pre></div>
 </div>
 </div>
@@ -114,11 +114,11 @@
 <p>If you run into: </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
-<span class="no">2</span> which is not the architecture being linked (x86_64)
-<span class="no">3</span> collect2: ld returned 1 exit status
-<span class="no">4</span> make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
-<span class="no">5</span> make: *** [mkmain.sh] Error 1
+  <div class="code"><pre>ld: in /usr/local/lib/libxml2.2.dylib, file was built for i386 
+which is not the architecture being linked (x86_64)
+collect2: ld returned 1 exit status
+make[1]: *** [../../.ext/x86_64-darwin10.6.0/tcltklib.bundle] Error 1
+make: *** [mkmain.sh] Error 1
 </pre></div>
 </div>
 </div>
@@ -126,7 +126,7 @@
 <p>You need to install libxml2</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> brew install libxml2
+  <div class="code"><pre>brew install libxml2
 </pre></div>
 </div>
 </div>
@@ -136,7 +136,7 @@
 <p>Normally, in order to install a gem, like rspec, you do:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> $ gem install rspec
+  <div class="code"><pre>$ gem install rspec
 </pre></div>
 </div>
 </div>
@@ -148,51 +148,51 @@
 <p>A Gemset is a set of gems, identified by a name which is completely independent of any other gemset or global gems. So we have the project Fenix and the project Hidra and we want to have a gemset for each of them. </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no"> 1</span> # Create folder
-<span class="no"> 2</span> $ mkdir hidra  
-<span class="no"> 3</span> $ cd hidra                   
-<span class="no"> 4</span> # Automatically use and/or create the gemset Hidra
-<span class="no"> 5</span> # when entering this folder (and subfolders). 
-<span class="no"> 6</span> # We save that conf to a .rvmrc file. 
-<span class="no"> 7</span> # This file is automatically read by RVM.
-<span class="no"> 8</span> $ &quot;rvm --create use  '1.9.2@Hidra'&quot; &gt; .rvmrc 
-<span class="no"> 9</span> 
-<span class="no"><strong>10</strong></span> # reenter the folder.
-<span class="no">11</span> 
-<span class="no">12</span> $ cd ..
-<span class="no">13</span> $ cd hidra
-<span class="no">14</span> 
-<span class="no">15</span> # Now, let install many gems ^_^!
-<span class="no">16</span> # This will install gems under the current gemset 
-<span class="no">17</span> # that you are using, that's is the Hidra gemset. 
-<span class="no">18</span> $ gem install jekyll
-<span class="no">19</span> Building native extensions.  This could take a while...
-<span class="no"><strong>20</strong></span> Successfully installed liquid-2.2.2
-<span class="no">21</span> Successfully installed fast-stemmer-1.0.0
-<span class="no">22</span> Successfully installed classifier-1.3.3
-<span class="no">23</span> Successfully installed directory_watcher-1.3.2
-<span class="no">24</span> Successfully installed syntax-1.0.0
-<span class="no">25</span> Successfully installed maruku-0.6.0
-<span class="no">26</span> Successfully installed jekyll-0.10.0
-<span class="no">27</span> 7 gems installed  
-<span class="no">28</span>    
-<span class="no">29</span> # Now lets create the project Fenix.
-<span class="no"><strong>30</strong></span> $ cd ..
-<span class="no">31</span> $ mkdir fenix
-<span class="no">32</span> $ &quot;rvm --create use  '1.9.2@Fenix'&quot; &gt; .rvmrc
-<span class="no">33</span> $ gem install rails
-<span class="no">34</span> ...large output ... 
-<span class="no">35</span> 
-<span class="no">36</span> # Now let check that we have truly have separate sets of gems. 
-<span class="no">37</span> 
-<span class="no">38</span> $ gem list
-<span class="no">39</span> 
-<span class="no"><strong>40</strong></span> ...will show the list of gems for the fenix gemset ...
-<span class="no">41</span> $ cd .. &amp;&amp; cd hidra
-<span class="no">42</span> $ gem list
-<span class="no">43</span> ...will show the list of gems for the hidra gemset ...    
-<span class="no">44</span> 
-<span class="no">45</span> They are different! ^_^   
+  <div class="code"><pre># Create folder
+$ mkdir hidra  
+$ cd hidra                   
+# Automatically use and/or create the gemset Hidra
+# when entering this folder (and subfolders). 
+# We save that conf to a .rvmrc file. 
+# This file is automatically read by RVM.
+$ &quot;rvm --create use  '1.9.2@Hidra'&quot; &gt; .rvmrc 
+
+# reenter the folder.
+
+$ cd ..
+$ cd hidra
+
+# Now, let install many gems ^_^!
+# This will install gems under the current gemset 
+# that you are using, that's is the Hidra gemset. 
+$ gem install jekyll
+Building native extensions.  This could take a while...
+Successfully installed liquid-2.2.2
+Successfully installed fast-stemmer-1.0.0
+Successfully installed classifier-1.3.3
+Successfully installed directory_watcher-1.3.2
+Successfully installed syntax-1.0.0
+Successfully installed maruku-0.6.0
+Successfully installed jekyll-0.10.0
+7 gems installed  
+   
+# Now lets create the project Fenix.
+$ cd ..
+$ mkdir fenix
+$ &quot;rvm --create use  '1.9.2@Fenix'&quot; &gt; .rvmrc
+$ gem install rails
+...large output ... 
+
+# Now let check that we have truly have separate sets of gems. 
+
+$ gem list
+
+...will show the list of gems for the fenix gemset ...
+$ cd .. &amp;&amp; cd hidra
+$ gem list
+...will show the list of gems for the hidra gemset ...    
+
+They are different! ^_^   
 </pre></div>
 </div>
 </div>
@@ -202,9 +202,9 @@
 <p>I don’t need the documentation that is installed for every gem. So:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> # ~/.gemrc or /etc/gemrc: 
-<span class="no">2</span> install: --no-rdoc --no-ri
-<span class="no">3</span> update: --no-rdoc --no-ri
+  <div class="code"><pre># ~/.gemrc or /etc/gemrc: 
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
 </pre></div>
 </div>
 </div>
@@ -213,8 +213,8 @@
 Instead of </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> # .rvmrc
-<span class="no">2</span> rvm --create use  '1.9.2@Fenix'
+  <div class="code"><pre># .rvmrc
+rvm --create use  '1.9.2@Fenix'
 </pre></div>
 </div>
 </div>
@@ -222,10 +222,10 @@ Instead of </p>
 <p>you can write this so that it creates the gemset in whatever is the default ruby version.                           </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="no">1</span> <span class="c"># .rvmrc</span>
-<span class="no">2</span> <span class="c"># Either create a gemset mongoid-site or use the existing one</span>
-<span class="no">3</span> rvm gemset create <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
-<span class="no">4</span> rvm gemset use <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
+  <div class="code"><pre><span class="c"># .rvmrc</span>
+<span class="c"># Either create a gemset mongoid-site or use the existing one</span>
+rvm gemset create <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
+rvm gemset use <span class="s"><span class="dl">&quot;</span><span class="k">Fenix</span><span class="dl">&quot;</span></span>
 </pre></div>
 </div>
 </div>
