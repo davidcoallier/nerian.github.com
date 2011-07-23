@@ -17,4 +17,4 @@ I am fluent in English – officially B2 european level – and in Spanish, whic
 
 When I am not coding I am either thinking on new business ideas, swimming or reading a book.
 
-You can contact me at siotopo @ gmail .com
+You can contact me at <a href="mailto:gonzalo.rodriguez@nerian.es">gonzalo.rodriguez@nerian.es</a>
