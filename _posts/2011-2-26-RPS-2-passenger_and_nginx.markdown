@@ -156,5 +156,5 @@ How do I see the logs of my application?
 
 How do I restart my application?
 
-	$ touch yourapp/tmp/restart
+	$ touch yourapp/tmp/restart.txt
 {:lang="bash"}

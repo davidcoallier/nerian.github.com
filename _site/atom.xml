@@ -4,7 +4,7 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-07-23T13:03:01+02:00</updated>
+ <updated>2011-07-24T12:50:00+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
@@ -973,7 +973,7 @@ $ tail -f log/development.log
 &lt;p&gt;How do I restart my application?&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ touch yourapp/tmp/restart
+  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;$ touch yourapp/tmp/restart.txt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
