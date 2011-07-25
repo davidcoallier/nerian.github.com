@@ -70,6 +70,9 @@ So you just do:
 	*** Installed
 {:lang="bash"}
 
+Check this out too: https://github.com/Rodreegez/powder
+
+It truly makes setting up a new rails app deployment a one liner task.
 
 
 ###Links 

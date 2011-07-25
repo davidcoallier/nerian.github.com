@@ -4,7 +4,7 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-07-25T18:12:34+02:00</updated>
+ <updated>2011-07-25T18:21:05+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
@@ -605,6 +605,10 @@ $ curl get.pow.cx | sh
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;p&gt;Check this out too: https://github.com/Rodreegez/powder&lt;/p&gt;
+
+&lt;p&gt;It truly makes setting up a new rails app deployment a one liner task.&lt;/p&gt;
 
 &lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
 
