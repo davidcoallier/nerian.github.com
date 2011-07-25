@@ -124,11 +124,7 @@ Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rail
 
 Create a .rvmrc file on the root of your project. Change username and project name.
 
-	if [[ -s "/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci" ]] ; then
-	  . "/Users/Nerian/.rvm/environments/ruby-1.9.2-p180@DaVinci"
-	else
-	  rvm --create use  "ruby-1.9.2-p180@DaVinci"
-	fi                  
+	rvm 1.9.2@DaVinci --create
 {:lang="bash"}
 
 
