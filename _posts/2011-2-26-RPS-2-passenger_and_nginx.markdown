@@ -124,8 +124,10 @@ Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rail
 
 Create a .rvmrc file on the root of your project. Change username and project name.
 
-	rvm 1.9.2@DaVinci --create
+	rvm 1.9.2@DaVinci --create             		
 {:lang="bash"}
+
+Or just use [Simple_gem](https://github.com/Nerian/simple_gemset)
 
 
 Set up load paths in your Rails 3 project. This is config/setup_load_paths.rb
