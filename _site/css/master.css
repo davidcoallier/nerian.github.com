@@ -1,11 +1,13 @@
-body{
-	background: #ACD0DB url("data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAF2CAYAAACvRfJEAAAA1ElEQVQ4y51VQRICIQxL+P/Ju5/QJznjyT/Ug64INKGztwU2aUnb0C7X+609ni80AGgAovH3dexly+wgGkhY2P+SGYGJ1ulDpVGgH7DcxI1BF8poE6nn6xKL/EhzrbVGeYwai8mU9JVhaDXISmlzEUkWfp72OlYyG+yRrsJS3lKSIlF3mpRT2C/M95XoTsJilXSs9JBvwmw4Q5PCtMBO2I2rmAaBGogYhchPnT10JU3NT7H4mRZCLC5aMBnH95m8vTGCMtrqtnSnW3r/bmUGVX23JAJv0QW40LEL68QAAAAASUVORK5CYII=") repeat-x;      	                      	
-	font-family: "Bookman Old Style";
-}
+body{           
+ 	background:url("/images/background3.png"), no-repeat;
+	background-attachment:fixed;	                      	
+	font-family: "Bookman Old Style";   
+	color: black;	
+}              
 
 #header a{
     text-decoration: none;
-	color: black;	
+	color: black;
 }                 
 
 #header a:hover, #content a:hover {
@@ -14,18 +16,16 @@ body{
 }
 
 #content a{    
-    color: black;
+    color: black;      
 }
 
 #header{
-	height: 400px;
     float: left;
-    margin-bottom: 10px;
     width: 150px;
 	margin-left: 30px;  
 	font-family: 'Verdana';
 	position: fixed;
-}
+}       
 
 #header ul{      	
 	padding: 0;
@@ -44,7 +44,7 @@ body{
 }
 
 #wrapper{  
-	min-width: 1070px;
+	min-width: 1070px;     	
 }
 
 #content{
@@ -53,22 +53,29 @@ body{
 	line-height: 26px;
 	width: 800px;
 	margin: 50px auto;
-	padding-left: 200px;	  
+	padding-left: 200px;	
 }                         
 
 .post, #header{
-	background-color: #f0ffff;
+	background-color: #f0ffff; 
+	background-color: #ededed;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	-webkit-box-shadow: 0px 0px 7px #5a74a4;
+	-webkit-box-shadow: 0px 0px 15px #5a74a4; 
+	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
 	-moz-box-shadow: 0px 0px 7px #5a74a4;
-	padding: 25px;
+	padding: 25px;    
+	background-color: #eceffd;	
 }   
    
 #content h1, h2{
 	font-size:100%;
 	font-family: 'Verdana'
+}             
+
+#content h2{
+	font-size: 120%;
 }
 
 p{
@@ -132,7 +139,7 @@ p.not_indented{
 
 
 #languages{
-	position: absolute;
+	position: fixed;
 	top: 15px;
 	left: 50px;
 }
