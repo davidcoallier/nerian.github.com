@@ -3,6 +3,7 @@ body{
 	background-attachment: fixed;	                      	
 	font-family: "Bookman Old Style";   
 	color: black;	
+	text-rendering: optimizeLegibility;
 }              
 
 #header a{
@@ -51,7 +52,7 @@ body{
 	margin: 50px auto;	 	
 }
 
-#content{      
+#content{             
 	border: 1px solid black;
 	text-align: justify;   	
 	font-size: 16px;
@@ -89,7 +90,6 @@ p.not_indented{
 }
 
 .image img{              
-	opacity: 1;	
     margin: 25px 0px;
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
