@@ -1,13 +1,13 @@
 body{           
- 	background:url("/images/background3.png"), no-repeat;
-	background-attachment:fixed;	                      	
+	background:url("/images/background4.jpg"), no-repeat;
+	background-attachment: fixed;	                      	
 	font-family: "Bookman Old Style";   
 	color: black;	
 }              
 
 #header a{
     text-decoration: none;
-	color: black;
+	color: #e0e2f1;
 }                 
 
 #header a:hover, #content a:hover {
@@ -19,64 +19,62 @@ body{
     color: black;      
 }
 
-#header{
-    float: left;
-    width: 150px;
-	margin-left: 30px;  
+#header{          
+	border: 1px solid black;
+	background:url("/images/background3.png") no-repeat;
+	font-family: Monaco, Courier, Helvetica, sans-serif;
 	font-family: 'Verdana';
-	position: fixed;
+	-webkit-border-radius: 10px 0 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;   
+	padding-bottom: 2px;    
+	opacity: 0.91;       
+	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
+	-moz-box-shadow: 0px 0px 7px #7c9fe2;
 }       
 
 #header ul{      	
 	padding: 0;
-    list-style-type: none;
+    list-style-type: none;  
+	text-align: center;
+}
+
+#header li{ 
+	display: inline;  
+	font-size: 140%;
+	padding: 0 7px 0 7px;
 }            
 
-#description {   	
-	width: 200px;     
-	font-size: 13px;
-	line-height: 26px; 
-	font-family: 'Verdana'
+#wrapper{             	
+	opacity: 0.91;
+	width: 800px;       
+	margin: 50px auto;	 	
 }
 
-#header li{
-	padding-bottom: 13px;
-}
-
-#wrapper{  
-	min-width: 1070px;     	
-}
-
-#content{
+#content{      
+	border: 1px solid black;
 	text-align: justify;   	
 	font-size: 16px;
-	line-height: 26px;
-	width: 800px;
-	margin: 50px auto;
-	padding-left: 200px;	
-}                         
-
-.post, #header{
-	background-color: #f0ffff; 
-	background-color: #ededed;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 0px 0px 15px #5a74a4; 
+	line-height: 26px;	 
+	background-color: #eceffd;     
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
 	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
-	-moz-box-shadow: 0px 0px 7px #5a74a4;
-	padding: 25px;    
-	background-color: #eceffd;	
-}   
+	-moz-box-shadow: 0px 0px 7px #7c9fe2;
+}                         
+    
+#header{
+	padding-top: 10px;
+}              
+
+.post{
+	padding: 10px 30px 40px 30px;
+}
    
 #content h1, h2{
-	font-size:100%;
 	font-family: 'Verdana'
 }             
-
-#content h2{
-	font-size: 120%;
-}
 
 p{
 	text-indent: 1.5em;
@@ -87,10 +85,11 @@ p.not_indented{
 }        
    
 .image{
-    text-align: center;    
+    text-align: center;  	  
 }
 
-.image img{
+.image img{              
+	opacity: 1;	
     margin: 25px 0px;
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
@@ -106,15 +105,9 @@ p.not_indented{
 }
 
 .title{           
-	display:inline;
-	float:right;
-}
-          
-
-.post-list span{
-	display:inline-block;
-    width:350px;
-}
+	display: inline;
+	float: right;
+}         
 
 .index{         
 	font-size:90%;
@@ -135,11 +128,4 @@ p.not_indented{
 
 #disqus_thread{
 	margin-top: 50px;
-}
-
-
-#languages{
-	position: fixed;
-	top: 15px;
-	left: 50px;
 }
