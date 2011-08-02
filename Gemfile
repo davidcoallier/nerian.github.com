@@ -3,4 +3,5 @@ gem "jekyll"
 gem 'coderay'
 gem 'kramdown'
 gem 'rack'
-gem 'rack-contrib'
+gem 'rack-contrib'    
+gem 'newrelic_rpm'

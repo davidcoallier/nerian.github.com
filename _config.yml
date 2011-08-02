@@ -8,6 +8,8 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 
+exclude: ./config
+
 future:      true
 lsi:         false
 pygments:    false
