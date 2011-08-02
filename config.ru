@@ -1,4 +1,5 @@
-require 'rack/contrib/try_static'
+require 'rack/contrib/try_static'  
+require 'newrelic_rpm'
 
 use Rack::TryStatic, 
     :root => "_site",  # static files root dir
