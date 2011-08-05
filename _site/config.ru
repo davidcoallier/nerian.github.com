@@ -1,4 +1,4 @@
-require 'rack/contrib/try_static'
+require 'rack/contrib/try_static'  
 
 use Rack::TryStatic, 
     :root => "_site",  # static files root dir
