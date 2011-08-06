@@ -21,7 +21,7 @@ You open your eyes, fully awoken, and you ask yourself 'What the fuck am I doing
 
 The previous years of my life I have been doing the usual stuff. I went to School, then to College and finally to University. But I did that without a purpose. It was just what was expected from me.  
 
-It has took a whole year for me to decide how to answer that question: I want to create something incredible. I want to create something so damn fucking useful that it will be used for decades by millions of souls – changing the way they interact with the world.
+It has taken a whole year for me to decide how to answer that question: I want to create something incredible. I want to create something so damn fucking useful that it will be used for decades by millions of souls – changing the way they interact with the world.
 
 I have a very defined idea that I want to implement. I have 22 years of experience in learning environments, from public schools to private colleges and three different universities. I know where I did learn a lot and why. I know were I did not learn a shit and why. 
 
