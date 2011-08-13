@@ -1,2 +1,3 @@
-rvm gemset create 'NerianBlog' 
-rvm gemset use 'NerianBlog'
+# Generated with Simple_gemset 
+rvm gemset create blog
+rvm gemset use blog
