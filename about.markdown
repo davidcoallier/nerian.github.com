@@ -24,12 +24,8 @@ You can contact me at <a href="mailto:gonzalo.rodriguez@nerian.es">gonzalo.rodri
 		Github
 </a>
 
-<a href="http://www.twitter.com/iCodeErgoExist" target='_blank'>
-	<img class='third-image' 
-		STYLE="position:relative; top:5px" src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" 
-		alt="Seguir a iCodeErgoExist en Twitter"/> 
-	Twitter
-</a>
+<a href="http://twitter.com/iCodeErgoExist" class="twitter-follow-button" data-show-count="false">Follow @iCodeErgoExist</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 
 <a href="http://careers.stackoverflow.com/nerian" 
 	target='_blank'>
