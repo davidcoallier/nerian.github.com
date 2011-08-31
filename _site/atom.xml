@@ -4,7 +4,7 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-08-16T00:49:11+02:00</updated>
+ <updated>2011-08-31T19:24:30+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
@@ -258,11 +258,11 @@ run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=
    <link href="http://nerian.github.com/2011/05/26/dpovray.html"/>
    <updated>2011-05-26T00:00:00+02:00</updated>
    <id>http://nerian.github.com/2011/05/26/dpovray</id>
-   <content type="html">&lt;p&gt;Let go back a couple of months. Let go back to the start of the academic year. September 2010. &lt;/p&gt;
+   <content type="html">&lt;p&gt;Lets go back a couple of months. Lets go back to the start of the academic year. September 2010. &lt;/p&gt;
 
 &lt;p&gt;I enrolled in the Distributed System course. I was curious to see how big applications can use multiple cores – a cluster of machines – to solve complicated or massive problems.            &lt;/p&gt;
 
-&lt;p&gt;So as part of the course we had to build a distributed system. Each team consisting of three persons. The technology that we had to use was Java and Corba.&lt;/p&gt;
+&lt;p&gt;So as a part of the course we had to build a distributed system. Each team consisting of three persons. The technology that we had to use was Java and Corba.&lt;/p&gt;
 
 &lt;p&gt;Now if you google what Corba is you will understand very well what my mind thought. In one word: WTF?&lt;/p&gt;
 
@@ -272,15 +272,15 @@ run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=
 
 &lt;p&gt;So I spoke with the professors. They told me that I could do the project in any technology that I wanted, provided that I can find a team that would agree. No problem, I thought, there must be someone who wants to try something new.&lt;/p&gt;
 
-&lt;p&gt;No fucking soul answered the call. They said that they only knew Java, that they didn’t wanted to learn ruby, that everybody was going to use Java, etc.&lt;/p&gt;
+&lt;p&gt;No fucking soul answered the call. They said that they only knew Java, that they didn’t want to learn Ruby, that everybody was going to use Java, etc.&lt;/p&gt;
 
 &lt;p&gt;My question is: What good is it to learn a technology that you will never ever use because it is so ancient that no new developments are being made? What good is it to use a technology that is slow, error prone, untested, undocumented, heavy and the complete opposite of agile? &lt;/p&gt;
 
 &lt;p&gt;The answer is: They are not software developers. They are sheep.&lt;/p&gt;
 
-&lt;p&gt;I had no choice but to join the sheep and build the software using Java and the ominous Corba. It took 4 months to build an application that rendered povray scenes using many computers. 4 months. 3 developers.&lt;/p&gt;
+&lt;p&gt;I had no choice but to join the sheep and build the software using Java and the ominous Corba. It took 4 months to build an application that rendered Povray’s scenes using many computers. 4 months. 3 developers.&lt;/p&gt;
 
-&lt;p&gt;One would be expect a really good piece of software. So long time. So many people. So much ‘documentation’ in the course slides about Java and Corba. I will say that our application got a 19/20 in the mark, almost perfect. But for me, in the range of good software, it was a complete and utter failure. 0 points. No bullshit.&lt;/p&gt;
+&lt;p&gt;One would be expect a really good piece of software. So long time. So many people. So much ‘documentation’ in the course slides about Java and Corba. I will say that our application got a 19/20 in the mark, almost perfect. But for me, in the light of good software good practices , it was a complete and utter failure. 0 points. No bullshit.&lt;/p&gt;
 
 &lt;p&gt;Here are some reasons:&lt;/p&gt;
 
@@ -290,15 +290,15 @@ run lambda { [&lt;span class=&quot;i&quot;&gt;404&lt;/span&gt;, {&lt;span class=
   &lt;li&gt;We used Corba. Seriously, google about Corba. It creeps the hell out of me.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;And that are only the software part of the problems. I haven’t talked about the methodology. It was almost a joke. First we develop the working software. Then we write the documention – flow diagrams, class diagrams, etc. The test part was irrelevant, nobody did testing.&lt;/p&gt;
+&lt;p&gt;And that are only the software part of the problems. I haven’t talked about the methodology. It was almost a joke. First we developed the working software. Then we wrote the documentation – flow diagrams, class diagrams, etc. The testing phase was irrelevant, nobody did testing.&lt;/p&gt;
 
 &lt;p&gt;Now, if you are with me in the agile way of developing software you must be feeling a heart attack. We were wasting days writing flow diagrams – which are supposed to help us when we START the development –  AFTER completing the software. Completely absurd. Retarded.&lt;/p&gt;
 
 &lt;p&gt;After 4 years of academic projects I can say that today universities need to rethink how they teach. They need to do it asap because the modern world has no use for the people they are training.&lt;/p&gt;
 
-&lt;p&gt;At the beginning I told my professor that even if I was going to do the Java project, I will keep developing the ruby alternative. I wanted to learn Ruby.                       &lt;/p&gt;
+&lt;p&gt;At the beginning I told my professor that even if I was going to do the Java project, I will keep developing the Ruby alternative. I wanted to learn Ruby.                       &lt;/p&gt;
 
-&lt;p&gt;That was probably one of the best decisions in my life. It is the reason why this blog is alive. I read the RSpec book and tried to follow the test driven methodology. I had a lot of mistakes. If I now look at my code I think is some serious shit. That’s good, it means I am learning.&lt;/p&gt;
+&lt;p&gt;That was probably one of the best decisions in my life. It is the reason why this blog is alive. I read the RSpec book and tried to follow the Test Driven Methodology. I had a lot of mistakes. If I now look at my code I think is some serious shit. That’s good, it means I am learning.&lt;/p&gt;
 
 &lt;p&gt;But I didn’t finished that ruby project. I started other projects – based in Ruby too. I read a lot about Rails; the Web development with ruby on Rails is a very good book. I learned about Capybara, Steak, Cucumber, MongoDB, Redis, RVM, Nginx, Passenger, Heroku, Stackoverflow, Sinatra, Git, RESTful services, HAML, Markdown, JSON….&lt;/p&gt;
 
