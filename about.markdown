@@ -17,7 +17,7 @@ I am fluent in English – officially B2 european level – and in Spanish, whic
 
 When I am not coding I am either thinking on new business ideas, swimming or reading a book.
 
-You can contact me at <a href="mailto:gonzalo.rodriguez@nerian.es">gonzalo.rodriguez@nerian.es</a>   
+You can contact me at gonzalo.rodriguez at nerian.es
 
 <a href="https://github.com/Nerian" target='_blank'>
 		<img class='second-image' STYLE="position:relative; top:9px" height="27" width="27" src="/images/github.png"/> 
