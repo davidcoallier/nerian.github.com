@@ -4,7 +4,7 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-09-03T16:19:58+02:00</updated>
+ <updated>2011-10-04T01:25:34+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
@@ -54,10 +54,21 @@
    <link href="http://nerian.github.com/2011/07/20/simple_generator.html"/>
    <updated>2011-07-20T00:00:00+02:00</updated>
    <id>http://nerian.github.com/2011/07/20/simple_generator</id>
-   <content type="html">&lt;p&gt;You know those situations. Every Ruby developer go through this:&lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;update&quot;&gt;Update&lt;/h2&gt;
+
+&lt;p&gt;Just use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rvm --create --rvmrc 1.9.3@blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That will create a very nice .rvmrc file.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You know those situations. Every Ruby developer go through this:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;You spot an interesting Ruby project at github&lt;/li&gt;
+  &lt;li&gt;You spot an interesting Ruby project at Github&lt;/li&gt;
   &lt;li&gt;You want to play with it, so you git clone it.&lt;/li&gt;
   &lt;li&gt;You don’t want to turn your gem space into a mess, so you lose 7 seconds typing a boring .rvmrc file that just creates a new gemset for whatever ruby version you happen to be using.&lt;/li&gt;
   &lt;li&gt;You play with your new toy.&lt;/li&gt;

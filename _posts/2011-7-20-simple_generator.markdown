@@ -3,9 +3,19 @@ layout: post
 title: "Simple Gemset – because 7 seconds is a lot of time!"
 ---                                    
                   
+## Update
+
+Just use:
+
+	$ rvm --create --rvmrc 1.9.3@blog
+
+That will create a very nice .rvmrc file.
+
+<hr>
+
 You know those situations. Every Ruby developer go through this:
 
-* You spot an interesting Ruby project at github
+* You spot an interesting Ruby project at Github
 * You want to play with it, so you git clone it.
 * You don't want to turn your gem space into a mess, so you lose 7 seconds typing a boring .rvmrc file that just creates a new gemset for whatever ruby version you happen to be using.
 * You play with your new toy.
