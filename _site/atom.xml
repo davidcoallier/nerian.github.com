@@ -4,13 +4,71 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-10-04T01:25:34+02:00</updated>
+ <updated>2011-10-19T16:53:31+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
    <email>siotopo@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Mendicant University: The art of teaching</title>
+   <link href="http://nerian.github.com/2011/10/19/mendicant-university.html"/>
+   <updated>2011-10-19T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/10/19/mendicant-university</id>
+   <content type="html">&lt;p&gt;During the month of September I have been learning. Learning in the most pure, distilled and effective way: By doing.&lt;/p&gt;
+
+&lt;p&gt;As an university student your assignments are usually just code samples. A small amount of code that implements a piece of functionality, isolated, completely out of context. That is good in order to learn isolated things.&lt;/p&gt;
+
+&lt;p&gt;But creating a product is not an isolated thing. Shipping a product is a coalescence of a myriad of tiny yet vital details.&lt;/p&gt;
+
+&lt;p&gt;That is what university doesn’t teach you. That is what working on pet projects teaches you. Enter Mendicant University.&lt;/p&gt;
+
+&lt;p&gt;Gregory Brown is the founder of Mendicant University(MU). The idea of MU is similar to a Think Tank. A place where intelligent people go to share thoughts and achieve greater things than if they did so alone.&lt;/p&gt;
+
+&lt;p&gt;From that organisation a Core Skills course was created. This course is designed to make a small group (≈10 people) skyrocket their development skills. How do they do that? By doing. &lt;/p&gt;
+
+&lt;p&gt;I did a total of four projects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Blood Chalice: A cooperative videogame where you and your friends incarnate a coven of vampires. The village that is your hunting territory is being sieged by hordes of zombies and they are assimilating all the peasants. An army of knights has been sent to defend it. But none of those are good news, since both groups will attack you on sight. Oh, and in 400 turns you will all die because of the sun’s light. Your only chance of survival is to summon the Black Sun, performing the Blood Chalice ritual. Good luck dear fiend.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;WordCram Wrapper: WordCram is a Word-Cloud generator. That is, it creates a stylised image from a given text. The catch is that is programmed in Java. I wrote a wrapper for the original library so that it can be used with JRuby. The objective was to create an api that feels like Ruby, not java. This was one of my favourites learning exercises.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pugnacious Juices: Do you know the game Liquid Wars? This is a clone of it. Two masses of particles fight for dominance in a map. Each player control one mass, using a pointer. The mass go to wherever the pointer is. The strategic part comes from the fact that a particle only hits another particle when they collide and when it dies it is assimilated and converted to the killer’s army. So you better envelop the enemy’s mass before he surrounds yours :)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Community Project: My assignment was to work on the Mendicant University internal web in order to implement full text search capabilities. This was difficult because I had to work with a mature codebase that I was not familiar with. My approach was make it work on the Rails command line and then use tests to drive the implementation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do you see a pattern here? Besides that all those projects are done in Ruby :)&lt;/p&gt;
+
+&lt;p&gt;They all emphasises one phase of a product’s life.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initial implementation of an original idea.&lt;/li&gt;
+  &lt;li&gt;Glueing different services together.&lt;/li&gt;
+  &lt;li&gt;Product distribution and optimisation.&lt;/li&gt;
+  &lt;li&gt;Working with an old code base.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;They are not just isolated irrelevant code examples. They are meaningful projects with a context. They are available, ready to be used. Can you say the same of your regular university stuff?&lt;/p&gt;
+
+&lt;p&gt;The feedback I got from my peers and mentors helped me to become a better developer. For that, I will always be thankful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://university.rubymendicant.com&quot;&gt;http://university.rubymendicant.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Nerian/Wordcram.rb&quot;&gt;https://github.com/Nerian/Wordcram.rb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Nerian/Pugnacious-Juices&quot;&gt;https://github.com/Nerian/Pugnacious-Juices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Nerian/BloodChalice&quot;&gt;https://github.com/Nerian/BloodChalice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>The paradox of the Slave-Student: We want oranges but we cultivate onions</title>
