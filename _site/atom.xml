@@ -4,13 +4,53 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2011-10-24T13:50:33+02:00</updated>
+ <updated>2011-10-25T17:26:30+02:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
    <email>siotopo@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>My favourite testing tools: Because I test them too :)</title>
+   <link href="http://nerian.github.com/2011/10/25/favourite-testing-tools.html"/>
+   <updated>2011-10-25T00:00:00+02:00</updated>
+   <id>http://nerian.github.com/2011/10/25/favourite-testing-tools</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;RSpec&lt;/strong&gt;: I love the RSpec project. It is intuitive and has great documentation. It is the second gem I add in all my projects. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Steak&lt;/strong&gt;: I learnt Ruby at the same time I was learning about testing. I read The RSpec Book, by the Pragmatic programmers. In that book they teach you, among other things, Cucumber. Cucumber is a domain language for specifying executable requirements (tests) at a very high level of abstraction. They are supposed to be written by the non technical client. I found it too cumbersome so I searched for a simpler alternative. There you have: Steak. Pure RSpec. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Capybara&lt;/strong&gt;: So you have tests, now we need to run them. Capybara provides you with a very clean api to assert things about the page. I use the driver Capybara-webkit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fabrication&lt;/strong&gt;: Easy and fast creation of objects. It works with Mongoid too :) &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Spork&lt;/strong&gt;: It preloads the Rails environment, so test are ran instantly. Very very handy. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;guard-rspec&lt;/strong&gt;: This little gem takes care of executing the appropriate tests each time I modify a file in my project. I make use of its integration with Growl. It is really cool of develop this way, constantly getting feedback about the project’s state.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What would &lt;strong&gt;you&lt;/strong&gt; add to this sweet melange?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.relishapp.com/rspec&quot;&gt;https://www.relishapp.com/rspec&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/cavalle/steak&quot;&gt;https://github.com/cavalle/steak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jnicklas/capybara&quot;&gt;https://github.com/jnicklas/capybara&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/paulelliott/fabrication&quot;&gt;https://github.com/paulelliott/fabrication&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/timcharper/spork&quot;&gt;https://github.com/timcharper/spork&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/guard/guard-rspec&quot;&gt;https://github.com/guard/guard-rspec&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Mendicant University: The art of teaching</title>
