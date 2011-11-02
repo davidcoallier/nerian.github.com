@@ -1,11 +1,12 @@
-body{           
+body{
 	background:url("/images/background5.jpg"), no-repeat;
 	background-size: cover;
-	background-attachment: fixed;	                      	
-	font-family: "Bookman Old Style";   
-	color: black;	
+	background-attachment: fixed;
+/*	font-family: "Bookman Old Style";*/
+	font-family: "helvetica";
+	color: black;
 	text-rendering: optimizeLegibility;
-}                          
+}
 
 #footer{
 	color: #e0e2f1;
@@ -16,81 +17,110 @@ body{
 	-webkit-border-radius: 0px 0px 10px 10px;
 	-moz-border-radius: 0px 0px 10px 10px;
 	border-radius: 0px 0px 10px 10px;
-	padding-bottom: 2px;    
-	opacity: 0.91;       
-	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
-	-moz-box-shadow: 0px 0px 7px #7c9fe2;    
+	padding-bottom: 2px;
+	opacity: 0.91;
+	-webkit-box-shadow: 0px 0px 7px #7c9fe2;
+	-moz-box-shadow: 0px 0px 7px #7c9fe2;
 	text-align: center;
 	padding: 10px;
-}       
+}
 
 #header a{
-    text-decoration: none;
+  text-decoration: none;
 	color: #e0e2f1;
-}                 
+}
 
-#header a:hover, #content a:hover {
+#header a:hover, #content a:hover{
 	text-decoration: underline;
-	color: #289ab1;		
+	color: #289ab1;
 }
 
-#content a{    
-    color: black;      
+#footer a{
+	color: #e0e2f1;
 }
 
-#header{                   	
+#footer a:hover, #footer a:hover{
+	text-decoration: underline;
+	color: #289ab1;
+}
+
+#content a{
+    color: black;
+}
+
+#header{
 	border: 1px solid black;
 	background:url("/images/background3.png") no-repeat;
 	font-family: Monaco, Courier, Helvetica, sans-serif;
 	font-family: 'Verdana';
 	-webkit-border-radius: 10px 0 0 0;
 	-moz-border-radius: 10px 10px 0 0;
-	border-radius: 10px 10px 0 0;   
-	padding-bottom: 2px;    
-	opacity: 0.91;       
-	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
+	border-radius: 10px 10px 0 0;
+	padding-bottom: 2px;
+	opacity: 0.91;
+	-webkit-box-shadow: 0px 0px 7px #7c9fe2;
 	-moz-box-shadow: 0px 0px 7px #7c9fe2;
-}       
+}
 
-#header ul{      	
+#header ul{
 	padding: 0;
-    list-style-type: none;  
+  list-style-type: none;
 	text-align: center;
 }
 
-#header li{ 
-	display: inline;  
+#header li{
+	display: inline;
 	font-size: 140%;
 	padding: 0 7px 0 7px;
-}            
-
-#wrapper{             	
-	opacity: 0.91;
-	width: 800px;       
-	margin: 50px auto;	 	
 }
 
-#content{             
+#wrapper{
+	opacity: 0.91;
+	width: 700px;
+	margin: 50px auto;
+}
+
+#content{
 	border: 1px solid black;
-	text-align: justify;   	
-	font-size: 16px;
-	line-height: 26px;	 
-	background-color: #eceffd;     
-	-webkit-box-shadow: 0px 0px 7px #7c9fe2; 		
+	text-align: justify;
+	font-size: 17px;
+	line-height: 24px;
+	background-color: #eceffd;
+	background-color: #f2f2f2;
+	background-color: #fcfafa;
+	-webkit-box-shadow: 0px 0px 7px #7c9fe2;
 	-moz-box-shadow: 0px 0px 7px #7c9fe2;
-}                         
-    
+}
+
+#content h2{
+	text-align: center;
+	line-height: 30px;
+}
+
+#content a{
+	text-decoration: none;
+	color: #289ab1;
+}
+
+#content h2 a {
+	color: black;
+}
+
+#content td a {
+	color: black;
+}
+
 #header{
 	padding-top: 10px;
-}              
+}
 
 .post{
 	padding: 10px 30px 40px 30px;
 }
-   
+
 #content h1, h2{
 	font-family: 'Verdana'
-}             
+}
 
 p{
 	text-indent: 1.5em;
@@ -102,13 +132,13 @@ li p{
 
 p.not_indented{
 	text-indent: 0
-}        
-   
-.image{
-    text-align: center;  	  
 }
 
-.image img{              
+.image{
+    text-align: center;
+}
+
+.image img{
     margin: 25px 0px;
     -webkit-box-shadow: 0 0 10px rgb(0,0,0);
     -moz-box-shadow: 0 0 10px rgb(0,0,0);
@@ -118,22 +148,18 @@ p.not_indented{
     text-align: center
 }
 
-.date{         
+.date{
 	display:inline;
 	height: 60px;
 }
 
-.title{           
+.title{
 	display: inline;
 	float: right;
-}         
+}
 
-.index{         
-	font-size:90%;
-	font-family: 'Verdana';		
-}                           
-
-.index a{ text-decoration: none;}
+.index{
+}
 
 .first-image{
 	padding-right: 13px;
@@ -143,7 +169,7 @@ p.not_indented{
 }
 .third-image{
 	padding-right: 10px;
-}      
+}
 
 #disqus_thread{
 	margin-top: 50px;

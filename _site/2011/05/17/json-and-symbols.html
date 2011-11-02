@@ -15,7 +15,7 @@
 		<div id='actions'>
 			<ul>
 				<li><a href="/index.html">Blog</a></li>
-				<li><a href="/about.html">About</a></li>
+				<li><a href="/about.html">Hire me</a></li>
 				<li>
 					<a href="http://feeds.feedburner.com/Nerian-blog" 
 					target='_blank' 
@@ -29,7 +29,6 @@
 		<div class='post'>
 			<div>
 	<h2><a href="/2011/05/17/json-and-symbols.html">Did you know that JSON.encode doesn't respect symbols?</a></h2>
-	<em>Posted on 17 May 2011</em>
 	<br/>
 	<div>
 		<p>Today was one of those days that instead of addressing myself as a programmer I entitle myself the title of ‘Bug Exorcist’.</p>
@@ -37,33 +36,33 @@
 <p>Doing bug exorcism is a very dangerous matter. Do not take it lightly for it can be your doom. The job of a Bug Exorcist is to track down devilish bugs that disguise themselves in the most elaborate ways. I will elaborate on one in particular:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">086</span> &gt; require <span class="s"><span class="dl">'</span><span class="k">json</span><span class="dl">'</span></span>    
+  <div class="code"><pre>ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">086</span> &gt; require <span class="string"><span class="delimiter">'</span><span class="content">json</span><span class="delimiter">'</span></span>    
                  
-<span class="c"># A hash that contains a string key. </span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">065</span> &gt; arra = {<span class="s"><span class="dl">'</span><span class="k">cu</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
- =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}
-<span class="c"># A hash that contains a symbol key.</span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">066</span> &gt; arra2 = {<span class="ke">cu</span>: <span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
- =&gt; {<span class="sy">:cu</span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}              
-<span class="c"># You would say they are different, won't you?</span>
+<span class="comment"># A hash that contains a string key. </span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">065</span> &gt; arra = {<span class="string"><span class="delimiter">'</span><span class="content">cu</span><span class="delimiter">'</span></span>=&gt;<span class="string"><span class="delimiter">'</span><span class="content">algo</span><span class="delimiter">'</span></span>}
+ =&gt; {<span class="string"><span class="delimiter">&quot;</span><span class="content">cu</span><span class="delimiter">&quot;</span></span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>}
+<span class="comment"># A hash that contains a symbol key.</span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">066</span> &gt; arra2 = {cu: <span class="string"><span class="delimiter">'</span><span class="content">algo</span><span class="delimiter">'</span></span>}
+ =&gt; {<span class="symbol">:cu</span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>}              
+<span class="comment"># You would say they are different, won't you?</span>
       
-<span class="c"># Are you watching closely?</span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">067</span> &gt; <span class="co">JSON</span>.dump(arra)
- =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">{</span><span class="ch">\&quot;</span><span class="k">cu</span><span class="ch">\&quot;</span><span class="k">:</span><span class="ch">\&quot;</span><span class="k">algo</span><span class="ch">\&quot;</span><span class="k">}</span><span class="dl">&quot;</span></span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">080</span> &gt; <span class="co">JSON</span>.dump(arra2)
- =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">{</span><span class="ch">\&quot;</span><span class="k">cu</span><span class="ch">\&quot;</span><span class="k">:</span><span class="ch">\&quot;</span><span class="k">algo</span><span class="ch">\&quot;</span><span class="k">}</span><span class="dl">&quot;</span></span>
+<span class="comment"># Are you watching closely?</span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">067</span> &gt; <span class="constant">JSON</span>.dump(arra)
+ =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">{</span><span class="char">\&quot;</span><span class="content">cu</span><span class="char">\&quot;</span><span class="content">:</span><span class="char">\&quot;</span><span class="content">algo</span><span class="char">\&quot;</span><span class="content">}</span><span class="delimiter">&quot;</span></span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">080</span> &gt; <span class="constant">JSON</span>.dump(arra2)
+ =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">{</span><span class="char">\&quot;</span><span class="content">cu</span><span class="char">\&quot;</span><span class="content">:</span><span class="char">\&quot;</span><span class="content">algo</span><span class="char">\&quot;</span><span class="content">}</span><span class="delimiter">&quot;</span></span>
 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">081</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra)) == arra
- =&gt; <span class="pc">true</span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">082</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2)) == arra
- =&gt; <span class="pc">true</span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">086</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2)) == arra2
- =&gt; <span class="pc">false</span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">081</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(arra)) == arra
+ =&gt; <span class="predefined-constant">true</span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">082</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(arra2)) == arra
+ =&gt; <span class="predefined-constant">true</span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">086</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(arra2)) == arra2
+ =&gt; <span class="predefined-constant">false</span>
 
-<span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra1))
- =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}        
-<span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(arra2))
- =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">cu</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>}
+<span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(arra1))
+ =&gt; {<span class="string"><span class="delimiter">&quot;</span><span class="content">cu</span><span class="delimiter">&quot;</span></span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>}        
+<span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(arra2))
+ =&gt; {<span class="string"><span class="delimiter">&quot;</span><span class="content">cu</span><span class="delimiter">&quot;</span></span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>}
 </pre></div>
 </div>
 </div>
@@ -73,14 +72,14 @@ ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">
 <p>And another perl: </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">090</span> &gt; otro={<span class="i">5</span>=&gt;<span class="s"><span class="dl">'</span><span class="k">algo</span><span class="dl">'</span></span>}
- =&gt; {<span class="i">5</span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>} 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">091</span> &gt; otro[<span class="i">5</span>]
- =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span> 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">092</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(otro))
- =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">5</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">algo</span><span class="dl">&quot;</span></span>} 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">093</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(otro)) == otro
- =&gt; <span class="pc">false</span>     
+  <div class="code"><pre>ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">090</span> &gt; otro={<span class="integer">5</span>=&gt;<span class="string"><span class="delimiter">'</span><span class="content">algo</span><span class="delimiter">'</span></span>}
+ =&gt; {<span class="integer">5</span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>} 
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">091</span> &gt; otro[<span class="integer">5</span>]
+ =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span> 
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">092</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(otro))
+ =&gt; {<span class="string"><span class="delimiter">&quot;</span><span class="content">5</span><span class="delimiter">&quot;</span></span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">algo</span><span class="delimiter">&quot;</span></span>} 
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">093</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(otro)) == otro
+ =&gt; <span class="predefined-constant">false</span>     
 </pre></div>
 </div>
 </div>
@@ -90,23 +89,26 @@ ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">
 <p>Or any other object, for that matter:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">096</span> &gt; persona = <span class="co">Person</span>.new
- =&gt; <span class="c">#&lt;Person:0x00000101883900&gt; </span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">098</span> &gt; mas = {persona =&gt; <span class="s"><span class="dl">'</span><span class="k">jojo</span><span class="dl">'</span></span>}
- =&gt; {<span class="c">#&lt;Person:0x00000101883900&gt;=&gt;&quot;jojo&quot;} </span>
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">099</span> &gt; mas[persona]
- =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">jojo</span><span class="dl">&quot;</span></span> 
+  <div class="code"><pre>ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">096</span> &gt; persona = <span class="constant">Person</span>.new
+ =&gt; <span class="comment">#&lt;Person:0x00000101883900&gt; </span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">098</span> &gt; mas = {persona =&gt; <span class="string"><span class="delimiter">'</span><span class="content">jojo</span><span class="delimiter">'</span></span>}
+ =&gt; {<span class="comment">#&lt;Person:0x00000101883900&gt;=&gt;&quot;jojo&quot;} </span>
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">099</span> &gt; mas[persona]
+ =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">jojo</span><span class="delimiter">&quot;</span></span> 
 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">101</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(mas)) == mas
- =&gt; <span class="pc">false</span> 
-ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">102</span> &gt; <span class="co">JSON</span>.parse(<span class="co">JSON</span>.dump(mas)) 
- =&gt; {<span class="s"><span class="dl">&quot;</span><span class="k">#&lt;Person:0x00000101883900&gt;</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">&quot;</span><span class="k">jojo</span><span class="dl">&quot;</span></span>}
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">101</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(mas)) == mas
+ =&gt; <span class="predefined-constant">false</span> 
+ruby-<span class="float">1.9</span>.<span class="error">2</span>-p180 :<span class="integer">102</span> &gt; <span class="constant">JSON</span>.parse(<span class="constant">JSON</span>.dump(mas)) 
+ =&gt; {<span class="string"><span class="delimiter">&quot;</span><span class="content">#&lt;Person:0x00000101883900&gt;</span><span class="delimiter">&quot;</span></span>=&gt;<span class="string"><span class="delimiter">&quot;</span><span class="content">jojo</span><span class="delimiter">&quot;</span></span>}
 </pre></div>
 </div>
 </div>
 
 <p>Conclusion: In JSON keys are always just strings. Don’t get fancy with your keys :)</p>
-		                              				
+	
+		<br/>
+    <br/>
+    <em>Posted on 17 May 2011</em>	                              				
 	</div>	                                              	
 </div>
 
@@ -131,7 +133,7 @@ ruby-<span class="fl">1.9</span>.<span class="i">2</span>-p180 :<span class="i">
 		</div>                                                                                                             				
 	</div>
 	<div id="footer">       	   
-		Looking for a Web Developer? ∫ gonzalo.rodriguez at nerian.es
+		<a href="/about.html">Hire a great web developer</a>
 	</div>   	
 </div>     
    		

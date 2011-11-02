@@ -8,6 +8,7 @@ title: "Simple Gemset – because 7 seconds is a lot of time!"
 Just use:
 
 	$ rvm --create --rvmrc 1.9.3@blog
+{:lang='ruby'}
 
 That will create a very nice .rvmrc file.
 

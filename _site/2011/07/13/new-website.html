@@ -15,7 +15,7 @@
 		<div id='actions'>
 			<ul>
 				<li><a href="/index.html">Blog</a></li>
-				<li><a href="/about.html">About</a></li>
+				<li><a href="/about.html">Hire me</a></li>
 				<li>
 					<a href="http://feeds.feedburner.com/Nerian-blog" 
 					target='_blank' 
@@ -29,7 +29,6 @@
 		<div class='post'>
 			<div>
 	<h2><a href="/2011/07/13/new-website.html">A new website</a></h2>
-	<em>Posted on 13 July 2011</em>
 	<br/>
 	<div>
 		<p>If there is something Apple taught the world is that the most important thing is not really creating something new, but evolve, redesign, refactor what it is already in front of you.</p>
@@ -45,13 +44,13 @@
 <p>The config.ru looks like this:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span>
-use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
-    <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
-    <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
-    <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
-<span class="c"># otherwise 404 NotFound</span>
-run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}
+  <div class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">rack/contrib/try_static</span><span class="delimiter">'</span></span>
+use <span class="constant">Rack</span>::<span class="constant">TryStatic</span>, 
+    <span class="symbol">:root</span> =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">_site</span><span class="delimiter">&quot;</span></span>,  <span class="comment"># static files root dir</span>
+    <span class="symbol">:urls</span> =&gt; <span class="string"><span class="delimiter">%w[</span><span class="content">/</span><span class="delimiter">]</span></span>,     <span class="comment"># match all requests </span>
+    <span class="symbol">:try</span> =&gt; [<span class="string"><span class="delimiter">'</span><span class="content">.html</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">index.html</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">/index.html</span><span class="delimiter">'</span></span>] <span class="comment"># try these postfixes sequentially</span>
+<span class="comment"># otherwise 404 NotFound</span>
+run lambda { [<span class="integer">404</span>, {<span class="string"><span class="delimiter">'</span><span class="content">Content-Type</span><span class="delimiter">'</span></span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">text/html</span><span class="delimiter">'</span></span>}, [<span class="string"><span class="delimiter">'</span><span class="content">whoops! Not Found</span><span class="delimiter">'</span></span>]]}
 </pre></div>
 </div>
 </div>
@@ -61,15 +60,15 @@ run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</s
 <p>And finally I switched from Markdown to Kramdown. Styling code blocks is quite appealing. This how the previous block of code is styled:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="c">#Kramdown with coderay:</span>
-    require <span class="s"><span class="dl">'</span><span class="k">rack/contrib/try_static</span><span class="dl">'</span></span> 
-    use <span class="co">Rack</span>::<span class="co">TryStatic</span>, 
-        <span class="sy">:root</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">_site</span><span class="dl">&quot;</span></span>,  <span class="c"># static files root dir</span>
-        <span class="sy">:urls</span> =&gt; <span class="s"><span class="dl">%w[</span><span class="k">/</span><span class="dl">]</span></span>,     <span class="c"># match all requests </span>
-        <span class="sy">:try</span> =&gt; [<span class="s"><span class="dl">'</span><span class="k">.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">index.html</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">/index.html</span><span class="dl">'</span></span>] <span class="c"># try these postfixes sequentially</span>
-    <span class="c"># otherwise 404 NotFound</span>
-    run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</span><span class="k">Content-Type</span><span class="dl">'</span></span> =&gt; <span class="s"><span class="dl">'</span><span class="k">text/html</span><span class="dl">'</span></span>}, [<span class="s"><span class="dl">'</span><span class="k">whoops! Not Found</span><span class="dl">'</span></span>]]}        
-{<span class="sy">:lang=</span><span class="s"><span class="dl">'</span><span class="k">ruby</span><span class="dl">'</span></span>}
+  <div class="code"><pre><span class="comment">#Kramdown with coderay:</span>
+    require <span class="string"><span class="delimiter">'</span><span class="content">rack/contrib/try_static</span><span class="delimiter">'</span></span> 
+    use <span class="constant">Rack</span>::<span class="constant">TryStatic</span>, 
+        <span class="symbol">:root</span> =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">_site</span><span class="delimiter">&quot;</span></span>,  <span class="comment"># static files root dir</span>
+        <span class="symbol">:urls</span> =&gt; <span class="string"><span class="delimiter">%w[</span><span class="content">/</span><span class="delimiter">]</span></span>,     <span class="comment"># match all requests </span>
+        <span class="symbol">:try</span> =&gt; [<span class="string"><span class="delimiter">'</span><span class="content">.html</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">index.html</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">/index.html</span><span class="delimiter">'</span></span>] <span class="comment"># try these postfixes sequentially</span>
+    <span class="comment"># otherwise 404 NotFound</span>
+    run lambda { [<span class="integer">404</span>, {<span class="string"><span class="delimiter">'</span><span class="content">Content-Type</span><span class="delimiter">'</span></span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">text/html</span><span class="delimiter">'</span></span>}, [<span class="string"><span class="delimiter">'</span><span class="content">whoops! Not Found</span><span class="delimiter">'</span></span>]]}        
+{<span class="symbol">:lang=</span><span class="string"><span class="delimiter">'</span><span class="content">ruby</span><span class="delimiter">'</span></span>}
 </pre></div>
 </div>
 </div>
@@ -77,7 +76,10 @@ run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</s
 <p>And finally I bought a domain name with my nickname :)</p>
 
 <p>The new website resides at <a href="http://nerian.es">nerian.es</a> and the code is at <a href="https://github.com/Nerian/nerian.github.com">github</a></p>
-		                              				
+	
+		<br/>
+    <br/>
+    <em>Posted on 13 July 2011</em>	                              				
 	</div>	                                              	
 </div>
 
@@ -102,7 +104,7 @@ run lambda { [<span class="i">404</span>, {<span class="s"><span class="dl">'</s
 		</div>                                                                                                             				
 	</div>
 	<div id="footer">       	   
-		Looking for a Web Developer? ∫ gonzalo.rodriguez at nerian.es
+		<a href="/about.html">Hire a great web developer</a>
 	</div>   	
 </div>     
    		

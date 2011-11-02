@@ -17,13 +17,21 @@ From that organisation a Core Skills course was created. This course is designed
 
 I did a total of four projects.
 
-* Blood Chalice: A cooperative videogame where you and your friends incarnate a coven of vampires. The village that is your hunting territory is being sieged by hordes of zombies and they are assimilating all the peasants. An army of knights has been sent to defend it. But none of those are good news, since both groups will attack you on sight. Oh, and in 400 turns you will all die because of the sun's light. Your only chance of survival is to summon the Black Sun, performing the Blood Chalice ritual. Good luck dear fiend.
+__Blood Chalice__ 
 
-* WordCram Wrapper: WordCram is a Word-Cloud generator. That is, it creates a stylised image from a given text. The catch is that is programmed in Java. I wrote a wrapper for the original library so that it can be used with JRuby. The objective was to create an api that feels like Ruby, not java. This was one of my favourites learning exercises.
+A cooperative videogame where you and your friends incarnate a coven of vampires. The village that is your hunting territory is being sieged by hordes of zombies and they are assimilating all the peasants. An army of knights has been sent to defend it. But none of those are good news, since both groups will attack you on sight. Oh, and in 400 turns you will all die because of the sun's light. Your only chance of survival is to summon the Black Sun, performing the Blood Chalice ritual. Good luck dear fiend.
 
-* Pugnacious Juices: Do you know the game Liquid Wars? This is a clone of it. Two masses of particles fight for dominance in a map. Each player control one mass, using a pointer. The mass go to wherever the pointer is. The strategic part comes from the fact that a particle only hits another particle when they collide and when it dies it is assimilated and converted to the killer's army. So you better envelop the enemy's mass before he surrounds yours :)
+__WordCram Wrapper__
 
-* Community Project: My assignment was to work on the Mendicant University internal web in order to implement full text search capabilities. This was difficult because I had to work with a mature codebase that I was not familiar with. My approach was make it work on the Rails command line and then use tests to drive the implementation.
+WordCram is a Word-Cloud generator. That is, it creates a stylised image from a given text. The catch is that is programmed in Java. I wrote a wrapper for the original library so that it can be used with JRuby. The objective was to create an api that feels like Ruby, not java. This was one of my favourites learning exercises.
+
+__Pugnacious Juices__ 
+
+Do you know the game Liquid Wars? This is a clone of it. Two masses of particles fight for dominance in a map. Each player control one mass, using a pointer. The mass go to wherever the pointer is. The strategic part comes from the fact that a particle only hits another particle when they collide and when it dies it is assimilated and converted to the killer's army. So you better envelop the enemy's mass before he surrounds yours :)
+
+__Community Project__
+
+My assignment was to work on the Mendicant University internal web in order to implement full text search capabilities. This was difficult because I had to work with a mature codebase that I was not familiar with. My approach was make it work on the Rails command line and then use tests to drive the implementation.
 
 Do you see a pattern here? Besides that all those projects are done in Ruby :)
 

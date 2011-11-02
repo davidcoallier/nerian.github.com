@@ -15,7 +15,7 @@
 		<div id='actions'>
 			<ul>
 				<li><a href="/index.html">Blog</a></li>
-				<li><a href="/about.html">About</a></li>
+				<li><a href="/about.html">Hire me</a></li>
 				<li>
 					<a href="http://feeds.feedburner.com/Nerian-blog" 
 					target='_blank' 
@@ -29,7 +29,6 @@
 		<div class='post'>
 			<div>
 	<h2><a href="/2011/02/28/RPS-3-spork_and_mongoid.html">Lighting fast tests with Spork on a Mongoid project</a></h2>
-	<em>Posted on 28 February 2011</em>
 	<br/>
 	<div>
 		<h3 id="summary">Summary:</h3>
@@ -67,13 +66,13 @@ $ echo &quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&
 <p>Configure Gemfile      </p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>gem <span class="s"><span class="dl">'</span><span class="k">rails</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">3.0.4</span><span class="dl">'</span></span>                                                     
-gem <span class="s"><span class="dl">&quot;</span><span class="k">mongoid</span><span class="dl">&quot;</span></span>, <span class="s"><span class="dl">&quot;</span><span class="k">2.0.0.rc.7</span><span class="dl">&quot;</span></span>
-gem <span class="s"><span class="dl">'</span><span class="k">bson_ext</span><span class="dl">'</span></span>
-group <span class="sy">:development</span>, <span class="sy">:test</span> <span class="r">do</span>
-  gem <span class="s"><span class="dl">'</span><span class="k">rspec-rails</span><span class="dl">'</span></span>
-  gem <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">~&gt; 0.9.0.rc</span><span class="dl">'</span></span> <span class="c"># It's important to use the rc version </span>
-<span class="r">end</span>              
+  <div class="code"><pre>gem <span class="string"><span class="delimiter">'</span><span class="content">rails</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">3.0.4</span><span class="delimiter">'</span></span>                                                     
+gem <span class="string"><span class="delimiter">&quot;</span><span class="content">mongoid</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.0.rc.7</span><span class="delimiter">&quot;</span></span>
+gem <span class="string"><span class="delimiter">'</span><span class="content">bson_ext</span><span class="delimiter">'</span></span>
+group <span class="symbol">:development</span>, <span class="symbol">:test</span> <span class="keyword">do</span>
+  gem <span class="string"><span class="delimiter">'</span><span class="content">rspec-rails</span><span class="delimiter">'</span></span>
+  gem <span class="string"><span class="delimiter">'</span><span class="content">spork</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">~&gt; 0.9.0.rc</span><span class="delimiter">'</span></span> <span class="comment"># It's important to use the rc version </span>
+<span class="keyword">end</span>              
 </pre></div>
 </div>
 </div>
@@ -99,11 +98,11 @@ group <span class="sy">:development</span>, <span class="sy">:test</span> <span 
 <p>Open config/application and comment the line require ‘rails/all’. Add the rest:</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre><span class="c">#require 'rails/all' </span>
-require <span class="s"><span class="dl">&quot;</span><span class="k">action_controller/railtie</span><span class="dl">&quot;</span></span>
-require <span class="s"><span class="dl">&quot;</span><span class="k">action_mailer/railtie</span><span class="dl">&quot;</span></span>
-require <span class="s"><span class="dl">&quot;</span><span class="k">active_resource/railtie</span><span class="dl">&quot;</span></span>
-require <span class="s"><span class="dl">&quot;</span><span class="k">rails/test_unit/railtie</span><span class="dl">&quot;</span></span>  
+  <div class="code"><pre><span class="comment">#require 'rails/all' </span>
+require <span class="string"><span class="delimiter">&quot;</span><span class="content">action_controller/railtie</span><span class="delimiter">&quot;</span></span>
+require <span class="string"><span class="delimiter">&quot;</span><span class="content">action_mailer/railtie</span><span class="delimiter">&quot;</span></span>
+require <span class="string"><span class="delimiter">&quot;</span><span class="content">active_resource/railtie</span><span class="delimiter">&quot;</span></span>
+require <span class="string"><span class="delimiter">&quot;</span><span class="content">rails/test_unit/railtie</span><span class="delimiter">&quot;</span></span>  
 </pre></div>
 </div>
 </div>
@@ -127,36 +126,36 @@ require <span class="s"><span class="dl">&quot;</span><span class="k">rails/test
 <p>Configure spec/spec_helper.rb</p>
 
 <div><div class="CodeRay">
-  <div class="code"><pre>require <span class="s"><span class="dl">'</span><span class="k">rubygems</span><span class="dl">'</span></span>
-require <span class="s"><span class="dl">'</span><span class="k">spork</span><span class="dl">'</span></span>
+  <div class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">rubygems</span><span class="delimiter">'</span></span>
+require <span class="string"><span class="delimiter">'</span><span class="content">spork</span><span class="delimiter">'</span></span>
 
-<span class="co">Spork</span>.prefork <span class="r">do</span>
-  <span class="c"># Loading more in this block will cause your tests to run faster. However,</span>
-  <span class="c"># if you change any configuration or code from libraries loaded here, you'll</span>
-  <span class="c"># need to restart spork for it take effect.</span>
-  <span class="co">ENV</span>[<span class="s"><span class="dl">&quot;</span><span class="k">RAILS_ENV</span><span class="dl">&quot;</span></span>] ||= <span class="s"><span class="dl">'</span><span class="k">test</span><span class="dl">'</span></span>
-  require <span class="co">File</span>.expand_path(<span class="s"><span class="dl">&quot;</span><span class="k">../../config/environment</span><span class="dl">&quot;</span></span>, <span class="pc">__FILE__</span>)
-  require <span class="s"><span class="dl">'</span><span class="k">rspec/rails</span><span class="dl">'</span></span>     
-  require <span class="s"><span class="dl">'</span><span class="k">capybara/rails</span><span class="dl">'</span></span>
+<span class="constant">Spork</span>.prefork <span class="keyword">do</span>
+  <span class="comment"># Loading more in this block will cause your tests to run faster. However,</span>
+  <span class="comment"># if you change any configuration or code from libraries loaded here, you'll</span>
+  <span class="comment"># need to restart spork for it take effect.</span>
+  <span class="predefined-constant">ENV</span>[<span class="string"><span class="delimiter">&quot;</span><span class="content">RAILS_ENV</span><span class="delimiter">&quot;</span></span>] ||= <span class="string"><span class="delimiter">'</span><span class="content">test</span><span class="delimiter">'</span></span>
+  require <span class="constant">File</span>.expand_path(<span class="string"><span class="delimiter">&quot;</span><span class="content">../../config/environment</span><span class="delimiter">&quot;</span></span>, <span class="predefined-constant">__FILE__</span>)
+  require <span class="string"><span class="delimiter">'</span><span class="content">rspec/rails</span><span class="delimiter">'</span></span>     
+  require <span class="string"><span class="delimiter">'</span><span class="content">capybara/rails</span><span class="delimiter">'</span></span>
   
-  <span class="co">Dir</span>[<span class="co">Rails</span>.root.join(<span class="s"><span class="dl">&quot;</span><span class="k">spec/support/**/*.rb</span><span class="dl">&quot;</span></span>)].each {|f| require f}
+  <span class="constant">Dir</span>[<span class="constant">Rails</span>.root.join(<span class="string"><span class="delimiter">&quot;</span><span class="content">spec/support/**/*.rb</span><span class="delimiter">&quot;</span></span>)].each {|f| require f}
 
-  <span class="co">RSpec</span>.configure <span class="r">do</span> |config|
-    config.mock_with <span class="sy">:rspec</span>    
+  <span class="constant">RSpec</span>.configure <span class="keyword">do</span> |config|
+    config.mock_with <span class="symbol">:rspec</span>    
 
-    <span class="c">#Add this following line to get spork working with rails 3</span>
-    <span class="co">ActiveSupport</span>::<span class="co">Dependencies</span>.clear
-  <span class="r">end</span>
+    <span class="comment">#Add this following line to get spork working with rails 3</span>
+    <span class="constant">ActiveSupport</span>::<span class="constant">Dependencies</span>.clear
+  <span class="keyword">end</span>
 
-<span class="r">end</span>
+<span class="keyword">end</span>
 
-<span class="co">Spork</span>.each_run <span class="r">do</span>
-  <span class="c"># This code will be run each time you run your specs.</span>
+<span class="constant">Spork</span>.each_run <span class="keyword">do</span>
+  <span class="comment"># This code will be run each time you run your specs.</span>
 
-  load <span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/config/routes.rb</span><span class="dl">&quot;</span></span>
-  <span class="co">Dir</span>[<span class="s"><span class="dl">&quot;</span><span class="il"><span class="idl">#{</span><span class="co">Rails</span>.root<span class="idl">}</span></span><span class="k">/app/**/*.rb</span><span class="dl">&quot;</span></span>].each { |f| load f }
+  load <span class="string"><span class="delimiter">&quot;</span><span class="inline"><span class="inline-delimiter">#{</span><span class="constant">Rails</span>.root<span class="inline-delimiter">}</span></span><span class="content">/config/routes.rb</span><span class="delimiter">&quot;</span></span>
+  <span class="constant">Dir</span>[<span class="string"><span class="delimiter">&quot;</span><span class="inline"><span class="inline-delimiter">#{</span><span class="constant">Rails</span>.root<span class="inline-delimiter">}</span></span><span class="content">/app/**/*.rb</span><span class="delimiter">&quot;</span></span>].each { |f| load f }
 
-<span class="r">end</span>           
+<span class="keyword">end</span>           
 </pre></div>
 </div>
 </div>
@@ -187,7 +186,10 @@ require <span class="s"><span class="dl">'</span><span class="k">spork</span><sp
 </div>
 
 <p>Instant start ^_^</p>
-		                              				
+	
+		<br/>
+    <br/>
+    <em>Posted on 28 February 2011</em>	                              				
 	</div>	                                              	
 </div>
 
@@ -212,7 +214,7 @@ require <span class="s"><span class="dl">'</span><span class="k">spork</span><sp
 		</div>                                                                                                             				
 	</div>
 	<div id="footer">       	   
-		Looking for a Web Developer? ∫ gonzalo.rodriguez at nerian.es
+		<a href="/about.html">Hire a great web developer</a>
 	</div>   	
 </div>     
    		
