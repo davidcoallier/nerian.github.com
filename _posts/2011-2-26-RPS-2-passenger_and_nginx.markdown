@@ -19,14 +19,14 @@ Running __rails s__ every time we want to start a Ruby on Rails server is a wast
 
 
 	$ bash < < ( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
-{:lang="bash"}
+{:lang="text"}
 
 Add this snippet to the end of your .bash_profile or .zshrc
               
                                              
 	# This loads RVM into a shell session.
 	[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  
-{:lang="bash"}
+{:lang="text"}
 
 Close the shell and open a new one.
                  
@@ -34,20 +34,20 @@ Install ruby 1.9.2
        
 
 	$ rvm install 1.9.2
-{:lang="bash"}
+{:lang="text"}
 
 Set as default
 
 
 	$ rvm --default 1.9.2                                  
-{:lang="bash"}
+{:lang="text"}
                                        
 ### Install Passenger from RVM
 
 Install passenger and bundler in the global gemset
 
 	$ rvm 1.9.2@global gem install passenger bundler       
-{:lang="bash"}
+{:lang="text"}
            
 ### Install Nginx from Homebrew
 
@@ -55,7 +55,7 @@ Install Nginx
                               
 
 	$ brew install nginx --with-passenger
-{:lang="bash"}
+{:lang="text"}
 
 The install outputs instructions to make Nginx lauch at login:
 
@@ -63,7 +63,7 @@ The install outputs instructions to make Nginx lauch at login:
 	$ cp /usr/local/Cellar/nginx/1.0.0/org.nginx.plist ~/Library/LaunchAgents/
 
 	$ launchctl load -w ~/Library/LaunchAgents/org.nginx.plist
-{:lang="bash"}
+{:lang="text"}
 
 ### Configure the couple                 
 
@@ -71,24 +71,24 @@ Decompress the source of Nginx.
 
 	$ cd $HOME/Library/Caches/Homebrew
 	$ tar xvf nginx-1.0.0.tar.gz
-{:lang="bash"}
+{:lang="text"}
                               
 Now install the Nginx module
 
 	$ passenger-install-nginx-module
-{:lang="bash"}
+{:lang="text"}
 
 Do chose to customise your own Nginx installation.
                                                              
 Your Nginx source code is located here (change it to you user name):
 
 	/Users/Nerian/Library/Caches/Homebrew/nginx-1.0.0                             
-{:lang="bash"}
+{:lang="text"}
 
 Chose to install Nginx to:
 
 	/usr/local/Cellar/nginx/1.0.0/sbin
-{:lang="bash"}
+{:lang="text"}
 
 Click intro in the next two questions.
 
@@ -103,7 +103,7 @@ Change user name and/or passenger version.
 	      passenger_ruby /Users/Nerian/.rvm/wrappers/ruby-1.9.2-p180/ruby;
 	      ...
 	  }                 
-{:lang="bash"}
+{:lang="text"}
        
 
 ### Set up a Rails Project
@@ -118,14 +118,14 @@ Add an entry to /usr/local/etc/nginx/nginx.conf. Notice that we can set the rail
 	      passenger_enabled on;
 		  rails_env development;   
 	   }                
-{:lang="bash"}
+{:lang="text"}
 
 
 
 Create a .rvmrc file on the root path of your project.
 
 	rvm 1.9.2@DaVinci --create             		
-{:lang="bash"}
+{:lang="text"}
 
 Or just use [Simple_gem](https://github.com/Nerian/simple_gemset)
 
@@ -144,15 +144,15 @@ Set up load paths in your Rails 3 project. This is config/setup_load_paths.rb
 	    raise "RVM ruby lib is currently unavailable."
 	  end
 	end           
-{:lang="bash"}
+{:lang="text"}
 
 How do I see the logs of my application?  
 
 	$ cd yourapp/
 	$ tail -f log/development.log
-{:lang="bash"}
+{:lang="text"}
 
 How do I restart my application?
 
 	$ touch yourapp/tmp/restart.txt
-{:lang="bash"}
+{:lang="text"}

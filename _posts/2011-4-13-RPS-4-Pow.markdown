@@ -27,39 +27,39 @@ Install Pow. Make sure it shows the four steps. As there could be errors.
 	*** Installing local configuration files...
 	*** Starting the Pow server...
 	*** Installed
-{:lang="bash"}
+{:lang="text"}
 
 If everything is correctly installed, add your Rails app – any Rack app would do – to Pow.
                     
 	$ cd ~/.pow
 	$ ln -s /path/to/myapp
-{:lang="bash"}
+{:lang="text"}
 
 It currently do not handle well names with upper case letter. So if you destination folder has upper case letter make sure that you rename the link file to lower case. It will work that way.
 
 	$ ls
 	DaVinci@ resque@
 	$ mv DaVinci davinci
-{:lang="bash"}
+{:lang="text"}
 
 If there was any error, try this:
                                                     
 	$ launchctl load -Fw ~/Library/LaunchAgents/cx.pow.powd.plist
 	$ chmod 644 ~/Library/LaunchAgents/cx.pow.powd.plist
 	$ curl get.pow.cx | sh
-{:lang="bash"} 
+{:lang="text"} 
 
 In order to update Pow, you just call 
      
 
 	$ curl get.pow.cx | sh
-{:lang="bash"}
+{:lang="text"}
 
 So a pragmatic thing to do is define an alias in you .zshrc.local or .bashrc file:
   
 
 	$ alias pow-update='curl get.pow.cx | sh'        
-{:lang="bash"}
+{:lang="text"}
 
 So you just do:
     
@@ -68,7 +68,7 @@ So you just do:
 	*** Installing local configuration files...
 	*** Starting the Pow server...
 	*** Installed
-{:lang="bash"}
+{:lang="text"}
 
 Check this out too: https://github.com/Rodreegez/powder
 

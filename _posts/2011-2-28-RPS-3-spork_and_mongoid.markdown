@@ -21,13 +21,13 @@ Spork is a gem designed to allow you to run your spec very quickly. How does it 
                                
 
 	$ rails new mongoid-spork-example
-{:lang="bash"}                                                                                   
+{:lang="text"}                                                                                   
 
 Configure RVM       
 
 	$ cd mongoid-spork-example
 	$ echo "rvm gemset create mongoid-example \nrvm gemset use mongoid-example" >> .rvmrc
-{:lang="bash"}
+{:lang="text"}
                     
 Configure Gemfile      
            
@@ -43,12 +43,12 @@ Configure Gemfile
 Install gems
 
 	$ bundle install       
-{:lang="bash"}
+{:lang="text"}
 
 Generate mongoid configuration file:
 
 	$ rails generate mongoid:config
-{:lang="bash"}
+{:lang="text"}
 
 Empty config/database.yml
 
@@ -64,12 +64,12 @@ Open config/application and comment the line require 'rails/all'. Add the rest:
 Run RSpec generator
 
 	rails g rspec:install
-{:lang="bash"}
+{:lang="text"}
 
 Run the Spork generator. This changes the spec/spec_helper.rb
 
 	$ spork --bootstrap          
-{:lang="bash"}
+{:lang="text"}
 
 Configure spec/spec_helper.rb
             
@@ -114,11 +114,11 @@ In order to configure Rspec to always use Spork we need to edit mongoid-spork-ex
 We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            
 
 	$ spork
-{:lang="bash"}
+{:lang="text"}
   
 Now run the tests from another tab.
 
 	$ rspec spec 
-{:lang="bash"}
+{:lang="text"}
 
 Instant start ^_^
