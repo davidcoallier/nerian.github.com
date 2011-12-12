@@ -3,7 +3,7 @@ layout: master
 title: About me
 ---
 
-My name is Gonzalo Rodríguez-Baltanás Díaz and I am a software developer specialised . I can make you win more money, or reduce your current costs, by leveraging modern web technologies, effective agile techniques and a good deal of communication.
+My name is Gonzalo Rodríguez-Baltanás Díaz and I am a software developer specialised in back-end web development with Ruby. I can make you win more money, or reduce your current costs, by leveraging modern web technologies, effective agile techniques and a good deal of communication.
 
 Nowadays I prefer to use Ruby on Rails, MongoDB, RSpec, Steak, GIT and Heroku as I find them to be excellent tools. But I am not afraid to use different technologies if they are proven to be better suited.
 
