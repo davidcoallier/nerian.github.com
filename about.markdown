@@ -11,8 +11,6 @@ I am also a great advocate of Behaviour Driven Development and Agile Project Man
 
 We will work remotely, constantly communicating using email and Skype.
 
-Hiring me cost 40 € per hour.
-
 Let me know how can I help you at <a href="mailto:gonzalo.rodriguez@nerian.es">gonzalo.rodriguez@nerian.es</a>
 
 Find me on:
