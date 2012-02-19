@@ -4,13 +4,58 @@
  <title>Nerian.blog</title>
  <link href="http://nerian.github.com/atom.xml" rel="self"/>
  <link href="http://nerian.github.com/"/>
- <updated>2012-02-15T20:33:40+01:00</updated>
+ <updated>2012-02-19T16:30:28+01:00</updated>
  <id>http://nerian.github.com/</id>
  <author>
    <name>Gonzalo Rodríguez</name>
    <email>siotopo@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>CourseMarket: An open, global and social marketplace for courses.</title>
+   <link href="http://nerian.github.com/2012/02/19/coursemarket-landing.html"/>
+   <updated>2012-02-19T00:00:00+01:00</updated>
+   <id>http://nerian.github.com/2012/02/19/coursemarket-landing</id>
+   <content type="html">&lt;p&gt;I am starting a revolution.&lt;/p&gt;
+
+&lt;p&gt;We need to end the monopoly of universities over education.&lt;/p&gt;
+
+&lt;p&gt;We need to empower everybody who has expertise in some area with the means to teach those who want to learn about it. Everybody should be able to be a teacher and gather students around him or her.&lt;/p&gt;
+
+&lt;p&gt;We need to create an open and global University where skilled individuals can offer their training courses to everybody in the entire world.&lt;/p&gt;
+
+&lt;p&gt;Imagine being a writer; you can start a science fiction writing course!&lt;/p&gt;
+
+&lt;p&gt;Imagine being a mathematician; you can start an Algebra course!&lt;/p&gt;
+
+&lt;p&gt;Imagine being a web developer; you can start a web development course!&lt;/p&gt;
+
+&lt;p&gt;It is going to be the objective of CourseMarket to create the technology to support this education platform.&lt;/p&gt;
+
+&lt;p&gt;Users of CourseMarket can offer his own catalog of courses. These courses can be either free or fee based. Both types can also be either private or public.&lt;/p&gt;
+
+&lt;p&gt;CourseMarket will charge teachers a monthly fixed fee for each course they offer. Teachers will gain all the income from the sale of his own courses.&lt;/p&gt;
+
+&lt;p&gt;Each course consist of a series of tools for the management of the learning process.&lt;/p&gt;
+
+&lt;p&gt;Inside each course, a teacher will be able to upload learning materials, like texts, hypermedia links, videos, anything that they need.&lt;/p&gt;
+
+&lt;p&gt;Teachers will be able to assign tasks to their students. A task is  an ongoing communication thread centered around a specific problem.&lt;/p&gt;
+
+&lt;p&gt;An example: ‘Write a 3 page Science fiction story’&lt;/p&gt;
+
+&lt;p&gt;The student will then write his first draft. The teacher will review it and he will make annotations. The student will then improve his work and repeat the process until the lesson is learnt.&lt;/p&gt;
+
+&lt;p&gt;Learning is not about grades. It is about gaining a new skill.&lt;/p&gt;
+
+&lt;p&gt;At the end of the course you will grade the teacher. That mark will be used to rank the course. That way students will be able to find the best courses, which are the ones that have the better teachers.&lt;/p&gt;
+
+&lt;p&gt;CourseMarket: An Open, Global and Social University.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://coursemarket.eu/&quot;&gt;http://coursemarket.eu/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>My favourite testing tools: Because I test them too :)</title>
