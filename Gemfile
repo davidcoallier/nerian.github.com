@@ -7,6 +7,7 @@ group :development do
   gem 'metadown'
   gem 'sass'
   gem 'rack'
+  gem 'rack-contrib'
   gem 'thor'
   gem 'heroku'
 end
