@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gonzalo Rodriguez on Web Development</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">body{ padding-top: 60px; padding-bottom: 40px;}</style>
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/assets/css/my-theme.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/">Blog</a>
+              </li>
+              <li>
+                <a href="/about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">$('ul.nav li:last-child').removeClass('active');
+      $('ul.nav li:first-child').addClass('active');</script>
+    <div class="container">
+      <div class="row" style="max-width:650px;margin-left:auto; margin-right:auto;">
+        <div class="span12" style="max-width:650px;"><h3>Lighting fast tests with Spork on a Mongoid project</h3>
+
+<h3>Summary:</h3>
+
+<ul>
+<li>We are going to set up a Rails 3 project using Mongoid and Spork.</li>
+<li>The full project is in <a href="https://github.com/Nerian/Mongoid-spork-Rails-app-example" title="github">github</a></li>
+</ul>
+
+<h3>Introduction:</h3>
+
+<p>MongoDB is a document oriented database. To sum it up what it means: Flexibility. </p>
+
+<p>Mongoid is a ODM that harness the power of MongoDB in a very elegant way. Its power lies around a very good documentation and an active community.</p>
+
+<p>Spork is a gem designed to allow you to run your spec very quickly. How does it do that? It preloads your Rails environment. You&#39;ll notice a difference in that your testing starts right away, instead of waiting a few seconds.</p>
+
+<h3>Create a Rails project:</h3>
+
+<pre><code>$ rails new mongoid-spork-example                                       
+</code></pre>
+
+<p>Configure RVM       </p>
+
+<pre><code>$ cd mongoid-spork-example
+$ echo &quot;rvm gemset create mongoid-example \nrvm gemset use mongoid-example&quot; &gt;&gt; .rvmrc
+</code></pre>
+
+<p>Configure Gemfile      </p>
+
+<pre><code>gem &#39;rails&#39;, &#39;3.0.4&#39;                                                     
+gem &quot;mongoid&quot;, &quot;2.0.0.rc.7&quot;
+gem &#39;bson_ext&#39;
+group :development, :test do
+  gem &#39;rspec-rails&#39;
+  gem &#39;spork&#39;, &#39;~&gt; 0.9.0.rc&#39; # It&#39;s important to use the rc version 
+end              
+</code></pre>
+
+<p>Install gems</p>
+
+<pre><code>$ bundle install       
+</code></pre>
+
+<p>Generate mongoid configuration file:</p>
+
+<pre><code>$ rails generate mongoid:config
+</code></pre>
+
+<p>Empty config/database.yml</p>
+
+<p>Open config/application and comment the line require &#39;rails/all&#39;. Add the rest:</p>
+
+<pre><code>#require &#39;rails/all&#39; 
+require &quot;action_controller/railtie&quot;
+require &quot;action_mailer/railtie&quot;
+require &quot;active_resource/railtie&quot;
+require &quot;rails/test_unit/railtie&quot;  
+</code></pre>
+
+<p>Run RSpec generator</p>
+
+<pre><code>rails g rspec:install
+</code></pre>
+
+<p>Run the Spork generator. This changes the spec/spec_helper.rb</p>
+
+<pre><code>$ spork --bootstrap          
+</code></pre>
+
+<p>Configure spec/spec_helper.rb</p>
+
+<pre><code>require &#39;rubygems&#39;
+require &#39;spork&#39;
+
+Spork.prefork do
+  # Loading more in this block will cause your tests to run faster. However,
+  # if you change any configuration or code from libraries loaded here, you&#39;ll
+  # need to restart spork for it take effect.
+  ENV[&quot;RAILS_ENV&quot;] ||= &#39;test&#39;
+  require File.expand_path(&quot;../../config/environment&quot;, __FILE__)
+  require &#39;rspec/rails&#39;     
+  require &#39;capybara/rails&#39;
+
+  Dir[Rails.root.join(&quot;spec/support/**/*.rb&quot;)].each {|f| require f}
+
+  RSpec.configure do |config|
+    config.mock_with :rspec    
+
+    #Add this following line to get spork working with rails 3
+    ActiveSupport::Dependencies.clear
+  end
+
+end
+
+Spork.each_run do
+  # This code will be run each time you run your specs.
+
+  load &quot;#{Rails.root}/config/routes.rb&quot;
+  Dir[&quot;#{Rails.root}/app/**/*.rb&quot;].each { |f| load f }
+
+end           
+</code></pre>
+
+<p>In order to configure Rspec to always use Spork we need to edit mongoid-spork-example/.rspec. Create it if it doesn&#39;t exist.</p>
+
+<pre><code>--colour
+--drb
+</code></pre>
+
+<p>We have everything setup now. Let run the tests! Open new tab and go to the directory where you have your app. Start Spork.            </p>
+
+<pre><code>$ spork
+</code></pre>
+
+<p>Now run the tests from another tab.</p>
+
+<pre><code>$ rspec spec 
+</code></pre>
+
+<p>Instant start ^_^</p>
+<div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">var disqus_shortname = 'nerian-blog';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();</script>
+  </body>
+</html>

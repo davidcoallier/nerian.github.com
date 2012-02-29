@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gonzalo Rodriguez on Web Development</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">body{ padding-top: 60px; padding-bottom: 40px;}</style>
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/assets/css/my-theme.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/">Blog</a>
+              </li>
+              <li>
+                <a href="/about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">$('ul.nav li:last-child').removeClass('active');
+      $('ul.nav li:first-child').addClass('active');</script>
+    <div class="container">
+      <div class="row" style="max-width:650px;margin-left:auto; margin-right:auto;">
+        <div class="span12" style="max-width:650px;"><p><img alt ='' src='http://stillmaintained.com/Nerian/nerian.github.com.png'></img></p>
+          
+          <p>My Jekyll powered blog. I blog about Ruby, Web development and good practices.</p>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>
