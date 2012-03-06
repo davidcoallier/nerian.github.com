@@ -29,10 +29,11 @@ html
       $('ul.nav li:last-child').removeClass('active');
       $('ul.nav li:first-child').addClass('active');
     .container
-      .row{style='max-width:650px;margin-left:auto; margin-right:auto;'}
-        .span12{style='max-width:650px;'}          
-          == yield
-          div id="disqus_thread"
+      .row
+        .span12
+          .site-width
+            == yield
+            div id="disqus_thread"
 
     script src="/assets/js/bootstrap.min.js"
     javascript:

@@ -4,7 +4,7 @@ title: "Thoughts of an Erasmus student, an anthropological Post-Mortem"
 date: 2011-7-14
 ---
 
-### Thoughts of an Erasmus student, an anthropological Post-Mortem
+# Thoughts of an Erasmus student, an anthropological Post-Mortem
 
 No more than 15 days ago I was still in Belgium as a part of my Erasmus scholarship. Now it is over. I am at home now but at the same time I feel like I am not really there.
 

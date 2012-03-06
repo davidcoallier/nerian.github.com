@@ -4,14 +4,14 @@ title: 'Lighting fast tests with Spork on a Mongoid project'
 date: 2011-2-28
 ---                                                                          
 
-### Lighting fast tests with Spork on a Mongoid project
+# Lighting fast tests with Spork on a Mongoid project
 
-### Summary:
+## Summary:
 
 * We are going to set up a Rails 3 project using Mongoid and Spork.
 * The full project is in [github](https://github.com/Nerian/Mongoid-spork-Rails-app-example 'github')
 
-### Introduction:
+## Introduction:
 
 MongoDB is a document oriented database. To sum it up what it means: Flexibility. 
 
@@ -19,7 +19,7 @@ Mongoid is a ODM that harness the power of MongoDB in a very elegant way. Its po
 
 Spork is a gem designed to allow you to run your spec very quickly. How does it do that? It preloads your Rails environment. You'll notice a difference in that your testing starts right away, instead of waiting a few seconds.
 
-### Create a Rails project:
+## Create a Rails project:
                                
 
 	$ rails new mongoid-spork-example                                       

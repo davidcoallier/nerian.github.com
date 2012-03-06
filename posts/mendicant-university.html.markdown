@@ -4,7 +4,7 @@ title: "Mendicant University: The art of teaching"
 date: 2011-10-19
 ---                                    
 
-### Mendicant University: The art of teaching
+# Mendicant University: The art of teaching
 
 During the month of September I have been learning. Learning in the most pure, distilled and effective way: By doing.
 

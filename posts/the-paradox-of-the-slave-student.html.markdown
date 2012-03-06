@@ -4,7 +4,7 @@ title: "The paradox of the Slave-Student: We want oranges but we cultivate onion
 date: 2011-8-14
 ---                         
 
-### The paradox of the Slave-Student: We want oranges but we cultivate onions           
+# The paradox of the Slave-Student: We want oranges but we cultivate onions           
 
 – Good evening – said the speaker, an old man with long white hair and deep blue eyes.
 

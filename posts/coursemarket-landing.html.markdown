@@ -4,7 +4,7 @@ title: "CourseMarket: An open, global and social marketplace for courses."
 date: 2012-02-19
 ---
 
-### CourseMarket: An open, global and social marketplace for courses
+# CourseMarket: An open, global and social marketplace for courses
 
 I am starting a revolution.
 
