@@ -2,6 +2,7 @@ require 'metadown'
 require 'sass'
 Slim::Engine.set_default_options :pretty => true
 Slim::Engine.default_options[:disable_escape] = true
+
 layout 'layout.html.slim'
 
 before 'index.html.slim' do
@@ -16,11 +17,9 @@ end
 
 Dir.glob("posts/*.markdown").each do |file_name|
   before file_name do |file|
-    post = Metadown.render(File.read("/Users/Nerian/Projects/blog/#{file_name}"))
+    post = Metadown.render(File.read("/Users/Nerian/Projects/nerian.github.com/#{file_name}"))
     instead post.output
   end
 end
-
-ignore /config.ru/
 
 
