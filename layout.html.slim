@@ -23,12 +23,12 @@ html
             ul.nav
               li
                 a href='/'Blog
-              li
+              li.about
                 a href='/about.html' Hire me
               li
-                a href='http://feeds.feedburner.com/Nerian-blog' Rss
+                a href='http://feeds.feedburner.com/Nerian-blog' Subscribe
     javascript:
-      $('ul.nav li:last-child').removeClass('active');
+      $('ul.nav li').removeClass('active');
       $('ul.nav li:first-child').addClass('active');
     .container
       .row
