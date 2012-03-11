@@ -15,6 +15,19 @@ before 'index.html.slim' do
   end  
 end
 
+layout 'rss.xml.erb' => 'none.html.slim'
+before 'rss.xml.erb' do
+  
+  @posts = Array.new
+  Dir.foreach("posts") do |file_name|
+    unless file_name == '.' or file_name == '..' or file_name == 'controller.rb'
+      post = Metadown.render(File.read("posts/" + file_name))
+      post.metadata['url'] = 'http://nerian.es/' + file_name.gsub('.markdown', '')
+      @posts << post.metadata
+    end
+  end  
+end
+
 Dir.glob("posts/*.markdown").each do |file_name|
   before file_name do |file|
     post = Metadown.render(File.read("/Users/Nerian/Projects/nerian.github.com/#{file_name}"))
