@@ -6,6 +6,8 @@ date: 2012-02-19
 
 # CourseMarket: An open, global and social marketplace for courses
 
+Let see how much attention does this get :)
+
 I am starting a revolution.
 
 We need to end the monopoly of universities over education.
