@@ -2,7 +2,7 @@
 layout: post
 title: "The paradox of the Slave-Student: We want oranges but we cultivate onions"
 date: 2011-8-14
----                         
+---
 
 # The paradox of the Slave-Student: We want oranges but we cultivate onions           
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gonzalo Rodriguez on Web Development</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">body{ padding-top: 60px; padding-bottom: 40px;}</style>
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/assets/css/my-theme.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/">Blog</a>
+              </li>
+              <li class="about">
+                <a href="/about.html">Hire me</a>
+              </li>
+              <li>
+                <a href="http://feeds.feedburner.com/Nerian-blog">Subscribe</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">$('ul.nav li').removeClass('active');
+      $('ul.nav li:first-child').addClass('active');</script>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="site-width"><h1>DaVinci LMS: A minimalistic Learning Management System</h1>
+            
+            <p>When I was in university Pablo de Olavide we used WebCT for the online presence of teachers and students. It was an extremely useful web system. Among the many thing WebCT could do was to manage documents. So teachers will upload notes for the Java class at the start of the course and students will be able to download it, study it and raise questions before the actual class starts. It was a very useful document store. Another very useful feature that we used intensively was the Task system. So a teacher will say &#39;Solve problems 13-18 and send me the code&#39;. We will solve them and then send back the code, all using the web interface. It was very handy.</p>
+            
+            <p>There are many other features, but they were all irrelevant since we didn&#39;t use them. Nonetheless it wasn&#39;t all perfect. It was far from perfect. The idea, the utility of the application was very good, yet the implementation could be much better. It was slow. The UI was ugly. Some times it will just explode and we will be without WebCT a few days until the IT figure it out what went wrong. Also, it was incredible costly for the university to use it, not just because of the important investment in IT infrastructure to serve 20000 users, but the actual cost of licensing the software. To get you an idea, they can&#39;t afford to upgrade to new versions of WebCT. And since the world is in recession and particularly in Spain the government is cutting education budget by 20% (for real) it doesn&#39;t seem likely that they will be able to update in years.</p>
+            
+            <p>So that was the situation. When I was at my final year I took a web development course. I learnt a lot of technologies but the one that caught my eye was Ruby on Rails. It was an amazing piece of technology that allowed small teams to deliver working software in a matter of days instead of weeks or months. Real speed. I decided that I wanted to give it a go to creating a Learning Management System(LMS). I deliberately wanted it to be dead simple to use and to install. I didn&#39;t want universities to need a whole staff of IT just to support the platform. It must be open source, so that they could modify the source code to meet they particular needs. It needed to be fast so that people could spend their time actually learning and not just using the learning platform. It should be able to store documents and manage tasks.</p>
+            
+            <ul>
+            <li>Speed</li>
+            <li>Open source</li>
+            <li>Easy to use </li>
+            <li>Easy to deploy</li>
+            <li>Document store</li>
+            <li>Task Management</li>
+            </ul>
+            
+            <p>My first attempt was a shit. I didn&#39;t really knew how to use Rails and I was a beginner in CSS, HTML, knew nothing about JS. I made every possible mistake. I failed to create useful software, but I learned more and more of Rails. I started again. And again. And again. Each time a new project. Each time a new approach, different tools, different UI, different database, different testing approach, etc. It has become sort of my &#39;Hello World&#39; application whenever I want to test a new cutting edge tech.</p>
+            
+            <p>This time, the new tech I wanted to give it try was Apotomo, a component oriented framework for Rails. I also happen to be reading Designed For Use, a book on Usability, how to improve user interfaces so that they are intuitive, natural, discoverable, easy to learn and master. So as a was reading the book I was designing the UI of the new DaVinci LMS prototype. I think this time I have actually achieve to produce a fully working application that meets the IT needs to a school. And so I wanted to make it public, so that people can try it and give me feedback on what is right and what is not right. Also, I can use more fellow developers on this project so you welcome to contribute.</p>
+            
+            <p>Check it out: <a href="https://github.com/Nerian/DaVinci-LMS">https://github.com/Nerian/DaVinci-LMS</a></p>
+            
+            <p>And there is an online demo: <a href="http://davinci-lms-testing.herokuapp.com/en/login">http://davinci-lms-testing.herokuapp.com/en/login</a></p>
+            <div id="disqus_thread"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">var disqus_shortname = 'nerian-blog';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();</script>
+  </body>
+</html>
