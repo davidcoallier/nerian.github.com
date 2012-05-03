@@ -8,6 +8,6 @@ class Deploy < Thor::Group
   
   def two
     puts '# Deploying to Heroku'
-    `git push heroku`
+    `git push heroku master`
   end
 end
