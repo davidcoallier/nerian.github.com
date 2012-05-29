@@ -1,0 +1,10 @@
+// import original bootstrap
+@import "bootstrap";
+// @import "responsive";
+
+@import "variables.scss"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.scss";
+@import "responsive-utilities.scss";
+@import "responsive-767px-max.scss";
+@import "responsive-768px-979px.scss";
+@import "responsive-navbar.scss";

@@ -1,9 +1,4 @@
-require 'rack'
-require 'rack/contrib/try_static'
+# This file is used by Rack-based servers to start the application.
 
-use Rack::TryStatic, 
-    :root => "public",  # static files root dir
-    :urls => %w[/],     # match all requests 
-    :try => ['.html', 'index.html', '/index.html'] # try these postfixes sequentially
-# otherwise 404 NotFound
-run lambda { [404, {'Content-Type' => 'text/html'}, ['whoops! Not Found']]}
+require ::File.expand_path('../config/environment',  __FILE__)
+run Blog::Application

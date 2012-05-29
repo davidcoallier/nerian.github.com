@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Nerian's blog'</title>
+    <link>http://nerian.es/rss.xml/</link>
+    <description>Gonzalo Rodriguez on Web Development</description>
+
+    <% @posts.each do |post| %> 
+      <% date = post.publish_date %>
+      <item>
+        <title>
+          <%= post.title %>
+        </title>
+        <link><%= link_to post.title, nice_post_url(post.id, date.year, date.month, date.day, post.title.parameterize) %></link>
+        <description></description>
+        <guid><%= link_to post.title, nice_post_url(post.id, date.year, date.month, date.day, post.title.parameterize) %></guid>
+      </item>
+    <% end %>
+
+  </channel>
+</rss>

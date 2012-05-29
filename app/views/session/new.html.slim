@@ -1,0 +1,5 @@
+= semantic_form_for '', url: session_index_path, html: {class: 'form-horizontal'} do |f|  
+  = f.inputs t(:login) do
+      = f.input :password
+  = f.actions do
+    = f.action :submit, disable_with: 'Logging in...', label: 'Log in'

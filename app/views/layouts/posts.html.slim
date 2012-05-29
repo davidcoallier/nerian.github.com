@@ -1,0 +1,11 @@
+- content_for :content do
+  = link_to root_path do
+    i.icon-arrow-left
+    span{style='padding-left:3px'}  Back
+
+  br
+  br
+  
+  = yield
+
+= render :template => 'layouts/application'

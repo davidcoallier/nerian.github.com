@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Gonzalo on Web development
+    = stylesheet_link_tag    :application
+    = javascript_include_tag :application
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta http-equiv="Content-Type" content="text/html;charset=UTF-8"
+    = csrf_meta_tags
+  body
+    .container
+      .row.span12{style='margin: 0;'}
+        #main_box data-pjax-container=true
+          = content_for?(:content) ? yield(:content) : yield
+        - if logged_in?
+          .well        
+            ul
+              li = link_to 'New post', new_post_path
+              li = link_to 'List of posts', posts_path

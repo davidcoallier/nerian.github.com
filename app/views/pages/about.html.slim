@@ -1,0 +1,67 @@
+- content_for :content do
+  = link_to root_path do
+    i.icon-arrow-left
+    span{style='padding-left:3px'}  Back
+    
+  br
+  br
+
+  .title Who are you?
+  
+  p My name is Gonzalo Rodríguez-Baltanás Díaz and I am a product builder formally educated in Computer Science and experienced in Web application development with Ruby and MongoDB.
+
+  p
+    span I am an
+    a href='http://community.mendicantuniversity.org/people/Nerian'  alumni member
+    span  of Mendicant University and an 
+    a href='https://github.com/Nerian' open source 
+    span contributor.
+
+  .title Services
+
+  ul
+    li Code Review
+    li Web development
+
+  .title Expertise
+
+  p I work with Ruby on Rails, HTML, CSS, JQuery and MongoDB. My speciality is back-end web development; you may need a specialised designer.
+
+  p Other technologies that I regularly use are Cells & Apotomo, SASS, Twitter Bootstrap and Slim.
+
+  p I follow Agile techniques such as Behaviour Driven Development and I have an understanding of the Lean Startup way of developing products.
+
+  p I have a working knowledge on User Experience.
+
+  .title Languages
+
+  p I speak Spanish (native) and fluent English.
+
+  .title Contact
+
+  p Let me know how can I help you:
+
+  address
+    a href='mailto:gonzalo.rodriguez@nerian.es' gonzalo.rodriguez@nerian.es
+
+  p Other places where you can find me:
+
+  ul
+    li
+      a href='https://github.com/Nerian' Github
+    li
+      a href='http://twitter.com/iCodeErgoExist' @iCodeErgoExist
+    li
+      a href='http://dl.dropbox.com/u/834494/curriculum_english.pdf' CV
+
+  .title Projects
+
+  p I contribute to open source projects and you can see all my developer activity on Github. My current pet project is an Open Source Learning Management System called DaVinci LMS.
+
+  ul
+    li
+      a href='https://github.com/Nerian/DaVinci-LMS' DaVinci LMS
+
+  javascript:
+    $('ul.nav li').removeClass('active');
+    $('ul.nav li.about').addClass('active');
