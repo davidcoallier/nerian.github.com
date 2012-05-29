@@ -24,7 +24,6 @@ GIT
 
 GEM
   remote: https://rubygems.org/
-  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
@@ -81,7 +80,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fabrication (1.4.0)
-    faraday (0.8.0)
+    faraday (0.8.1)
       multipart-post (~> 1.1)
     font-awesome-rails (0.2.1)
       railties (~> 3.1)
