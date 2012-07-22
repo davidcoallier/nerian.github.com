@@ -1,12 +1,11 @@
-- content_for :content do
-  = link_to root_path do
-    i.icon-arrow-left
-    span{style='padding-left:3px'}  Back
+- content_for :content do 
 
-  br
-  br
+  = render :partial => 'shared/menu'
   
-  = yield
+  article
+    = yield
+  
+  hr
   
   #disqus_thread
   
@@ -16,6 +15,6 @@
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    })();    
 
 = render :template => 'layouts/application'

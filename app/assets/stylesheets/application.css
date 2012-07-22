@@ -11,7 +11,4 @@
  *= require_self
  *= require app_bootstrap
  *= require main
- *= require formtastic-bootstrap
- *= require bootstrap-datepicker
- *= require font-awesome
 */

@@ -1,12 +1,7 @@
 - content_for :content do
-  = link_to root_path do
-    i.icon-arrow-left
-    span{style='padding-left:3px'}  Back
-    
-  br
-  br
+  = render :partial => 'shared/menu'
 
-  .title Who are you?
+  h3 Who are you?
   
   p My name is Gonzalo Rodríguez-Baltanás Díaz and I am a product designer formally educated in Computer Science and experienced in Web application development with Ruby and MongoDB.
 
@@ -17,13 +12,13 @@
     a href='https://github.com/Nerian' open source 
     span contributor.
 
-  .title Services
+  h3 Services
 
   ul
     li Code Review
     li Web development
 
-  .title Expertise
+  h3 Expertise
   
   p Developing software is about understanding a problem and designing a solution. The solutions I provide are web applications, that I craft with the maximum quality.
 
@@ -40,11 +35,11 @@
     dd Lean Startup
     dd UX
 
-  .title Languages
+  h3 Languages
 
   p I speak Spanish (native) and fluent English.
 
-  .title Contact
+  h3 Contact
 
   p Let me know how can I help you:
 
@@ -61,7 +56,7 @@
     li
       a href='http://dl.dropbox.com/u/834494/curriculum_english.pdf' CV
 
-  .title Projects
+  h3 Projects
 
   p I contribute to open source projects and you can see all my developer activity on Github. My current pet project is an Open Source Learning Management System called DaVinci LMS.
 

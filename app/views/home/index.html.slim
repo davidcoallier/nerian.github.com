@@ -1,15 +1,10 @@
-.well style='text-align:center'
-  p Hi! I am Gonzalo Rodríguez and this is my website.
-  .row-fluid
-    .span3 = link_to 'About', about_path
-    .span3 = link_to 'Github', 'https://github.com/Nerian'                     
-    .span3 = link_to 'Twitter', 'http://twitter.com/#!/iCodeErgoExist'
-    .span3 = link_to 'Subscribe', 'http://feeds.feedburner.com/Nerian-blog'
+= render :partial => 'shared/menu'
   
-dl.dl-horizontal
+ul.unstyled
   - @posts.each do |post|
     - date = post.publish_date
-    dt = post.publish_date
-    dd = link_to post.title, nice_post_path(post.id, date.year, date.month, date.day, post.title.parameterize)
+    li 
+      span.date.hidden-phone = post.publish_date
+      span.link = link_to post.title, nice_post_path(post.id, date.year, date.month, date.day, post.title.parameterize)
     
     

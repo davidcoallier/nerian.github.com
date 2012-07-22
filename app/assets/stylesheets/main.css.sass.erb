@@ -1,97 +1,22 @@
-.navbar-inner
-  border-radius: 0px
-
+.date
+  padding-right: 2em
+  
 body
-  margin: 0
-  padding: 0
-  background-color: #a5eaff  
-  background-image: url(<%= asset_data_uri 'background3.png' %>)
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
+  text-align: justify
+  text-justify: inter-word
+ 
+article           
+  p
+    text-indent: 2.5em
 
-p
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
-  line-height: 23px
-  margin: 0 0 25px
-
-#main_box
-  margin-top: 62px
-  background-color: white
-  border-radius: 4px
-  padding: 30px
-  border: 1px solid #DDD
-  border: 1px solid rgba(185, 185, 185, 1)  
-  margin-bottom: 100px
-  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4)
-
-.horizontal-list
-  li.span4:nth-child(3n+1) 
-    margin-left: 0
-  
-li
-  line-height: 20px
-
-dt, dd
-  line-height: 30px
+  h1 + p, h2 + p, h3 + p
+    text-indent: 0
     
-dl
-  dd
-    border-left: 1px solid #DDD
-    padding-left: 10px
-    a
-      padding-right: 10px
-    small
-      padding-right: 10px
-  .add-new
-    padding-top: 5px
-    border-left: none
-
-i
-  padding-right: 7px
+.center
+  text-align: center
   
-
-.section
-  ul
-    li
-      a
-        padding-right: 10px
-      
-
-.section
-  margin: 15px 0
-
-.navbar
-  margin-bottom: 40px
-  .brand
-    color: white
-
-ul
-  margin: 0 0 25px 25px
-
-.title
-  display: block
-  width: 100%
-  padding: 0
-  margin-bottom: 30px
-  font-size: 19.5px
-  line-height: 36px
-  color: #333
-  border: 0
-  border-bottom: 1px solid #EEE
-  a
-    color: #50abf3
-    cursor: default
-
-  > span, > a
-    padding-right: 15px
-  i
-    padding: 0 11px 0 0
+#menu
+  text-align:  center
+  margin:  auto
   .nav
-    margin-bottom: 0
-    margin-right: 10px
     display: inline-block
-    .dropdown-menu
-      margin-top: 6px
-      li
-        font-size: initial
-    > li > a:hover
-      background-color: transparent
