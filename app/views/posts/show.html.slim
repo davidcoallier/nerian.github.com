@@ -1,9 +1,0 @@
-div style='text-align:center'
-  h2.title style='margin-bottom: 15px' == @post.title
-
-  small = @post.publish_date
-
-br 
-br
-
-== Kramdown::Document.new(@post.content).to_html

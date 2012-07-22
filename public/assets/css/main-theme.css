@@ -1,0 +1,26 @@
+.date {
+  padding-right: 2em;
+  color: #333333; }
+
+article p {
+  text-indent: 2.5em; }
+article h1 + p, article h2 + p, article h3 + p {
+  text-indent: 0; }
+article #post-intro {
+  text-align: center;
+  margin-bottom: 3em; }
+  article #post-intro h2 {
+    margin-bottom: 0.65em; }
+
+body {
+  text-align: justify;
+  text-justify: inter-word; }
+
+.center {
+  text-align: center; }
+
+#menu {
+  text-align: center;
+  margin: auto; }
+  #menu .nav {
+    display: inline-block; }
