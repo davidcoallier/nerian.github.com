@@ -4,9 +4,6 @@ class Deploy < Thor::Group
   def one                           
     puts '# Pushing to github'
     `git push`                 
-  end                      
-  
-  def two
     puts '# Deploying to Heroku'
     `git push heroku master`
   end
