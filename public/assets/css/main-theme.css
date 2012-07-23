@@ -12,6 +12,15 @@ article #post-intro {
   article #post-intro h2 {
     margin-bottom: 0.65em; }
 
+#about img {
+  padding: 0 2em 2em 0; }
+@media (min-width: 767px) {
+  #about img {
+    float: left; } }
+@media (max-width: 767px) {
+  #about #avatar {
+    text-align: center; } }
+
 body {
   text-align: justify;
   text-justify: inter-word; }
